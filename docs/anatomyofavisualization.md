@@ -37,7 +37,7 @@ The file structure of the default plugin as of 7/5/2017. This is also after `npm
 ###.api
 You should not need to change anything in this folder. It contains module and schema definitions for the packager to use in constructing your `samplePiChart.pbiviz`.
 
-*   `PowerBI-visuals.d.ts`: The declaration file for the Power BI Typescript components. If you are unfamiliar with the concept of a declaration file, documentation is available [here](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
+*   `PowerBI-visuals.d.ts`: The declaration file for the Power BI TypeScript components. If you are unfamiliar with the concept of a declaration file, documentation is available [here](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
 *   `schema.capabilities.json`: Defines the legal schema for `capabilities.json`.
 *   `schema.dependencies.json`: Defines the legal schema for the optional `dependencies.json`. `dependencies.json` is used for defining CRAN dependencies if you are using R. Usinng R is outside the scope of this tutorial, and this will not be covered.
 *   `schema.pbiviz.json`: Defines the legal schema for `pbiviz.json`.
@@ -75,5 +75,5 @@ Files on the root of your porject are all configuration files of one sort or ano
 *   `capabilities.json`: Defines everything about your data binding. You will extensively modify this for most projects. We will talk about this quite a bit in the section on data binding.
 *   `package.json`: Defines external dependencies you want npm to install, as well as scripts that run after various events. We will talk about this more when we talk about using external libraries. This is a feature of npm, so documentation is available [here](https://docs.npmjs.com/files/package.json).
 *   `pbiviz.json`: The configuration file for the `pbiviz package` process. Contains information about visualization name, version, and all of the various components that go into packaging a `.pbiviz`.
-*   `tsconfig.json`: Defines the options and files that should be fed to the Typescript compiler. When you add additional `.ts` files, you will need to add them to `tsconfig.json`. For more information on configuring the Typescript compiler, see the documentation [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+*   `tsconfig.json`: Defines the options and files that should be fed to the TypeScript compiler. When you add additional `.ts` files, you will need to add them to `tsconfig.json`. For more information on configuring the TypeScript compiler, see the documentation [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 *   `tslint.json`: Defines which rules get run by the linter. Feel free to modify as you see fit. More documentation is available [here](https://palantir.github.io/tslint/usage/tslint-json/).
