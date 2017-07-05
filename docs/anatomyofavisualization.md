@@ -34,7 +34,7 @@ The file structure of the default plugin as of 7/5/2017. This is also after `npm
 |   +-- tslint.json
 ```
 
-###.api
+###`.api`
 You should not need to change anything in this folder. It contains module and schema definitions for the packager to use in constructing your `samplePiChart.pbiviz`.
 
 *   `PowerBI-visuals.d.ts`: The declaration file for the Power BI TypeScript components. If you are unfamiliar with the concept of a declaration file, documentation is available [here](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
@@ -43,27 +43,27 @@ You should not need to change anything in this folder. It contains module and sc
 *   `schema.pbiviz.json`: Defines the legal schema for `pbiviz.json`.
 *   `schema.stringResources.json`: Defines the legal syntax for the optional stringResource files. These are used in localization and are outside the scope of this tutorial.
 
-###.vscode
+###`.vscode`
 You should not need to change anything in this folder. Contains configuration files for Visual Studio Code.
 
 *   `launch.json`: The configuration for the prefered debugger. For more information on debugger settings, see the documentation [here](https://code.visualstudio.com/docs/editor/debugging)
 *   `settings.json`: Custom workspace settings for the project. For more infomation on workspace settings, see the documentation [here](https://code.visualstudio.com/docs/getstarted/settings).
 
-###assets
+###`assets`
 You will add things to this folder and should replace the starting file. All your assets for the visualization should be here. This includes the icon, any background images or other similar files.
 
 *   `icon.png`: The icon that appears under the Visualizations tab of Power BI. You chould change this to something more representative of your visualization.
 
-###node_modules
+###`node_modules`
 This contains all of your dependencies managed by npm. You should not modify anything in this folder. You may have to reference files here in other configuration files, but otherwise you should not do anything with this folder.
 
-###src
+###`src`
 This is where you will write the majority of your code. You can add as many files as you want in this folder and can rename or remove any of the existing files (which will be covered later). However, in this tutorial, we will be using the files provided to us to build our visualization.
 
 *   `settings.ts`: The starting file for managing your visualization's settings. You can handle this task anywhere, but having a separate file will make maintaining the code easier in the long run.
 *   `visual.ts`: The starting file for generating your visualization. you can rename this file, but you will have to change some configurations.
 
-###style
+###`style`
 This is where you will provide any styling your visualization needs. The styling language is [Less](http://lesscss.org/), meaning you can also provide raw CSS. You can add aditional files, though you will have to import them into `visual.less` or its equivalent, since the packager only accepts a single style file.
 
 *   `visual.less`: The provided file for styling your visualization. You can rename this file (covered later).
