@@ -87,29 +87,39 @@
     },
     "dataViewMappings": [
     {
+        "conditions": [
+        {
+            "mycategory":
+            {
+                "max": 1
+            },
+            "mymeasure":
+            {
+                "max": 1
+            }
+        } ],
         "categorical":
         {
             "categories":
             {
-                "for":
+                "bind":
                 {
-                    "in": "category"
+                    "to": "mycategory"
                 },
                 "dataReductionAlgorithm":
                 {
                     "top":
-                    {}
+                    {
+                        "count": 30000
+                    }
                 }
             },
             "values":
             {
-                "select": [
+                "bind":
                 {
-                    "bind":
-                    {
-                        "to": "measure"
-                    }
-                } ]
+                    "to": "mymeasure"
+                }
             }
         }
     } ]
