@@ -27,7 +27,7 @@ Required. This is the name that will be presented to the user. It should be shor
 Required. This is the internal name for the data field. We will use this name to reference the data field in the future. As such, it must be unique, and should be easily identifiable. Keep in mind that any references to it will be case sensitive.
 
 ###`description`
-A brief description of what the field does and/or what kinds of data should be given to it. It will be a tooltip, so it should be short.
+Optional. A brief description of what the field does and/or what kinds of data should be given to it. It will be a tooltip, so it should be short.
 
 ###`kind`
 Required. This defines what kind of field you are describing. There are three different kinds: `Measure`, `Grouping`, and `GroupingOrMeasure`. Contrary to what the official documentation says, you must use one of those three string enums, rather than the old `0`,`1`,`2` integer enums.
@@ -41,7 +41,8 @@ Each kind fills a different purpose:
 `GroupingOrMeasure`: These can be either. In general, it is best to give your data roles one of `Grouping` or `Measure`, but if you truly must be both, use this kind.
 
 ###`requiredTypes`
-Defines the types of data that will be accepted. An example looks like:
+Optional. Defines the types of data that will be accepted. An example looks like:
+
 ```
 "requiredTypes": [
     {
@@ -49,20 +50,101 @@ Defines the types of data that will be accepted. An example looks like:
     }
 ]
 ```
+
 The possible types you can use are listed in `.api/schema.capabilities.json`, around line 766 at the time of writing, and a list is transposed below:
 *   `bool`
 *   `enumeration`
 *   `fill`
 *   `formatting`
 *   `integer`
+    *   In my testing of `integer`, it appears to accept decimal numbers, so use with caution.
 *   `numeric`
 *   `filter`
 *   `operations`
 *   `text`
+    *   `text` is a very permissive choice, since it will accept any `FORMAT()` result, anything with a text hierarchy, such as dates, and regular old text.
 *   `scripting`
 *   `geography`
 
-In general, you will probably only use the primitive types.
+In general, you will probably only use the primitive types. You can also say `"type": false` in your requiredTypes list, but this will prevent you from putting any values into the field, unless you also have a `"type": true` specified. This makes `"type": false` effectively worthless.
+
+It is also possible to specify that a data role can be one of a number of types, like this:
+
+```
+"requiredTypes": [
+    {
+      "numeric": true
+    },
+    {
+        "text": true
+    }, ...
+]
+```
+
+##samplePiChart Data Roles
+Since we are building a Pi chart, we only have two fields for now. We need a category field and a measure field. Let's start with the bare bones for the category field:
+
+```
+{
+  "displayName": "Category",
+  "name": "mycategory",
+  "kind": "Grouping"
+}
+```
+
+Remember that we are choosing `Grouping` for `kind` because we want to group our measure field on our category field. Next, let's add our required types:
+
+```
+{
+  "displayName": "Category",
+  "name": "mycategory",
+  "kind": "Grouping",
+  "requiredTypes": [
+      {
+          "text": true
+      },
+      {
+          "numeric": true
+      }
+  ]
+}
+```
+
+Since we want our category to be able to handle both category names and ID numbers, we give it both acceptable types. Lastly we will add a description.
+
+```
+{
+  "displayName": "Category",
+  "name": "mycategory",
+  "kind": "Grouping",
+  "requiredTypes": [
+      {
+          "text": true
+      },
+      {
+          "numeric": true
+      }
+  ],
+  "description": "The key on which to group Measure values."
+}
+```
+
+Now the same for our measure field:
+
+```
+{
+  "displayName": "Measure",
+  "name": "mymeasure",
+  "kind": "Measure",
+  "description": "The value on which to aggregate around Category."
+}
+```
+
+You can see that we've changed a couple of things:
+1.   The names, so that the user and we are clear on the difference between the fields.
+2.   The `kind` is now `Measure`, since we are going to group this field.
+3.   We removed `requiredTypes`, since we don't care what kind of data gets put in this field, as Power BI will aggregate it all for us, regardless of type. This is the behavior of `Measure` fields.
+4.   The description has been updated to reflect what this field does.
 
 ---
 The official documentation for data roles is available [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/Capabilities.md#define-the-data-fields-your-visual-expects---dataroles). Be warned that some of it is out of date and was very limited to begin with.

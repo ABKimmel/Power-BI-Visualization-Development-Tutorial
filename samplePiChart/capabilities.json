@@ -1,56 +1,83 @@
 {
     "dataRoles": [
+    {
+        "displayName": "Category",
+        "name": "mycategory",
+        "kind": "Grouping",
+        "requiredTypes": [
         {
-            "displayName": "Category Data",
-            "name": "category",
-            "kind": "Grouping"
+            "text": true
         },
         {
-            "displayName": "Measure Data",
-            "name": "measure",
-            "kind": "Measure"
-        }
-    ],
-    "objects": {
-        "dataPoint": {
+            "numeric": true
+        } ],
+        "description": "The key on which to group Measure values."
+    },
+    {
+        "displayName": "Measure",
+        "name": "mymeasure",
+        "kind": "Measure",
+        "description": "The value on which to aggregate around Category."
+    } ],
+    "objects":
+    {
+        "dataPoint":
+        {
             "displayName": "Data colors",
-            "properties": {
-                "defaultColor": {
+            "properties":
+            {
+                "defaultColor":
+                {
                     "displayName": "Default color",
-                    "type": {
-                        "fill": {
-                            "solid": {
+                    "type":
+                    {
+                        "fill":
+                        {
+                            "solid":
+                            {
                                 "color": true
                             }
                         }
                     }
                 },
-                "showAllDataPoints": {
+                "showAllDataPoints":
+                {
                     "displayName": "Show all",
-                    "type": {
+                    "type":
+                    {
                         "bool": true
                     }
                 },
-                "fill": {
+                "fill":
+                {
                     "displayName": "Fill",
-                    "type": {
-                        "fill": {
-                            "solid": {
+                    "type":
+                    {
+                        "fill":
+                        {
+                            "solid":
+                            {
                                 "color": true
                             }
                         }
                     }
                 },
-                "fillRule": {
+                "fillRule":
+                {
                     "displayName": "Color saturation",
-                    "type": {
-                        "fill": {}
+                    "type":
+                    {
+                        "fill":
+                        {}
                     }
                 },
-                 "fontSize": {
+                "fontSize":
+                {
                     "displayName": "Text Size",
-                    "type": {
-                        "formatting": {
+                    "type":
+                    {
+                        "formatting":
+                        {
                             "fontSize": true
                         }
                     }
@@ -59,26 +86,31 @@
         }
     },
     "dataViewMappings": [
+    {
+        "categorical":
         {
-            "categorical": {
-                "categories": {
-                    "for": {
-                        "in": "category"
-                    },
-                    "dataReductionAlgorithm": {
-                        "top": {}
-                    }
+            "categories":
+            {
+                "for":
+                {
+                    "in": "category"
                 },
-                "values": {
-                    "select": [
-                        {
-                            "bind": {
-                                "to": "measure"
-                            }
-                        }
-                    ]
+                "dataReductionAlgorithm":
+                {
+                    "top":
+                    {}
                 }
+            },
+            "values":
+            {
+                "select": [
+                {
+                    "bind":
+                    {
+                        "to": "measure"
+                    }
+                } ]
             }
         }
-    ]
+    } ]
 }
