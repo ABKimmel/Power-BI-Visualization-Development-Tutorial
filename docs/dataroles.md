@@ -146,5 +146,7 @@ You can see that we've changed a couple of things:
 3.   We removed `requiredTypes`, since we don't care what kind of data gets put in this field, as Power BI will aggregate it all for us, regardless of type. This is the behavior of `Measure` fields.
 4.   The description has been updated to reflect what this field does.
 
+**Note that at this point, the visual is not functional.** We will fix this in the DataViewMapping section.
+
 ---
 The official documentation for data roles is available [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/Capabilities.md#define-the-data-fields-your-visual-expects---dataroles). Be warned that some of it is out of date and was very limited to begin with.
