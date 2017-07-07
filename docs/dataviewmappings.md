@@ -64,7 +64,7 @@ You can also specify multiple sets of `conditions` that are valid. In this case,
 ```
 
 ##Data Mappings
-Data mappings are how we define the structure of the data in the DataViews we get from Power BI. There are four kinds of data mappings that we will talk about: `single`, `categorical`, `table`, and `matrix`. Each has its own applications, and use cases where it is most useful. All of your data roles should be present in your data mapping definition.
+Data mappings are how we define the structure of the data in the DataViews we get from Power BI. There are three kinds of data mappings that we will talk about: `single`, `categorical`, and `table`. There are two or three other mappings (`tree`, `matrix`, and `scriptResult`), that we will not cover because there is literally no documentation on any of them byond what is available in `schema.capabilities.json`, and `tree` doesn't even appear there. Each has its own applications, and use cases where it is most useful. All of your data roles should be present in your data mapping definition.
 
 ###`single`
 `single` is the simplest of all the data mappings. `single` takes a single measure data role, and provides you the sum or count of items in the first data field. A `single` data mapping looks like:
@@ -102,6 +102,19 @@ The main use case for this is things like the built-in Card visual.
 }s
 ```
 
+or
+
+```
+"categories": {
+    "select":[
+        {"for|bind": { ... }},
+        {"for|bind": { ... }},
+        ...
+    ],
+    "dataReductionAlgorithm": { ... }
+}
+```
+
 You have three options for what to specify inside of categories: `for`, `bind`, and `select`. This is also where you will specify the `dataReductionAlgorithm`, which is covered further down the page.
 
 #####`bind`
@@ -131,8 +144,8 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 ```
 "categories": {
     "select":[
-        "for|bind": { ... },
-        "for|bind": { ... },
+        {"for|bind": { ... }},
+        {"for|bind": { ... }},
         ...
     ]
 }
@@ -154,8 +167,8 @@ or
 "values":
 {
     "select": [
-        "for|bind": { ... },
-        "for|bind": { ... },
+        {"for|bind": { ... }},
+        {"for|bind": { ... }},
         ...
     ]
 }
@@ -164,6 +177,60 @@ or
 `for`, `bind`, and `select` are as above. The values here will show up in the values property of the DataView object
 
 ###`table`
+The  `table` data mapping is quite simple. If you want to have rows of data to access, you will want to use the `table` data mapping. In  the  `table` data mapping, you specify the `rows` of data you want, like such:
+
+```
+{
+    "conditions": [ ... ],
+    "table": {
+        "rows": { ... },
+        "rowCount": { ... }
+    }
+}
+```
+
+####`rows`
+Rows is where you specify the data roles that will make up the rows of the table DataView. In effect, each data role you bind here will define a column. Each row will then be formed by selecting related data from the roles you bound. A `rows` definition looks like:
+
+```
+"rows": {
+    "for|bind": { ... },
+    "dataReductionAlgorithm": { ... }
+}
+```
+
+or
+
+```
+"rows": {
+    "select": [
+        {"for|bind": { ... }},
+        {"for|bind": { ... }},
+        ...
+    ],
+    "dataReductionAlgorithm": { ... }
+}
+```
+
+`select`, `for`, and `bind` are as above. It is also important to note that the data you get from the DataView will not be in any particular order, meaning you cannot look to your data mapping to determine which columns fit which data roles. We will talk more about this in [Accessing Your Data]().
+
+####`rowCount`
+`rowCount` allows you to define the number of rows that the visual supports. This is an optional property. It has two properties, `preferred` and `supported`. `preferred` sets the preferred range for the number of rows the visual can handle. `supported` sets a hard range for number of rows supported by the visual, and defaults to the `preferred` values if not specified. Example usage is below.
+
+```
+"rowcount":{
+    "preferred": {
+        "min": 100,
+        "max": 200
+    },
+    "supported": {
+        "min": 0,
+        "max": 300
+    }
+}
+```
+
+Note that you should use the `dataReductionAlgorithm` to limit your entries, instead of using `rowCount`.
 
 
 
@@ -184,7 +251,7 @@ On the `conditions` side of things, we are only expecting one data field in each
 } ]
 ```
 
-We are going to use a `categorical` data mapping, since we wat to group our measure by whatever categories we get. Since we are grouping on 'mycategory' our `categories` section will look like:
+We are going to use a `categorical` data mapping, since we want to group our measure by whatever categories we get. Since we are grouping on 'mycategory' our `categories` section will look like:
 
 ```
 "categories": {
