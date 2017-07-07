@@ -122,5 +122,16 @@
                 }
             }
         }
-    } ]
+    } ],
+    "sorting":
+    {
+        "implicit":
+        {
+            "clauses": [
+            {
+                "role": "mycategory",
+                "direction": 1
+            } ]
+        }
+    }
 }
