@@ -77,3 +77,54 @@ Since we are creating a Pi chart, it will be useful for the data to be sorted by
     }
 }
 ```
+
+##Highlighting
+By default, when a user selects an element of a visualization, the dataset will narrow to those selected entries. In your custom visual, this change is transparent to the visual, as it will look like a smaller data set. If you want to still recieve the full data set, and highlight the relevant data yourself, you can specify the optional `supportsHighlight` property in your `capabilities.json`. This will tell Power BI to pass you the full data set, as well as an additional property, `highlights`, that contains the filtered values. You can add it to your `capabilities.json` like so:
+
+```
+capabilities.json:
+    {
+        "dataRoles": [ ... ],
+        "dataViewMappings": [ ... ],
+        "sorting": { ... },
+        "supportsHighlight": true|false
+    }
+```
+
+If you leave the property off, it is the same as specifying it as false.
+
+We are not going to implement highlighting in our Pi chart, so we will add it with the `false` value, as such:
+
+```
+"supportsHighlight": false
+```
+
+##Advanced Edit mode
+If you have complex controls you want to add to your visual, it may be best to hide them under the advanced edit mode. Advanced edit mode is mostly what you make of it, since the only mechanism provided is that the update call comes in with the `editMode` property of the `VisualUpdateOptions` object set to `1`, instead of the normal `0`. Advanced edit mode will always have an `editMode` of 1, while normal edit mode will always have an `editMode` of `0`. Be careful while using advanced edit mode, as sometimes `editMode` will be `undefined`. Users can activate advanced edit mode by clicking the Edit button in the visual's dropdown.
+
+Adding advanced edit mode to `capabilities.json` is done like so:
+```
+capabilities.json:
+    {
+        "dataRoles": [ ... ],
+        "dataViewMappings": [ ... ],
+        "sorting": { ... },
+        "supportsHighlight": ...,
+        "advancedEditModeSupport": 0|1|2
+    }
+```
+
+###`0`
+Specifying `0` means that advanced edit mode is not supported. This is the same as not specifying an `advancedEditModeSupport` property. In this setting, the Edit button will not be displayed.
+
+###`1`
+Specifying `1` means that advanced edit mode is supported in both the report view and in the focused view. In limited testing of this setting, it does not appear that there is a way to switch out of advanced edit mode once it has been turned on, so proceed with caution.
+
+###`2`
+Specifying `2` means that advanced edit mode is supported in only the focused view. If the user clicks the edit button while not in the focused view, it will take them to the focused view. When the user leaves focused mode, the `editmode` property will return to the normal `0`.
+
+We are not going to implement advanced edit mode in our Pi chart, so we will add it with a value of `0`, as such:
+
+```
+"advancedEditModeSupport": 0
+```

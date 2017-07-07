@@ -133,5 +133,7 @@
                 "direction": 1
             } ]
         }
-    }
+    },
+    "supportsHighlight": false,
+    "advancedEditModeSupport": 0
 }
