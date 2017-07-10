@@ -2,7 +2,7 @@
 ---
 Data roles are how you define the fields into which your visualization will accept data.
 
-![Image of the data fields](../img/DataFields.png)
+![Image of the data fields](/img/DataFields.png)
 
 Each of the fields there has a data role that is defined under the `dataRoles` attribute of `capabilities.json`.
 
@@ -62,7 +62,7 @@ The possible types you can use are listed in `.api/schema.capabilities.json`, ar
 *   `filter`
 *   `operations`
 *   `text`
-    *   `text` is a very permissive choice, since it will accept any `FORMAT()` result, anything with a text hierarchy, such as dates, and regular old text.
+    *   `text` is a very permissive choice, since it will accept any `FORMAT()` result, anything with a text hierarchy (dates, locations, etc.), and regular old text.
 *   `scripting`
 *   `geography`
 

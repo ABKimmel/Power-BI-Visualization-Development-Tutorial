@@ -64,20 +64,9 @@ You can also specify multiple sets of `conditions` that are valid. In this case,
 ```
 
 ##Data Mappings
-Data mappings are how we define the structure of the data in the DataViews we get from Power BI. There are three kinds of data mappings that we will talk about: `single`, `categorical`, and `table`. There are two or three other mappings (`tree`, `matrix`, and `scriptResult`), that we will not cover because there is literally no documentation on any of them beyond what is available in `schema.capabilities.json`, and `tree` doesn't even appear there. Each has its own applications and use cases where it is most useful. All of your data roles should be present in your data mapping definition.
+Data mappings are how we define the structure of the data in the DataViews we get from Power BI. We will only talk about `categorical` in this section, but there are four other types. Each has its own applications and use cases where it is most relevant. All of your data roles should be present in your data mapping definition.
 
-###`single`
-`single` is the simplest of all the data mappings. `single` takes a single measure data role, and provides you the sum or count of items in the first data field. A `single` data mapping looks like:
-
-```
-{
-    "conditions": [ ... ],
-    "single": {
-        "role": "myDataRole"
-    }
-}
-```
-The main use case for this is things like the built-in Card visual.
+**If you would like information about the other kinds of `dataViewMappings`, please see the [`dataViewMappings` appendix](/docs/appendices/dataViewMappings.md).**
 
 ###`categorical`
 `categorical` is the data mapping you will probably use the most. It provides a mapping for things that are grouped into categories. This is great for any data you want to group in your visualization. When you define a `categorical` data mapping, you have to define both the categories you are mapping onto, and the values you are mapping. A simple `categorical` data mapping looks like this:
@@ -174,65 +163,9 @@ or
 }
 ```
 
-`for`, `bind`, and `select` are as above. The values here will show up in the values property of the DataView object
+`for`, `bind`, and `select` are as above. The values here will show up in the values property of the DataView object.
 
-###`table`
-The  `table` data mapping is quite simple. If you want to have rows of data to access, you will want to use the `table` data mapping. In  the  `table` data mapping, you specify the `rows` of data you want, like such:
-
-```
-{
-    "conditions": [ ... ],
-    "table": {
-        "rows": { ... },
-        "rowCount": { ... }
-    }
-}
-```
-
-####`rows`
-Rows is where you specify the data roles that will make up the rows of the table DataView. In effect, each data role you bind here will define a column. Each row will then be formed by selecting related data from the roles you bound. A `rows` definition looks like:
-
-```
-"rows": {
-    "for|bind": { ... },
-    "dataReductionAlgorithm": { ... }
-}
-```
-
-or
-
-```
-"rows": {
-    "select": [
-        {"for|bind": { ... }},
-        {"for|bind": { ... }},
-        ...
-    ],
-    "dataReductionAlgorithm": { ... }
-}
-```
-
-`select`, `for`, and `bind` are as above. It is also important to note that the data you get from the DataView will not be in any particular order, meaning you cannot look to your data mapping to determine which columns fit which data roles. We will talk more about this in [Accessing Your Data]().
-
-####`rowCount`
-`rowCount` allows you to define the number of rows that the visual supports. This is an optional property. It has two properties, `preferred` and `supported`. `preferred` sets the preferred range for the number of rows the visual can handle. `supported` sets a hard range for number of rows supported by the visual, and defaults to the `preferred` values if not specified. Example usage is below.
-
-```
-"rowcount":{
-    "preferred": {
-        "min": 100,
-        "max": 200
-    },
-    "supported": {
-        "min": 0,
-        "max": 300
-    }
-}
-```
-
-Note that you should use the `dataReductionAlgorithm` to limit your entries, instead of using `rowCount`.
-
-###`dataReductionAlgorithm`
+##`dataReductionAlgorithm`
 The `dataReductionAlgorithm` allows you limited control to specify the behavior of Power BI when there are more records than a certain threshold. THis lets you set the threshold and the behavior to a limited extent. There are four reduction algorithms from which you can choose. The algorithms are `top`, `bottom`, `sample`, and `window`. Please note that no matter what you specify for `count`, Power BI will not return more than 30,000 entries to your visual. A `dataReductionAlgorithm` definition looks like:
 
 ```
@@ -243,16 +176,16 @@ The `dataReductionAlgorithm` allows you limited control to specify the behavior 
 }
 ```
 
-####`top`
+###`top`
 `top` tells Power BI to return the top `count` entries from the query.
 
-####`bottom`
+##`bottom`
 `bottom` tells Power BI to return the bottom `count` entries from the query.
 
 ####`sample`
 `sample` tells Power BI to return a sample of `count` entries from the query. It is not clear whether the sampling algorithm is their new [high density sampling algorithm](https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-high-density-sampling/), the older algorithm, or even a different algorithm.
 
-####`window`
+###`window`
 `window` tells Power BI to return a window of `count` entries from the query. In theory, this allows you to circumvent the 30,000 entry limit Power BI imposes on your visual. That said, there is no documentation on how to access windows beyond the first, and at the time of writing, no one had figured out how to do it.
 
 It is important to specify a `dataReductionAlgorithm`, because if you do not, it will use this default `dataReductionAlgorithm`:

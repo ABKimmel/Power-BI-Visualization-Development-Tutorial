@@ -18,7 +18,9 @@ After the visual is sorted out, we'll look at settings and how they work. We'll 
     *   DataView Mappings
     *   Sorting and Other Configurations
 *   Visualizing Your Data
-    *   Accessing Your Data
+    *   Extracting Your Data
+    *   Defining Your Data Model
+    *   Filling Your Data Model
     *   Building a Visual
     *   Coloring Your Visual
 *   Advanced Features
@@ -26,6 +28,8 @@ After the visual is sorted out, we'll look at settings and how they work. We'll 
     *   Adding Tooltips
 *   Appendices
     *   Anatomy of a `DataView`
+    *   `dataViewMappings`
+    *   `VisualUpdateOptions`
 
 ---
-If you have any questions, please open an issue. I will try to answer questions as soon as I can. If you find an error, or you want to elaborate on something, feel free to open a pull request, and I will review it as soon as I can.
+If you have any questions or find an error, please open an issue. I will try to answer questions and fix errors as soon as I can. If you want to elaborate on something, feel free to open a pull request, and I will review it as soon as I can.
