@@ -24,6 +24,8 @@ After the visual is sorted out, we'll look at settings and how they work. We'll 
 *   Improving the User Experience
     *   Adding Settings
     *   Adding Tooltips
+*   Additional information
+    *   Anatomy of a `dataView`
 
 ---
 If you have any questions, please open an issue. I will try to answer questions as soon as I can. If you find an error, or you want to elaborate on something, feel free to open a pull request, and I will review it as soon as I can.

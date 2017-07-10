@@ -64,7 +64,7 @@ You can also specify multiple sets of `conditions` that are valid. In this case,
 ```
 
 ##Data Mappings
-Data mappings are how we define the structure of the data in the DataViews we get from Power BI. There are three kinds of data mappings that we will talk about: `single`, `categorical`, and `table`. There are two or three other mappings (`tree`, `matrix`, and `scriptResult`), that we will not cover because there is literally no documentation on any of them byond what is available in `schema.capabilities.json`, and `tree` doesn't even appear there. Each has its own applications, and use cases where it is most useful. All of your data roles should be present in your data mapping definition.
+Data mappings are how we define the structure of the data in the DataViews we get from Power BI. There are three kinds of data mappings that we will talk about: `single`, `categorical`, and `table`. There are two or three other mappings (`tree`, `matrix`, and `scriptResult`), that we will not cover because there is literally no documentation on any of them beyond what is available in `schema.capabilities.json`, and `tree` doesn't even appear there. Each has its own applications and use cases where it is most useful. All of your data roles should be present in your data mapping definition.
 
 ###`single`
 `single` is the simplest of all the data mappings. `single` takes a single measure data role, and provides you the sum or count of items in the first data field. A `single` data mapping looks like:
