@@ -38,6 +38,7 @@ module powerbi.extensibility.visual {
         }
 
         public update(options: VisualUpdateOptions) {
+            console.log("VisualUpdateOptions", options);
             if (options.dataViews.length > 0) {
                 this.dataExtraction(options.dataViews[0]);
             }
