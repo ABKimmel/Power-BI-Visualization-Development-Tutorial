@@ -26,11 +26,11 @@ Once you have created the new visual template, the only thing left to do is view
      1. `pbiviz start`
 4.   Add the visual to your report. It will be in the Visualizations pane.
 
-       ![Image of the developer visual icon](../img/DeveloperVisualIcon.png)
+       ![Image of the developer visual icon](/img/DeveloperVisualIcon.png)
 
 5.  The visual on the report will not automatically update when the visual gets re-deployed, however you can set it to automatically refresh itself. You can also manually refresh it. This toolbar will appear below the developer visual while it is selected. To manually refresh the visual, click the circular arrow. To have the visual automatically refresh, click the play button.
 
-      ![Image of the developer visual toolbar](../img/DeveloperVisualToolbar.png)
+      ![Image of the developer visual toolbar](/img/DeveloperVisualToolbar.png)
 
 ###Packaging
 1.   Package the visual into `samplePiChart.pbiviz`. Note that you must execute this at the root of the project.
