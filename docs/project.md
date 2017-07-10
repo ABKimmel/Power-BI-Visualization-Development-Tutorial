@@ -13,7 +13,7 @@ After the visual is sorted out, we'll look at settings and how they work. We'll 
     *   Setting Up Your Project
     *   Anatomy of a Visualization
     *   Adding External Libraries
-*   Data Bindings
+*   Capabilities
     *   Data Roles
     *   DataView Mappings
     *   Sorting and Other Configurations
@@ -21,10 +21,10 @@ After the visual is sorted out, we'll look at settings and how they work. We'll 
     *   Accessing Your Data
     *   Building a Visual
     *   Coloring Your Visual
-*   Improving the User Experience
+*   Advanced Features
     *   Adding Settings
     *   Adding Tooltips
-*   Additional information
+*   Appendices
     *   Anatomy of a `DataView`
 
 ---
