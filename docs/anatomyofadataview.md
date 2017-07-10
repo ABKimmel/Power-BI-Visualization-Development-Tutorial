@@ -1,6 +1,6 @@
-#Anatomy of a `dataView`
+#Anatomy of a `DataView`
 ---
-A `dataView` object has five or six properties:
+A `DataView` object has five or six properties:
 |Property|Value|
 |--|--|
 |`metadata`|Contains information about the data fields that have been assigned to the data roles of your visual.|
@@ -83,3 +83,5 @@ Each object in the `values` array has the following properties:
 |`index`|The position of the column in the query to the data model. Integer.|
 |`isMeasure`|Whether this column is a measure or not. Boolean.|
 |`aggregates`|An object containing the aggregates computed for the column. This attribute will only appear on measures of numeric type. In general, this will have two attributes: `minLocal` and `maxLocal`, which will have the min and max values of the column, respectively.|
+
+**Others to come**

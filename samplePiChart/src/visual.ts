@@ -38,19 +38,25 @@ module powerbi.extensibility.visual {
         }
 
         public update(options: VisualUpdateOptions) {
-            this.settings = Visual.parseSettings(options && options.dataViews && options.dataViews[0]);
-            console.log('Visual update', options);
-            this.target.innerHTML = `<p>Update count: <em>${(this.updateCount++)}</em></p>`;
+            if (options.dataViews.length > 0) {
+                this.dataExtraction(options.dataViews[0]);
+            }
         }
 
         private static parseSettings(dataView: DataView): VisualSettings {
             return VisualSettings.parse(dataView) as VisualSettings;
         }
 
-        /** 
-         * This function gets called for each of the objects defined in the capabilities files and allows you to select which of the 
+        private dataExtraction(dataView: DataView) {
+            let categories = dataView.categorical.categories;
+            let values = dataView.categorical.values;
+            console.log("categories", categories, "values", values);
+        }
+
+        /**
+         * This function gets called for each of the objects defined in the capabilities files and allows you to select which of the
          * objects and properties you want to expose to the users in the property pane.
-         * 
+         *
          */
         public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
             return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
