@@ -62,8 +62,8 @@ The `custom` setting in theory indicates that the visual will provide its own me
 
 The `custom` object takes no additional properties.
 
-##Adding `sorting` to Sample Pi Chart
-Since we are creating a Pi chart, it will be useful for the data to be sorted by the category of the data, so we will define an implicit sort there:
+##Adding `sorting` to Sample Pie Chart
+Since we are creating a pie chart, it will be useful for the data to be sorted by the category of the data, so we will define an implicit sort there:
 
 ```
 "sorting": {

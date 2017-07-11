@@ -17,7 +17,7 @@ A full DataViewMapping will look like:
 
 
 ##`conditions`
-Conditions allow you to specify the number of data fields that can be placed in a particular data role. An example mapping for our SamplePiChart might look like:
+Conditions allow you to specify the number of data fields that can be placed in a particular data role. An example mapping for our SamplePieChart might look like:
 
 ```
 "conditions": [
@@ -199,7 +199,7 @@ It is important to specify a `dataReductionAlgorithm`, because if you do not, it
 ```
 
 
-##samplePiChart Data Bindings
+##samplePieChart Data Bindings
 On the `conditions` side of things, we are only expecting one data field in each role, so our roles should be limited to a max of one field each. This gives us:
 
 ```

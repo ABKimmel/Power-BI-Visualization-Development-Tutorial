@@ -26,13 +26,13 @@
 
 module powerbi.extensibility.visual {
 
-    export interface PiSlice {
+    export interface PieSlice {
         category: string | number,
         measure: number
     }
 
-    export interface Pi {
-        slices: PiSlice[],
+    export interface Pie {
+        slices: PieSlice[],
         sumOfMeasures: number
     }
 }

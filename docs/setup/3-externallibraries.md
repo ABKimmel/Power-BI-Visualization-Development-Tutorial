@@ -34,7 +34,7 @@ A better way to handle your typing needs is with `package.json`. This way, if yo
 ##Adding a Non-npm Dependency
 We won't be using any dependencies that aren't available on npm, but let's say that you have some internal code that isn't on npm that you want to use in your visualization. This is a fairly simple task. Start by creating an external folder:
 
-`samplePiChart/external`
+`samplePieChart/external`
 
 Next, add your `internalcode.ts` to the newly created `external` folder. You will want to be sure the `external` folder is included in your `tsconfig.json`. If you have a `.js` file, feel free to add that, just be sure you've installed typings for it. Last we have to add the file to `pbiviz.json`. To do this, simply add the path from the root of the project to your external dependency to the `externalJS` attribute of `pbiviz.json`, like so:
 

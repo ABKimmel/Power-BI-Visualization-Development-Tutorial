@@ -51,7 +51,7 @@ module powerbi.extensibility.visual {
          * This function extracts the data from the given DataView and passes it into the data model defined in
          * dataInterfaces.ts
          */
-        private dataExtraction(dataView: DataView): Pi {
+        private dataExtraction(dataView: DataView): Pie {
             let categoryColumn = dataView.categorical.categories[0];
             let categoryValues = categoryColumn.values;
             let valueColumn = dataView.categorical.values[0];
@@ -63,22 +63,22 @@ module powerbi.extensibility.visual {
                 };
             }
 
-            let piSlices = [];
+            let pieSlices = [];
             let sumOfMeasures = 0;
             for (let i = 0; i < categoryValues.length; i++) {
                 let category = categoryValues[i].valueOf() as string | number;
                 let measure = valueValues[i].valueOf() as number;
                 sumOfMeasures += measure;
 
-                let piSlice = {
+                let pieSlice = {
                     category,
                     measure
                 }
-                piSlices.push(piSlice);
+                pieSlices.push(pieSlice);
             }
 
             return {
-                slices: piSlices,
+                slices: pieSlices,
                 sumOfMeasures: sumOfMeasures
             }
         }

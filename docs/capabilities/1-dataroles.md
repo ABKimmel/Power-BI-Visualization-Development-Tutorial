@@ -81,8 +81,8 @@ It is also possible to specify that a data role can be one of a number of types,
 ]
 ```
 
-##samplePiChart Data Roles
-Since we are building a Pi chart, we only have two fields for now. We need a category field and a measure field. Let's start with the bare bones for the category field:
+##samplePieChart Data Roles
+Since we are building a pie chart, we only have two fields for now. We need a category field and a measure field. Let's start with the bare bones for the category field:
 
 ```
 {

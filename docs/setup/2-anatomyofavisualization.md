@@ -5,7 +5,7 @@
 The file structure of the default plugin as of 7/5/2017. This is also after `npm install` has been run.
 
 ```
-+-- samplePiChart
++-- samplePieChart
 |   +-- .api
     |   +-- v1.7.0
         |   +-- PowerrBI-visuals.d.ts
@@ -35,7 +35,7 @@ The file structure of the default plugin as of 7/5/2017. This is also after `npm
 ```
 
 ###`.api`
-You should not need to change anything in this folder. It contains module and schema definitions for the packager to use in constructing your `samplePiChart.pbiviz`.
+You should not need to change anything in this folder. It contains module and schema definitions for the packager to use in constructing your `samplePieChart.pbiviz`.
 
 *   `PowerBI-visuals.d.ts`: The declaration file for the Power BI TypeScript components. If you are unfamiliar with the concept of a declaration file, documentation is available [here](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
 *   `schema.capabilities.json`: Defines the legal schema for `capabilities.json`.

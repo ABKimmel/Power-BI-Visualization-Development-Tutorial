@@ -9,10 +9,10 @@
 Complete the following steps using the command line:
 1.   Navigate to the directory you want to keep your visuals in.
      1. `cd powerbi-visuals`
-2.   Create a new visual template with `pbiviz`. We are going to name ours 'samplePiChart'.
-     1. `pbiviz new samplePiChart`
+2.   Create a new visual template with `pbiviz`. We are going to name ours 'samplePieChart'.
+     1. `pbiviz new samplePieChart`
 3.   Navigate into the newly created project folder.
-     1. `cd samplePiChart`
+     1. `cd samplePieChart`
 4.   Install your dependencies using npm. This step will be important once we start adding external libraries.
      1. `npm install`
 
@@ -33,9 +33,9 @@ Once you have created the new visual template, the only thing left to do is view
       ![Image of the developer visual toolbar](/img/DeveloperVisualToolbar.png)
 
 ###Packaging
-1.   Package the visual into `samplePiChart.pbiviz`. Note that you must execute this at the root of the project.
+1.   Package the visual into `samplePieChart.pbiviz`. Note that you must execute this at the root of the project.
      1. `pbiviz package`
-2.   If this is the first time you have run `pbiviz package`, it will create the `dist` folder in the root directory. The generated `samplePiChart.pbiviz` will be in the `dist` folder.
+2.   If this is the first time you have run `pbiviz package`, it will create the `dist` folder in the root directory. The generated `samplePieChart.pbiviz` will be in the `dist` folder.
 3.   Now import your visual into the Power BI desktop client. Instructions on importing a custom visual can be found [here](https://powerbi.microsoft.com/en-us/documentation/powerbi-custom-visuals-use/).
 
 

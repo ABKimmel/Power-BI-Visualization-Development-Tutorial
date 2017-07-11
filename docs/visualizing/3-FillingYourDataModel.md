@@ -38,18 +38,18 @@ private dataExtraction(dataView: DataView): Pi {
 
     ...
 
-    let piSlices = [];
+    let pieSlices = [];
     let sumOfMeasures = 0;
     for (let i = 0; i < categoryValues.length; i++) {
         let category = categoryValues[i].valueOf() as string | number;
         let measure = valueValues[i].valueOf() as number;
         sumOfMeasures += measure;
 
-        let piSlice = {
+        let pieSlice = {
             category,
             measure
         }
-        piSlices.push(piSlice);
+        pieSlices.push(pieSlice);
     }
 }
 ```
@@ -62,7 +62,7 @@ private dataExtraction(dataView: DataView): Pi {
     ...
 
     return {
-        slices: piSlices,
+        slices: pieSlices,
         sumOfMeasures: sumOfMeasures
     }
 }

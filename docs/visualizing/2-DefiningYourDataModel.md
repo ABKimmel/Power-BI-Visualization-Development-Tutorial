@@ -16,7 +16,7 @@ Next, we will add an interface to describe a single category:
 /*License*/
 module powerbi.extensibility.visual {
 
-    export interface PiSlice {
+    export interface PieSlice {
         category: string | number,
         measure: number
     }
@@ -33,7 +33,7 @@ module powerbi.extensibility.visual {
     ...
 
     export interface Pi {
-        slices: PiSlice[],
+        slices: PieSlice[],
         sumOfMeasures: number
     }
 }
