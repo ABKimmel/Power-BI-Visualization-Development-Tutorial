@@ -31,13 +31,21 @@ module powerbi.extensibility.visual {
         private svg: d3.Selection<SVGElement>;
         private chartContainer: d3.Selection<SVGElement>;
         private settings: VisualSettings;
+        private colorPalette: IColorPalette;
 
         constructor(options: VisualConstructorOptions) {
             this.svg = d3.select(options.element).append('svg');
             this.chartContainer = this.svg.append('g');
+            this.colorPalette = options.host.colorPalette;
         }
 
         public update(options: VisualUpdateOptions) {
+            try {
+                Visual.throwNewError();
+            } catch (e) {
+                console.error(e);
+                return;
+            }
             let pie: Pie;
             if (options.dataViews.length > 0) {
                 pie = this.dataExtraction(options.dataViews[0]);
@@ -46,6 +54,10 @@ module powerbi.extensibility.visual {
             }
 
             this.generateVisual(pie, options.viewport);
+        }
+
+        private static throwNewError() {
+            throw new Error();
         }
 
         private generateVisual(data: Pie, viewport: IViewport) {
@@ -78,7 +90,7 @@ module powerbi.extensibility.visual {
                 .enter()
                 .append('path')
                 .attr('d', <any>arc)
-                .attr('fill', 'gray');
+                .attr('fill', function(d) { return (d.data as any).color });
         }
 
         private static parseSettings(dataView: DataView): VisualSettings {
@@ -106,11 +118,13 @@ module powerbi.extensibility.visual {
             for (let i = 0; i < categoryValues.length; i++) {
                 let category = categoryValues[i].valueOf() as string | number;
                 let measure = valueValues[i].valueOf() as number;
+                let color = this.colorPalette.getColor(category as string).value;
                 sumOfMeasures += measure;
 
                 let pieSlice = {
                     category,
-                    measure
+                    measure,
+                    color
                 }
                 pieSlices.push(pieSlice);
             }

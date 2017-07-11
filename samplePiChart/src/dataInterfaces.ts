@@ -28,7 +28,8 @@ module powerbi.extensibility.visual {
 
     export interface PieSlice {
         category: string | number,
-        measure: number
+        measure: number,
+        color: string
     }
 
     export interface Pie {
