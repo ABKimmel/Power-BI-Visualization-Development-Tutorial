@@ -1,6 +1,6 @@
 #Adding External Libraries
 ---
-For our project, we will be uisng the D3.js library to render our visualization. Since this is not included in the default project, we will have to import it ourselves. For this project we will use npm to manage our external dependencies. We will also cover adding something that is not available on npm.
+For our project, we will be using the D3.js library to render our visualization. Since this is not included in the default project, we will have to import it ourselves. For this project, we will use npm to manage our external dependencies. We will also cover adding something that is not available on npm.
 
 ##Adding npm Dependency
 All of our npm dependencies will be listed in `package.json` under the "dependencies" property. Documentation on the dependencies portion of `package.json` is available [here](https://docs.npmjs.com/files/package.json#dependencies). In short, you will add an attribute with the name of the package you want imported, and the value will be the version you want. In an ideal world, we wouldn't have to worry about compatibility issues, but Power BI is fairly broken when it comes to [external](https://github.com/Microsoft/PowerBI-visuals/issues/98) [libraries](https://github.com/Microsoft/PowerBI-visuals/issues/99). Since we do have issues with compatibility, we are going to ask npm for a specific version of D3.
@@ -9,7 +9,7 @@ All of our npm dependencies will be listed in `package.json` under the "dependen
 "d3": "3.5.5"
 ```
 
-At this point, you will see that when you run `npm install`, you have the D3 package installed in `/node_modules`, but that TypeScript is throwing an error when you try to acces the `d3` namespace. This is because we have not yet installed the typings for D3. Because TypeScript is strongly-typed JavaScript, we need to install the files that will tell the TypeScript compiler what the D3 code is doing.
+At this point, you will see that when you run `npm install`, you have the D3 package installed in `/node_modules`, but that TypeScript is throwing an error when you try to access the `d3` namespace. This is because we have not yet installed the typings for D3. Because TypeScript is strongly-typed JavaScript, we need to install the files that will tell the TypeScript compiler what the D3 code is doing.
 
 ###Manually Installing Types
 As of TypeScript 2.0, you can install typings directly with npm. For more information on the installation of types, see [this](https://blogs.msdn.microsoft.com/typescript/2016/06/15/the-future-of-declaration-files/) MSDN blog. Typings are installed as such:
@@ -42,3 +42,6 @@ Next, add your `internalcode.ts` to the newly created `external` folder. You wil
 The last step in importing any library is to add it to the `externalJS` section of `pbiviz.json`. In our case, this looks like:
 
 `"node_modules/d3/d3.js"`
+
+
+**Don't forget to run `npm install` whenever you change `package.json`**

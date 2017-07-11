@@ -15,11 +15,11 @@ A `DataView` object has five or six properties:
 |Property|Value|
 |--|--|
 |`roles`|This is an object that will have properties that have the internal names of the data roles to which this data field is assigned and the value of `true`. For example: `"mymeasure":true`.|
-|`type`|This is an object that contains properties with names of types, and boolean values of whether or not the data field conforms to that type. It also contains some functions for comparing that data field to other objects.|
+|`type`|This is an object that contains properties with names of types, and Boolean values of whether the data field conforms to that type. It also contains some functions for comparing that data field to other objects.|
 |`format`|A deprecated property. The functionality has been moved to settings objects.|
 |`displayName`|The display name of the data field in question. Always a string.|
 |`queryName`| This is the query used to get the field. Always a string. Typically either `DataSet.FieldName` or `AGGREGATE(DataSet.FieldName)`.|
-|`expr`|An object representing the SQExpr that is prepresented by this column.|
+|`expr`|An object representing the SQExpr that is represented by this column.|
 |`index`|The position of the column in the query to the data model. Integer.|
 |`isMeasure`|Whether this column is a measure or not. Boolean.|
 |`aggregates`|An object containing the aggregates computed for the column. This attribute will only appear on measures of numeric type. In general, this will have two attributes: `minLocal` and `maxLocal`, which will have the min and max values of the column, respectively.|

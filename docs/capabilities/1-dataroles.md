@@ -30,7 +30,7 @@ Required. This is the internal name for the data field. We will use this name to
 Optional. A brief description of what the field does and/or what kinds of data should be given to it. It will be a tooltip, so it should be short.
 
 ###`kind`
-Required. This defines what kind of field you are describing. There are three different kinds: `Measure`, `Grouping`, and `GroupingOrMeasure`. Contrary to what the official documentation says, you must use one of those three string enums, rather than the old `0`,`1`,`2` integer enums.
+Required. This defines what kind of field you are describing. There are three different kinds: `Measure`, `Grouping`, and `GroupingOrMeasure`. Contrary to what the official documentation says, you must use one of those three string enums, rather than the old `0`, `1`, `2` integer enums.
 
 Each kind fills a different purpose:
 

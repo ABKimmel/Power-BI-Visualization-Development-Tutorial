@@ -1,6 +1,7 @@
 #Setting Up Your Environment
 ---
 ##Dependencies
+The Power BI visualization creation tool, `pbiviz`, requires NodeJS. Start by installing the following:
 *   [NodeJS 4.0+](https://nodejs.org)
 *   pbiviz
     *   `npm install -g powerbi-visuals-tools`

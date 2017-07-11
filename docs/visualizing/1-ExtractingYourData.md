@@ -32,7 +32,7 @@ private dataExtraction(dataView : DataView) {
 }
 ```
 
-Now we need to pass this function a `DataView`. In general, we need to do this every time the visual is updated, so we will call `dataExtraction()` from `update()`. We can retrieve the dataView from the `VisualUpdateOptions` parameter by getting the first entry in the `dataViews` property. We may also want to check to ensure the dataView exists before we pass it on to `dataExtraction()`. If we remove the starting code from `update()` we will get:
+Now we need to pass this function a `DataView`. In general, we need to do this every time the visual is updated, so we will call `dataExtraction()` from `update()`. We can retrieve the `DataView` from the `VisualUpdateOptions` parameter by getting the first entry in the `dataViews` property. We may also want to check to ensure the `DataView` exists before we pass it on to `dataExtraction()`. If we remove the starting code from `update()` we will get:
 
 ```
 public update(options: VisualUpdateOptions) {

@@ -1,6 +1,6 @@
 #Building Your Visual
 ---
-Now that we have a well defined data model, we need to take it into `update()` and build a visualization with it.
+Now that we have a well-defined data model, we need to take it into `update()` and build a visualization with it.
 ```
 public update(options: VisualUpdateOptions) {
     let pie: Pie;

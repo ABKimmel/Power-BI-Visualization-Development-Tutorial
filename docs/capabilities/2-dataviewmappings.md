@@ -64,12 +64,12 @@ You can also specify multiple sets of `conditions` that are valid. In this case,
 ```
 
 ##Data Mappings
-Data mappings are how we define the structure of the data in the DataViews we get from Power BI. We will only talk about `categorical` in this section, but there are four other types. Each has its own applications and use cases where it is most relevant. All of your data roles should be present in your data mapping definition.
+Data mappings are how we define the structure of the data in the DataViews we get from Power BI. We will only talk about `categorical` in this section, but there are four other types. Each has its own applications and use cases where it is most relevant. All your data roles should be present in your data mapping definition.
 
 **If you would like information about the other kinds of `dataViewMappings`, please see the [`dataViewMappings` appendix](/docs/appendices/dataViewMappings.md).**
 
 ###`categorical`
-`categorical` is the data mapping you will probably use the most. It provides a mapping for things that are grouped into categories. This is great for any data you want to group in your visualization. When you define a `categorical` data mapping, you have to define both the categories you are mapping onto, and the values you are mapping. A simple `categorical` data mapping looks like this:
+`categorical` is the data mapping you will probably use the most. It provides a mapping for things that are grouped into categories. This is great for any data you want to group in your visualization. When you define a `categorical` data mapping, you must define both the categories you are mapping onto, and the values you are mapping. A simple `categorical` data mapping looks like this:
 
 ```
 {
@@ -118,7 +118,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 ```
 
 #####`for`
-`for` is much the same as `bind`. It tells Power BI that the fields in the role should be returned as part of the categories property of the DataView object. It differs from `bind` in that you can use it on data roles that allow more than one field within them. All of the fields will be included in the DataView object. `for` looks like:
+`for` is much the same as `bind`. It tells Power BI that the fields in the role should be returned as part of the categories property of the DataView object. It differs from `bind` in that you can use it on data roles that allow more than one field within them. All the fields will be included in the DataView object. `for` looks like:
 
 ```
 "categories": {
@@ -186,7 +186,7 @@ The `dataReductionAlgorithm` allows you limited control to specify the behavior 
 `sample` tells Power BI to return a sample of `count` entries from the query. It is not clear whether the sampling algorithm is their new [high density sampling algorithm](https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-high-density-sampling/), the older algorithm, or even a different algorithm.
 
 ###`window`
-`window` tells Power BI to return a window of `count` entries from the query. In theory, this allows you to circumvent the 30,000 entry limit Power BI imposes on your visual. That said, there is no documentation on how to access windows beyond the first, and at the time of writing, no one had figured out how to do it.
+`window` tells Power BI to return a window of `count` entries from the query. In theory, this allows you to circumvent the 30,000-entry limit Power BI imposes on your visual. That said, there is no documentation on how to access windows beyond the first, and at the time of writing, no one had figured out how to do it.
 
 It is important to specify a `dataReductionAlgorithm`, because if you do not, it will use this default `dataReductionAlgorithm`:
 

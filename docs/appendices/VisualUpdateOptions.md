@@ -3,7 +3,7 @@
 ##`dataViews`
 `dataViews` is the object that holds all of the data we are trying to visualize, as well as all of the information on the visual's settings. It is an array of `DataView`s. In all cases, there will be only one `DataView` returned, no matter how many `dataViewMappings` you defined in `capabilities.json`.
 
-For more information on the `DataView` object, see the [Anatomy of a `DataView` appendix](/docs/appendices/AnatomyOfADataView.md). 
+For more information on the `DataView` object, see the [Anatomy of a `DataView` appendix](/docs/appendices/AnatomyOfADataView.md).
 
 ##`editMode`
 `editMode` was previously discussed in the section on [advanced edit mode](). It normally comes back as `0` or `undefined`, but when the user activates Edit mode, it will return as `1`. Note that if you receive multiple updates from a single user action, they may not have the same value for `editMode`, so it is up to you to handle that in your visual.
@@ -15,7 +15,7 @@ For more information on the `DataView` object, see the [Anatomy of a `DataView` 
 |--|--|
 |`2` |A data update. This kind of update will be sent when a new field is dragged in, an existing field is removed, or there occurs an event where the data changes in any way. This will also be sent when any of the settings of the visual are changed.|
 |`4` |A resize update. This kind of update will be sent when the visual is resized, or the viewPort changes.|
-|`8` |A `viewMode` update. This kind of update is sernt when the `viewMode` changes. This would mean your visual is switching between normal view, edit view, and infocus view. You may see it by itself when you go from focused view back to the full report, but not always. It is not clear what causes it to be sent or not sent.|
+|`8` |A `viewMode` update. This kind of update is sent when the `viewMode` changes. This would mean your visual is switching between normal view, edit view, and the focused view. You may see it by itself when you go from focused view back to the full report, but not always. It is not clear what causes it to be sent or not sent.|
 |`16` |A style update. This doesn't seem to be sent outside of the `62` type.|
 |`32` |A resize end update. This will be sent with `4` for any resize event that isn't scaling the visual in the default view. This includes going to and from focused view, resizes initiated by changing the page size, and any other event that forces the visual to resize that isn't directly caused by the user.|
 

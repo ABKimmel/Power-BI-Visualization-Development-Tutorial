@@ -46,13 +46,13 @@ You should not need to change anything in this folder. It contains module and sc
 ###`.vscode`
 You should not need to change anything in this folder. Contains configuration files for Visual Studio Code.
 
-*   `launch.json`: The configuration for the prefered debugger. For more information on debugger settings, see the documentation [here](https://code.visualstudio.com/docs/editor/debugging)
-*   `settings.json`: Custom workspace settings for the project. For more infomation on workspace settings, see the documentation [here](https://code.visualstudio.com/docs/getstarted/settings).
+*   `launch.json`: The configuration for the preferred debugger. For more information on debugger settings, see the documentation [here](https://code.visualstudio.com/docs/editor/debugging)
+*   `settings.json`: Custom workspace settings for the project. For more information on workspace settings, see the documentation [here](https://code.visualstudio.com/docs/getstarted/settings).
 
 ###`assets`
 You will add things to this folder and should replace the starting file. All your assets for the visualization should be here. This includes the icon, any background images or other similar files.
 
-*   `icon.png`: The icon that appears under the Visualizations tab of Power BI. You chould change this to something more representative of your visualization.
+*   `icon.png`: The icon that appears under the Visualizations tab of Power BI. You should change this to something more representative of your visualization.
 
 ###`node_modules`
 This contains all of your dependencies managed by npm. You should not modify anything in this folder. You may have to reference files here in other configuration files, but otherwise you should not do anything with this folder.
@@ -64,12 +64,12 @@ This is where you will write the majority of your code. You can add as many file
 *   `visual.ts`: The starting file for generating your visualization. you can rename this file, but you will have to change some configurations.
 
 ###`style`
-This is where you will provide any styling your visualization needs. The styling language is [Less](http://lesscss.org/), meaning you can also provide raw CSS. You can add aditional files, though you will have to import them into `visual.less` or its equivalent, since the packager only accepts a single style file.
+This is where you will provide any styling your visualization needs. The styling language is [Less](http://lesscss.org/), meaning you can also provide raw CSS. You can add additional files, though you will have to import them into `visual.less` or its equivalent, since the packager only accepts a single style file.
 
 *   `visual.less`: The provided file for styling your visualization. You can rename this file (covered later).
 
 ###root
-Files on the root of your porject are all configuration files of one sort or another. You should not change any of the filenames in this directory, though feel free to add aditional files as needed.
+Files on the root of your project are all configuration files of one sort or another. You should not change any of the filenames in this directory, though feel free to add additional files as needed.
 
 *   `.npmignore`: The npmignore for the directory. For more information on npmignore, see the documentation [here](https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package).
 *   `capabilities.json`: Defines everything about your data binding. You will extensively modify this for most projects. We will talk about this quite a bit in the section on data binding.

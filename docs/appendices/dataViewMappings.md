@@ -14,7 +14,7 @@
 The main use case for this is things like the built-in Card visual.
 
 ##`table`
-The  `table` data mapping is quite simple. If you want to have rows of data to access, you will want to use the `table` data mapping. In  the  `table` data mapping, you specify the `rows` of data you want, like such:
+The `table` data mapping is quite simple. If you want to have rows of data to access, you will want to use the `table` data mapping. In the `table` data mapping, you specify the `rows` of data you want, like such:
 
 ```
 {
@@ -65,7 +65,7 @@ You have three options for what to specify inside of `rows`: `for`, `bind`, and 
 ```
 
 ####`for`
-`for` is much the same as `bind`. It tells Power BI that the fields in the role should be returned as part of the rows property of the DataView object. It differs from `bind` in that you can use it on data roles that allow more than one field within them. All of the fields will be included in the DataView object. `for` looks like:
+`for` is much the same as `bind`. It tells Power BI that the fields in the role should be returned as part of the rows property of the DataView object. It differs from `bind` in that you can use it on data roles that allow more than one field within them. All the fields will be included in the DataView object. `for` looks like:
 
 ```
 "rows": {
@@ -91,7 +91,7 @@ You have three options for what to specify inside of `rows`: `for`, `bind`, and 
 `rowCount` allows you to define the number of rows that the visual supports. This is an optional property. It has two properties, `preferred` and `supported`. `preferred` sets the preferred range for the number of rows the visual can handle. `supported` sets a hard range for number of rows supported by the visual, and defaults to the `preferred` values if not specified. Example usage is below.
 
 ```
-"rowcount":{
+"rowCount":{
     "preferred": {
         "min": 100,
         "max": 200

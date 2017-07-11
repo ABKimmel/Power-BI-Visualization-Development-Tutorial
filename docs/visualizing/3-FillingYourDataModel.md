@@ -1,8 +1,8 @@
 #Filling Your Data Model
 ---
-Now that we've defined a data model, we can begin to populate it with information from the `DataView`. This is the time when you should apply any transformations you want to apply to the incoming data before it gets sent to the visual generation code. Once the data leaves `dataExtraction()` it should only ever be read, unless you have split your extraction and your transformation steps into seperate functions.
+Now that we've defined a data model, we can begin to populate it with information from the `DataView`. This is the time when you should apply any transformations you want to apply to the incoming data before it gets sent to the visual generation code. Once the data leaves `dataExtraction()` it should only ever be read, unless you have split your extraction and your transformation steps into separate functions.
 
-In our case, we don't need to do any transformations, so we will just do our extraction in `dataExtraction()`. We want to create a `Category` object for each entry in our DataView. First though, we should check that all of the data roles we are expecting to be filled are filled. Since we are expecting there to be entries in both `categories` and `values`, we will check those. We also want to be sure that we have the smae number of values in both `categories` and in `values`. We will do so as such:
+In our case, we don't need to do any transformations, so we will just do our extraction in `dataExtraction()`. We want to create a `Category` object for each entry in our DataView. First though, we should check that all of the data roles we are expecting to be filled are filled. Since we are expecting there to be entries in both `categories` and `values`, we will check those. We also want to be sure that we have the same number of values in both `categories` and in `values`. We will do so as such:
 
 ```
 private dataExtraction(dataView: DataView) {
@@ -31,7 +31,7 @@ private dataExtraction(dataView: DataView): Categories {
 }
 ```
 
-Now to load the data into our data model. Something to watch out for is that all of the values you pull out of the `DataView` will have the type `PrimitiveValue`, so you will have to cast them to the thypes you defined in your data model. To do this, you should take the `.valueOf()` the `PrimitiveValue` and then cast it using the TypeScript `as DATATYPE`.
+Now to load the data into our data model. Something to watch out for is that all of the values you pull out of the `DataView` will have the type `PrimitiveValue`, so you will have to cast them to the types you defined in your data model. To do this, you should take the `.valueOf()` the `PrimitiveValue` and then cast it using the TypeScript `as DATATYPE`.
 
 ```
 private dataExtraction(dataView: DataView): Pi {
@@ -54,10 +54,10 @@ private dataExtraction(dataView: DataView): Pi {
 }
 ```
 
-Now that we've built the components of our `Pi` object, we can put it all together and return a `Pi` to our visual generation code.
+Now that we've built the components of our `Pie` object, we can put it all together and return a `Pie` to our visual generation code.
 
 ```
-private dataExtraction(dataView: DataView): Pi {
+private dataExtraction(dataView: DataView): Pie {
 
     ...
 
