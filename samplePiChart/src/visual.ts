@@ -25,22 +25,60 @@
  */
 
 module powerbi.extensibility.visual {
+
     "use strict";
     export class Visual implements IVisual {
-        private target: HTMLElement;
-        private updateCount: number;
+        private svg: d3.Selection<SVGElement>;
+        private chartContainer: d3.Selection<SVGElement>;
         private settings: VisualSettings;
 
         constructor(options: VisualConstructorOptions) {
-            console.log('Visual constructor', options);
-            this.target = options.element;
-            this.updateCount = 0;
+            this.svg = d3.select(options.element).append('svg');
+            this.chartContainer = this.svg.append('g');
         }
 
         public update(options: VisualUpdateOptions) {
+            let pie: Pie;
             if (options.dataViews.length > 0) {
-                this.dataExtraction(options.dataViews[0]);
+                pie = this.dataExtraction(options.dataViews[0]);
+            } else {
+                return;
             }
+
+            this.generateVisual(pie, options.viewport);
+        }
+
+        private generateVisual(data: Pie, viewport: IViewport) {
+            //making pie chart full size of visual viewport
+            let width = viewport.width;
+            let height = viewport.height;
+            let radius = Math.min(width, height) / 2;
+
+            //defining the vector element and centering the chart
+            this.svg.attr('width', width)
+                .attr('height', height);
+            this.chartContainer.attr('transform', 'translate(' + (width / 2) + ',' + (height / 2) + ')');
+
+            //defining the circle
+            let arc = d3.svg.arc()
+                .innerRadius(0)
+                .outerRadius(radius);
+
+            //trying casting to any to fix compilation error
+            let angles = d3.layout.pie()
+                .value(<any>function(d) { return d.measure })
+                .sort(null);
+
+            //removing the old pie chart slices
+            this.chartContainer.selectAll("*").remove();
+
+            //adding the new slices
+            let path = this.chartContainer.selectAll('path')
+                .data(angles(<any>data.slices))
+                .enter()
+                .append('path')
+                .attr('d', <any>arc)
+                .attr('fill', 'gray');
         }
 
         private static parseSettings(dataView: DataView): VisualSettings {

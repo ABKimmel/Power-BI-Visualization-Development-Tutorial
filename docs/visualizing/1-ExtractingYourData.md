@@ -38,6 +38,8 @@ Now we need to pass this function a `DataView`. In general, we need to do this e
 public update(options: VisualUpdateOptions) {
     if (options.dataViews.length > 0) {
         this.dataExtraction(options.dataViews[0]);
+    } else {
+        return;
     }
 }
 ```

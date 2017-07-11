@@ -21,7 +21,8 @@
         "icon": "assets/icon.png"
     },
     "externalJS": [
-        "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.js"
+        "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.js",
+        "node_modules/d3/d3.js"
     ],
     "style": "style/visual.less",
     "capabilities": "capabilities.json",
