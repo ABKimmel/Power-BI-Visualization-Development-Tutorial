@@ -53,7 +53,7 @@ Each object in the `categories` array has the following properties:
 |`format`|A deprecated property. The functionality has been moved to settings objects.|
 |`displayName`|The display name of the data field in question. Always a string.|
 |`queryName`| This is the query used to get the field. Always a string. Typically `DataSet.FieldName`.|
-|`expr`|An object representing the SQExpr that is prepresented by this column.|
+|`expr`|An object representing the SQExpr that is represented by this column.|
 |`index`|The position of the column in the query to the data model. Integer.|
 |`sort`|The direction of the sort applied on this column. Integer. `1` is ascending, `2` is descending. Only appears on grouping objects.|
 |`sortOrder`|The index of this column in the sort order. The lower the index, the earlier in the sequence the sort is applied. Integer. Only appears on grouping objects.|
@@ -79,7 +79,7 @@ Each object in the `values` array has the following properties:
 |`format`|A deprecated property. The functionality has been moved to settings objects.|
 |`displayName`|The display name of the data field in question. Always a string.|
 |`queryName`| This is the query used to get the field. Always a string. Typically `DataSet.FieldName`.|
-|`expr`|An object representing the SQExpr that is prepresented by this column.|
+|`expr`|An object representing the SQExpr that is represented by this column.|
 |`index`|The position of the column in the query to the data model. Integer.|
 |`isMeasure`|Whether this column is a measure or not. Boolean.|
 |`aggregates`|An object containing the aggregates computed for the column. This attribute will only appear on measures of numeric type. In general, this will have two attributes: `minLocal` and `maxLocal`, which will have the min and max values of the column, respectively.|
