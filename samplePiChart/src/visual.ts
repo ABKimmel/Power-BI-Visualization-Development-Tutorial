@@ -38,7 +38,6 @@ module powerbi.extensibility.visual {
         }
 
         public update(options: VisualUpdateOptions) {
-            console.log("VisualUpdateOptions", options);
             if (options.dataViews.length > 0) {
                 this.dataExtraction(options.dataViews[0]);
             }
@@ -48,10 +47,40 @@ module powerbi.extensibility.visual {
             return VisualSettings.parse(dataView) as VisualSettings;
         }
 
-        private dataExtraction(dataView: DataView) {
-            let categories = dataView.categorical.categories;
-            let values = dataView.categorical.values;
-            console.log("categories", categories, "values", values);
+        /*
+         * This function extracts the data from the given DataView and passes it into the data model defined in
+         * dataInterfaces.ts
+         */
+        private dataExtraction(dataView: DataView): Pi {
+            let categoryColumn = dataView.categorical.categories[0];
+            let categoryValues = categoryColumn.values;
+            let valueColumn = dataView.categorical.values[0];
+            let valueValues = valueColumn.values;
+            if (categoryValues.length < 1 || valueValues.length !== categoryValues.length) {
+                return {
+                    slices: [],
+                    sumOfMeasures: 0
+                };
+            }
+
+            let piSlices = [];
+            let sumOfMeasures = 0;
+            for (let i = 0; i < categoryValues.length; i++) {
+                let category = categoryValues[i].valueOf() as string | number;
+                let measure = valueValues[i].valueOf() as number;
+                sumOfMeasures += measure;
+
+                let piSlice = {
+                    category,
+                    measure
+                }
+                piSlices.push(piSlice);
+            }
+
+            return {
+                slices: piSlices,
+                sumOfMeasures: sumOfMeasures
+            }
         }
 
         /**

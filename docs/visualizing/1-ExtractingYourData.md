@@ -46,10 +46,14 @@ If you run your visual now, you will see the `DataView` being logged every time 
 
 ```
 private dataExtraction(dataView : DataView) {
-    let categories = dataView.categorical.categories;
-    let values = dataView.categorical.values;
-    console.log("categories", categories, "values", values);
+    let categoryColumn = dataView.categorical.categories[0];
+    let categoryValues = categoryColumn.values;
+    let valueColumn = dataView.categorical.values[0];
+    let valueValues = valueColumn.values;
+    console.log("categories", categoryValues, "values", valueValues);
 }
 ```
 
 Before we go any further with this, we want to think about defining a data model for our data.
+
+**If you want more information and examples of how to extract your data from other data mappings, see the [Data Extraction appendix](/docs/appendices/DataExtraction.md).**
