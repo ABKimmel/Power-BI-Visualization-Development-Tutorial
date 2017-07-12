@@ -40,12 +40,6 @@ module powerbi.extensibility.visual {
         }
 
         public update(options: VisualUpdateOptions) {
-            try {
-                Visual.throwNewError();
-            } catch (e) {
-                console.error(e);
-                return;
-            }
             let pie: Pie;
             if (options.dataViews.length > 0) {
                 pie = this.dataExtraction(options.dataViews[0]);
@@ -54,10 +48,6 @@ module powerbi.extensibility.visual {
             }
 
             this.generateVisual(pie, options.viewport);
-        }
-
-        private static throwNewError() {
-            throw new Error();
         }
 
         private generateVisual(data: Pie, viewport: IViewport) {

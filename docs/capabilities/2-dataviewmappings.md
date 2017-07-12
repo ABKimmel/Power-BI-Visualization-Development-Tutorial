@@ -88,7 +88,7 @@ Data mappings are how we define the structure of the data in the DataViews we ge
 "categories": {
     "for|bind": { ... },
     "dataReductionAlgorithm": { ... }
-}s
+}
 ```
 
 or

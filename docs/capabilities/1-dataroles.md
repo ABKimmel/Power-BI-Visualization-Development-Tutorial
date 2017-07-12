@@ -11,13 +11,19 @@ You can see an example of the minimal data role in the default visual if you loo
 A complete data role will look like this:
 
 ```
-{
-  "displayName": "DisplayName",
-  "name": "displayname",
-  "kind": "Grouping|Measure|GroupingOrMeasure",
-  "requiredTypes": [ { ... }, ... ],
-  "description": "This is an example field."
-}
+"dataRoles": [
+    {
+      "displayName": "DisplayName",
+      "name": "displayname",
+      "kind": "Grouping|Measure|GroupingOrMeasure",
+      "requiredTypes": [ { ... }, ... ],
+      "description": "This is an example field."
+    },
+    { ... },
+
+    ...
+    
+]
 ```
 
 ###`displayName`

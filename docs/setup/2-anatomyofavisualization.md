@@ -12,26 +12,26 @@ The file structure of the default plugin as of 7/5/2017. This is also after `npm
         |   +-- schema.capabilities.json
         |   +-- schema.dependencies.json
         |   +-- schema.pbiviz.json
-        |   +-- schema.stringResources.json
+        \   +-- schema.stringResources.json
 |   +-- .vscode
     |   +-- launch.json
-    |   +-- settings.json
+    \   +-- settings.json
 |   +-- assets
-    |   +-- icon.png
+    \   +-- icon.png
 |   +-- node_modules
     |   +-- powerbi-visuals-utils-dataviewutils
-    |   +-- ...other installed node modules...
+    \   +-- ...other installed node modules...
 |   +-- src
     |   +-- settings.ts
-    |   +-- visual.ts
+    \   +-- visual.ts
 |   +-- style
-    |   +-- visual.less
+    \   +-- visual.less
 |   +-- .npmignore
 |   +-- capabilities.json
 |   +-- package.json
 |   +-- pbiviz.json
 |   +-- tsconfig.json
-|   +-- tslint.json
+\   +-- tslint.json
 ```
 
 ###`.api`
@@ -66,7 +66,7 @@ This is where you will write the majority of your code. You can add as many file
 ###`style`
 This is where you will provide any styling your visualization needs. The styling language is [Less](http://lesscss.org/), meaning you can also provide raw CSS. You can add additional files, though you will have to import them into `visual.less` or its equivalent, since the packager only accepts a single style file.
 
-*   `visual.less`: The provided file for styling your visualization. You can rename this file (covered later).
+*   `visual.less`: The provided file for styling your visualization. You can rename this file, just be sure to update the entry in `pbiviz.json`.
 
 ###root
 Files on the root of your project are all configuration files of one sort or another. You should not change any of the filenames in this directory, though feel free to add additional files as needed.
