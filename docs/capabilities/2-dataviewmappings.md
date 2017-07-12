@@ -1,4 +1,4 @@
-#`dataViewMappings`
+#DataView Mappings
 ---
 The `dataViewMappings` property of `capabilities.json` does two different things: define how your individual data roles relate to each other, and let you provide some conditions for your data roles.
 
@@ -241,3 +241,7 @@ Remember that we are using `bind` because the role is limited to one field. Next
     }
 }
 ```
+
+---
+##**[Continue to the next section, Additional Settings]()**
+---

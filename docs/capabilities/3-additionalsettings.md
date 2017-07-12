@@ -128,3 +128,7 @@ We are not going to implement advanced edit mode in our Pi chart, so we will add
 ```
 "advancedEditModeSupport": 0
 ```
+
+---
+##**[Continue to the next section, Extracting Your Data]()**
+---

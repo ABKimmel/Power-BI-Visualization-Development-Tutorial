@@ -77,3 +77,8 @@ Files on the root of your project are all configuration files of one sort or ano
 *   `pbiviz.json`: The configuration file for the `pbiviz package` process. Contains information about visualization name, version, and all of the various components that go into packaging a `.pbiviz`.
 *   `tsconfig.json`: Defines the options and files that should be fed to the TypeScript compiler. When you add additional `.ts` files, you will need to add them to `tsconfig.json`. For more information on configuring the TypeScript compiler, see the documentation [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 *   `tslint.json`: Defines which rules get run by the linter. Feel free to modify as you see fit. More documentation is available [here](https://palantir.github.io/tslint/usage/tslint-json/).
+
+
+---
+##**[Continue to the next section, Adding External Libraries]()**
+---

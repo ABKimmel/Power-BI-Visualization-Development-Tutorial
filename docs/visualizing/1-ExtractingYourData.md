@@ -59,3 +59,7 @@ private dataExtraction(dataView : DataView) {
 Before we go any further with this, we want to think about defining a data model for our data.
 
 **If you want more information and examples of how to extract your data from other data mappings, see the [Data Extraction appendix](/docs/appendices/DataExtraction.md).**
+
+---
+##**[Continue to the next section, Defining Your Data Model]()**
+---

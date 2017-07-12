@@ -39,6 +39,8 @@ Once you have created the new visual template, the only thing left to do is view
 2.   If this is the first time you have run `pbiviz package`, it will create the `dist` folder in the root directory. The generated `samplePieChart.pbiviz` will be in the `dist` folder.
 3.   Now import your visual into the Power BI desktop client. Instructions on importing a custom visual can be found [here](https://powerbi.microsoft.com/en-us/documentation/powerbi-custom-visuals-use/).
 
-
 ---
+##**[Continue to the next section, Anatomy of a Visualization]()**
+---
+
 Official instructions for setting up your environment can be found [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/README.md#installation).

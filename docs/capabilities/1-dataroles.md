@@ -22,7 +22,7 @@ A complete data role will look like this:
     { ... },
 
     ...
-    
+
 ]
 ```
 
@@ -156,3 +156,8 @@ You can see that we've changed a couple of things:
 
 ---
 The official documentation for data roles is available [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/Capabilities.md#define-the-data-fields-your-visual-expects---dataroles). Be warned that some of it is out of date and was very limited to begin with.
+
+
+---
+##**[Continue to the next section, DataView Mappings]()**
+---

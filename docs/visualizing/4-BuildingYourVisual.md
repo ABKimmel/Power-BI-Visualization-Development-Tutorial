@@ -88,3 +88,7 @@ private generateVisual(data: Pie, viewport: IViewport) {
 ![A very gray Pie chart.](/img/UncoloredPieChart.png)
 
 As you can see, we've got ourselves a very gray pie chart. That's not very helpful, now, is it? In the next section, we'll cover adding theme colors to your visual.
+
+---
+##**[Continue to the next section, Coloring Your Visual]()**
+---

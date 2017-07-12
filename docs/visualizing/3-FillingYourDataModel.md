@@ -67,3 +67,7 @@ private dataExtraction(dataView: DataView): Pie {
     }
 }
 ```
+
+---
+##**[Continue to the next section, Building Your Visual]()**
+---

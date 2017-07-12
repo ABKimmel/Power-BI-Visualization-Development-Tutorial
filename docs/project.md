@@ -10,26 +10,27 @@ After the visual is sorted out, we'll look at settings and how they work. We'll 
 
 ##Table of Contents
 *   Setup
-    *   Setting Up Your Project
-    *   Anatomy of a Visualization
-    *   Adding External Libraries
+    *   [Setting Up Your Project]()
+    *   [Anatomy of a Visualization]()
+    *   [Adding External Libraries]()
 *   Capabilities
-    *   Data Roles
-    *   DataView Mappings
-    *   Sorting and Other Configurations
+    *   [Data Roles]()
+    *   [DataView Mappings]()
+    *   [Sorting and Other Configurations]()
 *   Visualizing Your Data
-    *   Extracting Your Data
-    *   Defining Your Data Model
-    *   Filling Your Data Model
-    *   Building a Visual
-    *   Coloring Your Visual
+    *   [Extracting Your Data]()
+    *   [Defining Your Data Model]()
+    *   [Filling Your Data Model]()
+    *   [Building a Visual]()
+    *   [Coloring Your Visual]()
 *   Advanced Features
-    *   Adding Settings
-    *   Adding Tooltips
+    *   [Adding Settings]()
+    *   [Adding Tooltips]()
 *   Appendices
-    *   Anatomy of a `DataView`
-    *   `dataViewMappings`
-    *   `VisualUpdateOptions`
+    *   [Anatomy of a `DataView`]()
+    *   [`dataViewMappings`]()
+    *   [`VisualUpdateOptions`]()
+    *   [Data Extraction]()
 
 ---
 If you have any questions or find an error, please open an issue. I will try to answer questions and fix errors as soon as I can. If you want to elaborate on something, feel free to open a pull request, and I will review it as soon as I can.
