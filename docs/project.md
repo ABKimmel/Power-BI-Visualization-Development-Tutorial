@@ -8,27 +8,27 @@ Next, we'll talk about accessing your data based on how you've set up your data 
 
 After the basic visual is sorted out, we'll look at more advanced features you can add to your visualization. This includes adding settings to allow users to customize their experience, adding tooltips to convey additional information and then a brief discussion of performance.
 
-You will also find a large set of appendices that contain a lot of information we didn't touch in the step-by-step tutorial. If you don't see something covered in the step-by-step, look through the appendices for the information you want. If you can't find it there, submit an issue and I'll look into adding the desired information as soon as I can. 
+You will also find a large set of appendices that contain a lot of information we didn't touch in the step-by-step tutorial. If you don't see something covered in the step-by-step, look through the appendices for the information you want. If you can't find it there, submit an issue and I'll look into adding the desired information as soon as I can.
 
 ##Table of Contents
-*   Setup
+*   ###Setup
     *   [Setting Up Your Project](/docs/setup/1-Setup.md)
     *   [Anatomy of a Visualization](/docs/setup/2-AnatomyOfAVisualization.md)
     *   [Adding External Libraries](/docs/setup/3-ExternalLibraries.md)
-*   Capabilities
+*   ###Capabilities
     *   [Data Roles](/docs/capabilities/1-DataRoles.md)
     *   [DataView Mappings](/docs/capabilities/2-DataViewMappings.md)
     *   [Sorting and Other Configurations](/docs/capabilities/3-AdditionalSettings.md)
-*   Visualizing Your Data
+*   ###Visualizing Your Data
     *   [Extracting Your Data](/docs/visualizing/1-ExtractingYourData.md)
     *   [Defining Your Data Model](/docs/visualizing/2-DefiningYourDataModel.md)
     *   [Filling Your Data Model](/docs/visualizing/3-FillingYourDataModel.md)
     *   [Building a Visual](/docs/visualizing/4-BuildingYourVisual.md)
     *   [Coloring Your Visual](/docs/visualizing/5-ColoringYourVisual.md)
-*   Advanced Features
+*   ###Advanced Features
     *   [Adding Settings](/docs/advanced/)
     *   [Adding Tooltips](/docs/advanced/)
-*   Appendices
+*   ###Appendices
     *   [Anatomy of a `DataView`](/docs/appendices/AnatomyOfADataView.md)
     *   [`dataViewMappings`](/docs/appendices/dataViewMappings.md)
     *   [`VisualUpdateOptions`](/docs/appendices/VisualUpdateOptions.md)
