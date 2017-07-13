@@ -159,5 +159,5 @@ The official documentation for data roles is available [here](https://github.com
 
 
 ---
-##**[Continue to the next section, DataView Mappings]()**
+##**[Continue to the next section, DataView Mappings](/docs/capabilities/2-DataViewMappings.md)**
 ---

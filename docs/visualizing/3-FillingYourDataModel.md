@@ -69,5 +69,5 @@ private dataExtraction(dataView: DataView): Pie {
 ```
 
 ---
-##**[Continue to the next section, Building Your Visual]()**
+##**[Continue to the next section, Building Your Visual](/docs/visualizing/4-BuildingYourVisual)**
 ---

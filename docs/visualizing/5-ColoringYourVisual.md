@@ -84,5 +84,5 @@ Once you've done all that you should end up with pie chart that looks something 
 Obviously, our visual is very simple and is missing a lot of features you would want to put on a visual you are giving to users, but we've covered all the basics at this point. If you are interested in learning about adding user-controlled settings or tooltips to your visualization as well as other advanced topics, feel free to proceed to the advanced section.
 
 ---
-##**[Continue to the advanced topics]()**
+##**[Continue to the advanced topics](/docs/advanced/1-AdvancedTopics.md)**
 ---

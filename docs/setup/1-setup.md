@@ -40,7 +40,7 @@ Once you have created the new visual template, the only thing left to do is view
 3.   Now import your visual into the Power BI desktop client. Instructions on importing a custom visual can be found [here](https://powerbi.microsoft.com/en-us/documentation/powerbi-custom-visuals-use/).
 
 ---
-##**[Continue to the next section, Anatomy of a Visualization]()**
+##**[Continue to the next section, Anatomy of a Visualization](/docs/setup/2-AnatomyOfAVisualization.md)**
 ---
 
 Official instructions for setting up your environment can be found [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/README.md#installation).

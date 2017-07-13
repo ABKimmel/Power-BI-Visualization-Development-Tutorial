@@ -47,5 +47,5 @@ The last step in importing any library is to add it to the `externalJS` section 
 **Don't forget to run `npm install` whenever you change `package.json`**
 
 ---
-##**[Continue to the next section, Data Roles]()**
+##**[Continue to the next section, Data Roles](/docs/capabilities/1-DataRoles.md)**
 ---

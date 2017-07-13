@@ -90,5 +90,5 @@ private generateVisual(data: Pie, viewport: IViewport) {
 As you can see, we've got ourselves a very gray pie chart. That's not very helpful, now, is it? In the next section, we'll cover adding theme colors to your visual.
 
 ---
-##**[Continue to the next section, Coloring Your Visual]()**
+##**[Continue to the next section, Coloring Your Visual](/docs/visualizing/5-ColoringYourVisual.md)**
 ---

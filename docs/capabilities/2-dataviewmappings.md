@@ -243,5 +243,5 @@ Remember that we are using `bind` because the role is limited to one field. Next
 ```
 
 ---
-##**[Continue to the next section, Additional Settings]()**
+##**[Continue to the next section, Additional Settings](/docs/capabilities/3-AdditionalSettings.md)**
 ---

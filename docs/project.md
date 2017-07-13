@@ -10,27 +10,27 @@ After the visual is sorted out, we'll look at settings and how they work. We'll 
 
 ##Table of Contents
 *   Setup
-    *   [Setting Up Your Project]()
-    *   [Anatomy of a Visualization]()
-    *   [Adding External Libraries]()
+    *   [Setting Up Your Project](/docs/setup/1-Setup.md)
+    *   [Anatomy of a Visualization](/docs/setup/2-AnatomyOfAVisualization.md)
+    *   [Adding External Libraries](/docs/setup/3-ExternalLibraries.md)
 *   Capabilities
-    *   [Data Roles]()
-    *   [DataView Mappings]()
-    *   [Sorting and Other Configurations]()
+    *   [Data Roles](/docs/capabilities/1-DataRoles.md)
+    *   [DataView Mappings](/docs/capabilities/2-DataViewMappings.md)
+    *   [Sorting and Other Configurations](/docs/capabilities/3-AdditionalSettings.md)
 *   Visualizing Your Data
-    *   [Extracting Your Data]()
-    *   [Defining Your Data Model]()
-    *   [Filling Your Data Model]()
-    *   [Building a Visual]()
-    *   [Coloring Your Visual]()
+    *   [Extracting Your Data](/docs/visualizing/1-ExtractingYourData.md)
+    *   [Defining Your Data Model](/docs/visualizing/2-DefiningYourDataModel.md)
+    *   [Filling Your Data Model](/docs/visualizing/3-FillingYourDataModel.md)
+    *   [Building a Visual](/docs/visualizing/4-BuildingYourVisual.md)
+    *   [Coloring Your Visual](/docs/visualizing/5-ColoringYourVisual.md)
 *   Advanced Features
-    *   [Adding Settings]()
-    *   [Adding Tooltips]()
+    *   [Adding Settings](/docs/advanced/)
+    *   [Adding Tooltips](/docs/advanced/)
 *   Appendices
-    *   [Anatomy of a `DataView`]()
-    *   [`dataViewMappings`]()
-    *   [`VisualUpdateOptions`]()
-    *   [Data Extraction]()
+    *   [Anatomy of a `DataView`](/docs/appendices/AnatomyOfADataView.md)
+    *   [`dataViewMappings`](/docs/appendices/dataViewMappings.md)
+    *   [`VisualUpdateOptions`](/docs/appendices/VisualUpdateOptions.md)
+    *   [Data Extraction](/docs/appendices/DataExtraction.md)
 
 ---
 If you have any questions or find an error, please open an issue. I will try to answer questions and fix errors as soon as I can. If you want to elaborate on something, feel free to open a pull request, and I will review it as soon as I can.

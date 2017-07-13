@@ -80,5 +80,5 @@ Files on the root of your project are all configuration files of one sort or ano
 
 
 ---
-##**[Continue to the next section, Adding External Libraries]()**
+##**[Continue to the next section, Adding External Libraries](/docs/setup/3-ExternalLibraries.md)**
 ---

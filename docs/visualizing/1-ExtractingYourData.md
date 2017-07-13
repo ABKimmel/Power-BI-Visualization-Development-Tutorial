@@ -61,5 +61,5 @@ Before we go any further with this, we want to think about defining a data model
 **If you want more information and examples of how to extract your data from other data mappings, see the [Data Extraction appendix](/docs/appendices/DataExtraction.md).**
 
 ---
-##**[Continue to the next section, Defining Your Data Model]()**
+##**[Continue to the next section, Defining Your Data Model](/docs/visualizing/2-DefiningYourDataModel.md)**
 ---
