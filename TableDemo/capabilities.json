@@ -1,84 +1,57 @@
 {
     "dataRoles": [
-        {
-            "displayName": "Category Data",
-            "name": "category",
-            "kind": "Grouping"
-        },
-        {
-            "displayName": "Measure Data",
-            "name": "measure",
-            "kind": "Measure"
-        }
-    ],
-    "objects": {
-        "dataPoint": {
-            "displayName": "Data colors",
-            "properties": {
-                "defaultColor": {
-                    "displayName": "Default color",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "showAllDataPoints": {
-                    "displayName": "Show all",
-                    "type": {
-                        "bool": true
-                    }
-                },
-                "fill": {
-                    "displayName": "Fill",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "fillRule": {
-                    "displayName": "Color saturation",
-                    "type": {
-                        "fill": {}
-                    }
-                },
-                 "fontSize": {
-                    "displayName": "Text Size",
-                    "type": {
-                        "formatting": {
-                            "fontSize": true
-                        }
-                    }
-                }
-            }
-        }
+    {
+        "displayName": "Column One Data",
+        "name": "c1",
+        "kind": "Grouping"
     },
+    {
+        "displayName": "Column Two Data",
+        "name": "c2",
+        "kind": "Measure"
+    },
+    {
+        "displayName": "Column Three Data",
+        "name": "c3",
+        "kind": "Measure"
+    },
+    {
+        "displayName": "Column Four Data",
+        "name": "c4",
+        "kind": "Measure"
+    } ],
     "dataViewMappings": [
+    {
+        "table":
         {
-            "categorical": {
-                "categories": {
-                    "for": {
-                        "in": "category"
-                    },
-                    "dataReductionAlgorithm": {
-                        "top": {}
+            "rows":
+            {
+                "select": [
+                {
+                    "for":
+                    {
+                        "in": "c1"
                     }
                 },
-                "values": {
-                    "select": [
-                        {
-                            "bind": {
-                                "to": "measure"
-                            }
-                        }
-                    ]
-                }
+                {
+                    "for":
+                    {
+                        "in": "c2"
+                    }
+                },
+                {
+                    "for":
+                    {
+                        "in": "c3"
+                    }
+                },
+                {
+                    "for":
+                    {
+                        "in": "c4"
+                    }
+                } ]
             }
         }
-    ]
+    } ]
 }
