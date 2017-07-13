@@ -1,2 +1,2 @@
-samplePiChart/node_modules
-samplePiChart/.tmp
+*/node_modules
+*/.tmp
