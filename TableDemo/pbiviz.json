@@ -1,8 +1,8 @@
 {
   "visual": {
-    "name": "tableMappingDemo",
-    "displayName": "TableMappingDemo",
-    "guid": "tableMappingDemo1D22FD665F5A47AEBC71CEA70B114547",
+    "name": "tableDemo",
+    "displayName": "TableDemo",
+    "guid": "tableDemoB54606E55D1D4701BD3B52447DC248CD",
     "visualClassName": "Visual",
     "version": "1.0.0",
     "description": "",

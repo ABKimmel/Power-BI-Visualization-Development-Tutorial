@@ -1,12 +1,14 @@
-#Sample Pi Chart Project
+#Sample Pie Chart Project
 ---
-This repo will walk you through the creation of a Pi chart visualization. We'll start with setting up the project, then pause and look at the files in the default project for a little bit. After that, we'll cover using external libraries in your visualizations.
+This documentation will walk you through the creation of a pie chart visualization. We'll start with setting up the project, then pause and look at the files in the default project for a little bit. After that, we'll cover using external libraries in your visualizations.
 
 Once all of that setup is completed, we will move on to actually creating the visualization. The first thing to do when creating a visualization is to figure out what your data bindings are going to look like. We will spend quite a bit of time discussisng what your options are, when they are appropriate, and how best to use them.
 
 Next, we'll talk about accessing your data based on how you've set up your data bindings. This is relatively straight forward, so we won't linger too long on it. After we've accessed the data, we'll create the visual. Since the visual itself isn't the focus of the project, this will be copy and paste for those of you following along at home, but if you were creating your own visual, you would probably spend a fair bit of time writing this out. We will also talk about coloring your visual in this section.
 
-After the visual is sorted out, we'll look at settings and how they work. We'll implement a COUPLE OF SETTINGS to show you some of what you can do. After that, the only thing left to do is add tooltips. We'll cover using the data with which you build your visual in your tooltip, as well as adding a tooltip field so users can add information to the tooltip if they want. Then we're done!
+After the basic visual is sorted out, we'll look at more advanced features you can add to your visualization. This includes adding settings to allow users to customize their experience, adding tooltips to convey additional information and then a brief discussion of performance.
+
+You will also find a large set of appendices that contain a lot of information we didn't touch in the step-by-step tutorial. If you don't see something covered in the step-by-step, look through the appendices for the information you want. If you can't find it there, submit an issue and I'll look into adding the desired information as soon as I can. 
 
 ##Table of Contents
 *   Setup
