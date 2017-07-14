@@ -32,14 +32,19 @@ module powerbi.extensibility.visual {
         private chartContainer: d3.Selection<SVGElement>;
         private settings: VisualSettings;
         private colorPalette: IColorPalette;
+        private host: IVisualHost;
+        private selectionManager: ISelectionManager;
 
         constructor(options: VisualConstructorOptions) {
             this.svg = d3.select(options.element).append('svg');
             this.chartContainer = this.svg.append('g');
-            this.colorPalette = options.host.colorPalette;
+            this.host = options.host;
+            this.colorPalette = this.host.colorPalette;
+            this.selectionManager = this.host.createSelectionManager();
         }
 
         public update(options: VisualUpdateOptions) {
+            console.log(options);
             let pie: Pie;
             if (options.dataViews.length > 0) {
                 pie = this.dataExtraction(options.dataViews[0]);
@@ -73,6 +78,7 @@ module powerbi.extensibility.visual {
 
             //removing the old pie chart slices
             this.chartContainer.selectAll("*").remove();
+            let selectionManager = this.selectionManager;
 
             //adding the new slices
             let path = this.chartContainer.selectAll('path')
@@ -80,7 +86,11 @@ module powerbi.extensibility.visual {
                 .enter()
                 .append('path')
                 .attr('d', <any>arc)
-                .attr('fill', function(d) { return (d.data as any).color });
+                .attr('fill', function(d) { return (d.data as any).color })
+                .on('click', function(d) {
+                    selectionManager.select((d.data as any).selectionID);
+                    d3.select(this).attr("fill", "#F0F0F0");
+                });
         }
 
         private static parseSettings(dataView: DataView): VisualSettings {
@@ -114,7 +124,10 @@ module powerbi.extensibility.visual {
                 let pieSlice = {
                     category,
                     measure,
-                    color
+                    color,
+                    selectionID: this.host.createSelectionIdBuilder()
+                        .withCategory(categoryColumn, i)
+                        .createSelectionId()
                 }
                 pieSlices.push(pieSlice);
             }

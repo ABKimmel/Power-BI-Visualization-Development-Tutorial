@@ -165,6 +165,18 @@ or
 
 `for`, `bind`, and `select` are as above. The values here will show up in the values property of the DataView object.
 
+`values` also offers you the ability to group your values along a second axis by using a data role other than your categorical roles. The `group` attribute functions as a wrapper for the other options for `values` given above.
+
+```
+"values":
+{
+    "group": {
+        "by":"groupingDataRole",
+        "select|for|bind": ...
+    }
+}
+``
+
 ##`dataReductionAlgorithm`
 The `dataReductionAlgorithm` allows you limited control to specify the behavior of Power BI when there are more records than a certain threshold. THis lets you set the threshold and the behavior to a limited extent. There are four reduction algorithms from which you can choose. The algorithms are `top`, `bottom`, `sample`, and `window`. Please note that no matter what you specify for `count`, Power BI will not return more than 30,000 entries to your visual. A `dataReductionAlgorithm` definition looks like:
 
