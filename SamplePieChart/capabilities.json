@@ -21,33 +21,28 @@
     } ],
     "objects":
     {
-        "dataPoint":
+        "chartOpacity":
         {
-            "displayName": "Data colors",
+            "displayName": "Chart Opacity",
+            "description": "Defines the transparency of the chart as a percentage.",
             "properties":
             {
-                "defaultColor":
+                "opacity":
                 {
-                    "displayName": "Default color",
+                    "displayName": "Opacity",
                     "type":
                     {
-                        "fill":
-                        {
-                            "solid":
-                            {
-                                "color": true
-                            }
-                        }
+                        "numeric": true
                     }
-                },
-                "showAllDataPoints":
-                {
-                    "displayName": "Show all",
-                    "type":
-                    {
-                        "bool": true
-                    }
-                },
+                }
+            }
+        },
+        "categoryColors":
+        {
+            "displayName": "Category Colors",
+            "description": "Define the colors of your categories.",
+            "properties":
+            {
                 "fill":
                 {
                     "displayName": "Fill",
@@ -59,26 +54,6 @@
                             {
                                 "color": true
                             }
-                        }
-                    }
-                },
-                "fillRule":
-                {
-                    "displayName": "Color saturation",
-                    "type":
-                    {
-                        "fill":
-                        {}
-                    }
-                },
-                "fontSize":
-                {
-                    "displayName": "Text Size",
-                    "type":
-                    {
-                        "formatting":
-                        {
-                            "fontSize": true
                         }
                     }
                 }

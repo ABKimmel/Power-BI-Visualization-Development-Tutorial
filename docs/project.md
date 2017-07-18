@@ -26,7 +26,7 @@ You will also find a large set of appendices that contain a lot of information w
     *   [Building a Visual](/docs/visualizing/4-BuildingYourVisual.md)
     *   [Coloring Your Visual](/docs/visualizing/5-ColoringYourVisual.md)
 *   ###Advanced Features
-    *   [Adding Settings](/docs/advanced/)
+    *   [Adding Settings](/docs/advanced/SettingsDefinitions.md)
     *   [Adding Tooltips](/docs/advanced/)
 *   ###Appendices
     *   [Anatomy of a `DataView`](/docs/appendices/AnatomyOfADataView.md)

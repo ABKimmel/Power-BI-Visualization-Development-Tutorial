@@ -116,6 +116,8 @@ private generateVisual(data: Pie, viewport: IViewport) {
 
 Now, if you click on a pie slice, you will see that the data has been filtered to the category of that slice. It's also important to note that the visual will not recive a call to `update()`, so you will have to explicitly update your visual if you must.
 
+You can also pass `ISelectionManager` an array of selection IDs if you want to enable multiple selection. 
+
 The next step is to add visual feedback. It is very important for the consumer to know right away that they've selected a subsection of the data. I've implemented this in a very crude manner, so you should put much more thought into how you provide visual feedback for your visuals.
 
 ```

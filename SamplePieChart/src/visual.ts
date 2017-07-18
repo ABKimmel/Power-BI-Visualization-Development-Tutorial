@@ -30,10 +30,20 @@ module powerbi.extensibility.visual {
     export class Visual implements IVisual {
         private svg: d3.Selection<SVGElement>;
         private chartContainer: d3.Selection<SVGElement>;
-        private settings: VisualSettings;
         private colorPalette: IColorPalette;
         private host: IVisualHost;
         private selectionManager: ISelectionManager;
+        private pie: Pie;
+        private opacity: number;
+
+        private static CategoryColorsPropertyIdentifiers: DataViewObjectPropertyIdentifier = {
+            objectName: "categoryColors",
+            propertyName: "fill"
+        }
+        private static ChartOpacityPropertyIdentifiers: DataViewObjectPropertyIdentifier = {
+            objectName: "chartOpacity",
+            propertyName: "opacity"
+        }
 
         constructor(options: VisualConstructorOptions) {
             this.svg = d3.select(options.element).append('svg');
@@ -44,15 +54,13 @@ module powerbi.extensibility.visual {
         }
 
         public update(options: VisualUpdateOptions) {
-            console.log(options);
-            let pie: Pie;
             if (options.dataViews.length > 0) {
-                pie = this.dataExtraction(options.dataViews[0]);
+                this.pie = this.dataExtraction(options.dataViews[0]);
             } else {
                 return;
             }
 
-            this.generateVisual(pie, options.viewport);
+            this.generateVisual(this.pie, options.viewport);
         }
 
         private generateVisual(data: Pie, viewport: IViewport) {
@@ -93,9 +101,6 @@ module powerbi.extensibility.visual {
                 });
         }
 
-        private static parseSettings(dataView: DataView): VisualSettings {
-            return VisualSettings.parse(dataView) as VisualSettings;
-        }
 
         /*
          * This function extracts the data from the given DataView and passes it into the data model defined in
@@ -144,7 +149,62 @@ module powerbi.extensibility.visual {
          *
          */
         public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
-            return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
+            let instanceEnumeration: VisualObjectInstanceEnumeration = [];
+
+            if (options.objectName === Visual.ChartOpacityPropertyIdentifiers.objectName) {
+                this.enumerateChartOpacity(instanceEnumeration);
+            } else if (options.objectName === Visual.CategoryColorsPropertyIdentifiers.objectName) {
+                this.enumerateCategoryProperties(instanceEnumeration);
+            }
+            return instanceEnumeration;
+        }
+
+        private enumerateCategoryProperties(instanceEnumeration: VisualObjectInstance[]): void {
+            let slices = this.pie.slices;
+            if (!slices || slices.length < 1) {
+                return;
+            }
+
+            slices.forEach((slice: PieSlice) => {
+                let selectionID: ISelectionId = slice.selectionID;
+                let displayName: string = "" + slice.category;
+
+                instanceEnumeration.push({
+                    displayName,
+                    objectName: Visual.CategoryColorsPropertyIdentifiers.objectName,
+                    selector: (selectionID as powerbi.visuals.ISelectionId).getSelector(),
+                    properties: {
+                        fill: {
+                            solid: {
+                                color: slice.color
+                            }
+                        }
+                    }
+
+                })
+
+            })
+        }
+
+        private enumerateChartOpacity(instanceEnumeration: VisualObjectInstance[]) {
+            instanceEnumeration.push({
+                displayName: "Opacity",
+                objectName: Visual.ChartOpacityPropertyIdentifiers.objectName,
+                selector: null,
+                properties: {
+                    opacity: {
+                        numeric: this.opacity || 100
+                    }
+                },
+                validValues: {
+                    opacity: {
+                        numberRange: {
+                            min: 10,
+                            max: 100
+                        }
+                    }
+                }
+            })
         }
     }
 }
