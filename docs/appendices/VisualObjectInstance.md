@@ -8,7 +8,7 @@ When you are [enumerating your settings](/docs/advanced/SettingsEnumeration.md),
 |`objectName`|`string`|The name of the object being defined by this `VisualObjectInstance`. This should match an object you have defined in `capabilities.json`.|
 |`displayName`|`string`|The name you want to be displayed to the user.|
 |`properties`|`object`|The properties you wish to define. See below.|
-|`selector`|`Selector`|The selector that identifies a data point. This can be gotten by: `(datapoint.selectionId as powerbi.visuals.ISelectionId).getSelector()`. Can also be set to `null` if there is not relevant selection ID.|
+|`selector`|`Selector`|The selector that identifies a data point. See below.|
 |`validValues`|`object`|Optional. Defines a valid range of values for the given properties. See below.|
 |`containerIdx`|`number`|Optional. The index of this object in the external `VisualObjectInstanceEnumeration` or array of `VisualObjectInstance`|
 
@@ -26,6 +26,17 @@ The basic usage of `VisualObjectInstance` is as such:
 
 }
 ```
+
+##`selector`
+The selector identifies which data point the object is tied to. You can retrieve the `Selector` object like so:
+
+```typescript
+(datapoint.selectionId as powerbi.visuals.ISelectionId).getSelector()
+```
+
+In addition, you can always set the value to `null`, and should if the property does not need to be bound to a specific data point.
+
+Also, remember that you can currently only generate selection IDs if you are using a `categorical` mapping.
 
 ##`properties`
 `properties` specifies the nature of the properties you wish to define. You can specify a single property or multiple properties with this field. A property definition looks much like the [definitions in `capabilities.json`](/docs/advanced/SettingsDefinitions.md). A single definition could look like:

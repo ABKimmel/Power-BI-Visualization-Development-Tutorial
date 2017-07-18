@@ -34,7 +34,7 @@ module powerbi.extensibility.visual {
         private host: IVisualHost;
         private selectionManager: ISelectionManager;
         private pie: Pie;
-        private opacity: number;
+        private opacity: number = 100;
 
         private static CategoryColorsPropertyIdentifiers: DataViewObjectPropertyIdentifier = {
             objectName: "categoryColors",
@@ -53,17 +53,41 @@ module powerbi.extensibility.visual {
             this.selectionManager = this.host.createSelectionManager();
         }
 
-        public update(options: VisualUpdateOptions) {
+        public update(options: VisualUpdateOptions): void {
             if (options.dataViews.length > 0) {
                 this.pie = this.dataExtraction(options.dataViews[0]);
+                this.updateSettings(options.dataViews[0]);
             } else {
                 return;
             }
-
             this.generateVisual(this.pie, options.viewport);
         }
 
-        private generateVisual(data: Pie, viewport: IViewport) {
+        private updateSettings(dataView: DataView): void {
+            let metadata = dataView.metadata;
+            let metadataObjects = metadata.objects;
+
+            if (metadataObjects) {
+                let chartOpacity = metadataObjects[Visual.ChartOpacityPropertyIdentifiers.objectName];
+                this.opacity = chartOpacity[Visual.ChartOpacityPropertyIdentifiers.propertyName] as number;
+            }
+
+            let categories = dataView.categorical.categories;
+            let categoryObjects = categories[0].objects;
+
+            if (categoryObjects) {
+                for (let i = 0; i < categoryObjects.length; i++) {
+                    if (categoryObjects[i]) {
+                        let chartColorObject = categoryObjects[i][Visual.CategoryColorsPropertyIdentifiers.objectName];
+                        let chartColorProperty = chartColorObject[Visual.CategoryColorsPropertyIdentifiers.propertyName];
+                        let color = (chartColorProperty as any).solid.color;
+                        this.pie.slices[i].color = color;
+                    }
+                }
+            }
+        }
+
+        private generateVisual(data: Pie, viewport: IViewport): void {
             //making pie chart full size of visual viewport
             let width = viewport.width;
             let height = viewport.height;
@@ -99,8 +123,9 @@ module powerbi.extensibility.visual {
                     selectionManager.select((d.data as any).selectionID);
                     d3.select(this).attr("fill", "#F0F0F0");
                 });
-        }
 
+            this.chartContainer.attr("opacity", this.opacity / 100);
+        }
 
         /*
          * This function extracts the data from the given DataView and passes it into the data model defined in
@@ -186,14 +211,14 @@ module powerbi.extensibility.visual {
             })
         }
 
-        private enumerateChartOpacity(instanceEnumeration: VisualObjectInstance[]) {
+        private enumerateChartOpacity(instanceEnumeration: VisualObjectInstance[]): void {
             instanceEnumeration.push({
                 displayName: "Opacity",
                 objectName: Visual.ChartOpacityPropertyIdentifiers.objectName,
                 selector: null,
                 properties: {
                     opacity: {
-                        numeric: this.opacity || 100
+                        numeric: this.opacity
                     }
                 },
                 validValues: {
@@ -206,5 +231,6 @@ module powerbi.extensibility.visual {
                 }
             })
         }
+
     }
 }

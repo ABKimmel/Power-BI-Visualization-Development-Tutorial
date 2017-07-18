@@ -8,7 +8,7 @@ If you look at the default `capabilities.json` that is created when you make a n
 You should plan on defining an `object` for each element of your visualization that you want the user to be able to customize. You will have to balance giving your users the granularity to make the visual look like they want, without bogging them down in hundreds of options.
 
 ##Databound objects
-Each object we create under the `objects` property is a databound object. Each represents one of the accordions on that formatting pane. Power BI will also provide some generic settings as long as you have specified an `objects` property. These settings are listed in the [Genereic Settings](/docs/appendices/GenericSettings.md) appendix. The minimal definition for Power BI to provide the basic settings is:
+Each object we create under the `objects` property is a databound object. Each represents one of the accordions on that formatting pane. Power BI will also provide some generic settings as long as you have specified an `objects` property. These settings are handled entirely by Power BI. The minimal definition for Power BI to provide the basic settings is:
 
 ```json
 "objects":{}

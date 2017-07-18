@@ -8,5 +8,6 @@ There are a number of more advanced features that will greatly improve the value
 *   [Interactivity and Interconnectivity](/docs/advanced/Interactivity.md)
 *   [Settings Definitions](/docs/advanced/SettingsDefinitions.md)
 *   [Settings Enumeration](/docs/advanced/SettingsEnumeration.md)
+*   [Settings Access](/docs/advanced/SettingsAccess.md)
 *   [Tooltips](/docs/advanced/Tooltips.md)
 *   [Performance Considerations](/docs/advanced/PerformanceConsiderations.md)

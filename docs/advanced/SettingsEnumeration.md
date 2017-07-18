@@ -163,5 +163,5 @@ As you can see, this is very similar to what we did with `chartOpacity`, except 
 This covers the process of enumerating your settings. Now, to access them.
 
 ---
-##**[Continue to the next section, Accessing Settings](/docs/advanced/AccessingSettings.md)**
+##**[Continue to the next section, Accessing Settings](/docs/advanced/SettingsAccess.md)**
 ---
