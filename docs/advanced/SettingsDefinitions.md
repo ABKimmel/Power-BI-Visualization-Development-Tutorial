@@ -10,13 +10,13 @@ You should plan on defining an `object` for each element of your visualization t
 ##Databound objects
 Each object we create under the `objects` property is a databound object. Each represents one of the accordions on that formatting pane. Power BI will also provide some generic settings as long as you have specified an `objects` property. These settings are listed in the [Genereic Settings](/docs/appendices/GenericSettings.md) appendix. The minimal definition for Power BI to provide the basic settings is:
 
-```
+```json
 "objects":{}
 ```
 
 The basic schema for `objects` is:
 
-```
+```json
 "objects": {
     "myObject1": { ... },
     "myObject2": { ... },
@@ -30,7 +30,7 @@ The name you give the object (in this case, `myObject1` and `myObject2`), is the
 
 Each object has a schema as follows:
 
-```
+```json
 "objects": {
     "myObject1": {
         "displayName": "My Object One",
@@ -46,7 +46,7 @@ Each object has a schema as follows:
 
 The `displayName` is what will show up as the header on the accordion. `displayNameKey` is the key that gets used if you are localizing your visual. `description` defines the tooltip definition of the object. Each property you specify beneath `properties` will be a new section on the object's menu. The property schema looks like this:
 
-```
+```json
 "properties": {
     "myFirstProperty": {
         "displayName": "firstPropertyName",
@@ -61,7 +61,7 @@ The `displayName` is what will show up as the header on the accordion. `displayN
 
 `displayName`, `displayNameKey`, and `description` are as described in the previous paragraph. `placeHolderText` defines the placeholder text for the property, should it be a field in which the user can enter data. `suppressFormatPainterCopy` tells the Format Painter to ignore this field if set to true. Type has two options: `ValueTypeDescriptor` and `StructuralTypeDescriptor`. `ValueTypeDescriptor` is used when want to specify a simple primitive field for the user to specify. it looks like:
 
-```
+```json
 "myFirstProperty": {
     ...
 
@@ -73,7 +73,7 @@ The `displayName` is what will show up as the header on the accordion. `displayN
 
 `StructuralTypeDescriptor` is used when you have a more complex setting you want to specify. There are a couple of ways you can specify this. The first is as an `enumeration`:
 
-```
+```json
 "myFirstProperty": {
     ...
 
@@ -95,7 +95,7 @@ The `displayName` is what will show up as the header on the accordion. `displayN
 
 `displayName` and `displayNameKey` are the same as they usually are: name for the user and key for localization, respectively. `value` is a string that represents the internal value. `enumeration`s are presented as dropdown lists. Another `StructuralTypeDescriptor` you are likely to use is the `fill` property. The `fill` property defines colors to be used in your visualization.
 
-```
+```json
 "myFirstProperty": {
     ...
 
@@ -111,7 +111,7 @@ The `displayName` is what will show up as the header on the accordion. `displayN
 
 `solid` defines a solid color picker. `color` can either be `true`, which enables the color picker, or it can be an object with the property `nullable`. If `nullable` is set to true, the user can pick 'no fill' as the color from the color picker. The last type you are likely to use is the `formatting` type.
 
-```
+```json
 "myFirstProperty": {
     ...
 
@@ -127,7 +127,7 @@ The `displayName` is what will show up as the header on the accordion. `displayN
 
 There is also a single reserved property name, `show`. The `show` propewrty adds the off/on toggle to the header of the accordion menu.
 
-```
+```json
 "properties": {
     "show": {
         "displayName": "My Object Switch",
@@ -141,7 +141,7 @@ Now that you have an understanding of how Databound objects are created, we'll s
 
 First, we'll make an object that will wrap our chart opacity setting:
 
-```
+```json
 "objects": {
     "chartOpacity": {
         "displayName": "Chart Opacity",
@@ -160,7 +160,7 @@ First, we'll make an object that will wrap our chart opacity setting:
 
 Now let's define an object for the colors of our pie slices. Now this one is a little tricky, since we won't know the number or names of the categories we want to color until runtime. This means we will need to add our `properties` at runtime, which will be covered in the next section. However, we do need to set up a filler property that will look like the properties we are going to fill in. To that end we ill define our `categoryColors` as such:
 
-```
+```json
 "objects": {
 
     ...

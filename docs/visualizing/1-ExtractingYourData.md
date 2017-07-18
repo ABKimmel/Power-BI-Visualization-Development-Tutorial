@@ -26,7 +26,7 @@ The first step to accessing your data is to extract the `DataView` from the `Vis
 ##Extracting Your Data
 Now that we have an understanding of the `VisualUpdateOptions` object, we can go about extracting our data. For this, we will need to extract our `DataView`. Let's start by defining a new function `dataExtraction()`, so that we can encapsulate our data processing. For now, let's not worry about a return type, though we will add one in the next step. Since we only need the `DataView` to access the data, set `dataExtraction()` up to take a `DataView` object. This should give you:
 
-```
+```typescript
 private dataExtraction(dataView : DataView) {
     console.log("DataView", dataView);
 }
@@ -34,7 +34,7 @@ private dataExtraction(dataView : DataView) {
 
 Now we need to pass this function a `DataView`. In general, we need to do this every time the visual is updated, so we will call `dataExtraction()` from `update()`. We can retrieve the `DataView` from the `VisualUpdateOptions` parameter by getting the first entry in the `dataViews` property. We may also want to check to ensure the `DataView` exists before we pass it on to `dataExtraction()`. If we remove the starting code from `update()` we will get:
 
-```
+```typescript
 public update(options: VisualUpdateOptions) {
     if (options.dataViews.length > 0) {
         this.dataExtraction(options.dataViews[0]);
@@ -46,7 +46,7 @@ public update(options: VisualUpdateOptions) {
 
 If you run your visual now, you will see the `DataView` being logged every time the visual updates. This is great and all, but we want more granular access to the data. Since the `DataView` is an object, and we know the schema, we can easily get to the information we want. If you haven't read the [Anatomy of a `DataView` appendix](/docs/appendices/AnatomyOfADataView), this will make more sense if you do. We'll start by extracting the category and value information.
 
-```
+```typescript
 private dataExtraction(dataView : DataView) {
     let categoryColumn = dataView.categorical.categories[0];
     let categoryValues = categoryColumn.values;

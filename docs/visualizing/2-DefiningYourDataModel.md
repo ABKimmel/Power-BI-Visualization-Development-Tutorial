@@ -3,7 +3,7 @@ We want to define a set of objects that will represent our data to our visualiza
 
 Start by adding the license and the module definition to `dataInterfaces.ts`:
 
-```
+```typescript
 /*License*/
 module powerbi.extensibility.visual {
 
@@ -12,7 +12,7 @@ module powerbi.extensibility.visual {
 
 Next, we will add an interface to describe a single category:
 
-```
+```typescript
 /*License*/
 module powerbi.extensibility.visual {
 
@@ -26,7 +26,7 @@ module powerbi.extensibility.visual {
 
 And finally, an interface to describe the entire data set:
 
-```
+```typescript
 /*License*/
 module powerbi.extensibility.visual {
 

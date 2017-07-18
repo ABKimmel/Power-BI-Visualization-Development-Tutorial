@@ -4,7 +4,7 @@ The `dataViewMappings` property of `capabilities.json` does two different things
 
 A full DataViewMapping will look like:
 
-```
+```json
 "dataViewMappings":[
     {
         "conditions": [ ... ],
@@ -19,7 +19,7 @@ A full DataViewMapping will look like:
 ##`conditions`
 Conditions allow you to specify the number of data fields that can be placed in a particular data role. An example mapping for our SamplePieChart might look like:
 
-```
+```json
 "conditions": [
 {
     "mycategory":
@@ -39,7 +39,7 @@ Something very important to keep in mind is that the conditions must be valid **
 
 You can also specify multiple sets of `conditions` that are valid. In this case, only one of the configurations has to be valid at any time. For example:
 
-```
+```json
 "conditions": [
 {
     "mycategory":
@@ -71,7 +71,7 @@ Data mappings are how we define the structure of the data in the DataViews we ge
 ###`categorical`
 `categorical` is the data mapping you will probably use the most. It provides a mapping for things that are grouped into categories. This is great for any data you want to group in your visualization. When you define a `categorical` data mapping, you must define both the categories you are mapping onto, and the values you are mapping. A simple `categorical` data mapping looks like this:
 
-```
+```json
 {
     "conditions": [ ... ],
     "categorical": {
@@ -84,7 +84,7 @@ Data mappings are how we define the structure of the data in the DataViews we ge
 ####`categories`
 `categories` sets which data roles will be used to define categories in the DataView for grouping the data. These data roles should all have the `kind` `Grouping`. A typical `categories` definition will look like:
 
-```
+```json
 "categories": {
     "for|bind": { ... },
     "dataReductionAlgorithm": { ... }
@@ -93,7 +93,7 @@ Data mappings are how we define the structure of the data in the DataViews we ge
 
 or
 
-```
+```json
 "categories": {
     "select":[
         {"for|bind": { ... }},
@@ -109,7 +109,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 #####`bind`
 `bind` tells Power BI to return the single field in the specified role as part of the categories property of the DataView object. Note that you should only `bind` data roles if they allow a maximum of one data field. Bindings look like:
 
-```
+```json
 "categories": {
     "bind": {
         "to":"mySingleDataRole"
@@ -120,7 +120,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 #####`for`
 `for` is much the same as `bind`. It tells Power BI that the fields in the role should be returned as part of the categories property of the DataView object. It differs from `bind` in that you can use it on data roles that allow more than one field within them. All the fields will be included in the DataView object. `for` looks like:
 
-```
+```json
 "categories": {
     "for": {
         "in":"myMultipleDataRole"
@@ -130,7 +130,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 #####`select`
 `select` allows you to have more than one data role in your `categories` definition. It can contain any number of Usage is:
 
-```
+```json
 "categories": {
     "select":[
         {"for|bind": { ... }},
@@ -143,7 +143,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 ####`values`
 `values` sets the data roles that will be grouped by the roles in `categories`. These data roles should be `Measure`s. Values look like:
 
-```
+```json
 "values":
 {
     "for|bind": { ... }
@@ -152,7 +152,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 
 or
 
-```
+```json
 "values":
 {
     "select": [
@@ -167,7 +167,7 @@ or
 
 `values` also offers you the ability to group your values along a second axis by using a data role other than your categorical roles. The `group` attribute functions as a wrapper for the other options for `values` given above.
 
-```
+```json
 "values":
 {
     "group": {
@@ -175,12 +175,12 @@ or
         "select|for|bind": ...
     }
 }
-``
+```
 
 ##`dataReductionAlgorithm`
 The `dataReductionAlgorithm` allows you limited control to specify the behavior of Power BI when there are more records than a certain threshold. THis lets you set the threshold and the behavior to a limited extent. There are four reduction algorithms from which you can choose. The algorithms are `top`, `bottom`, `sample`, and `window`. Please note that no matter what you specify for `count`, Power BI will not return more than 30,000 entries to your visual. A `dataReductionAlgorithm` definition looks like:
 
-```
+```json
 "dataReductionAlgorithm": {
     "top|bottom|sample|window": {
         "count": 10
@@ -202,7 +202,7 @@ The `dataReductionAlgorithm` allows you limited control to specify the behavior 
 
 It is important to specify a `dataReductionAlgorithm`, because if you do not, it will use this default `dataReductionAlgorithm`:
 
-```
+```json
 "dataReductionAlgorithm": {
     "top": {
         "count": 1000
@@ -214,7 +214,7 @@ It is important to specify a `dataReductionAlgorithm`, because if you do not, it
 ##samplePieChart Data Bindings
 On the `conditions` side of things, we are only expecting one data field in each role, so our roles should be limited to a max of one field each. This gives us:
 
-```
+```json
 "conditions": [
 {
     "mycategory":
@@ -230,7 +230,7 @@ On the `conditions` side of things, we are only expecting one data field in each
 
 We are going to use a `categorical` data mapping, since we want to group our measure by whatever categories we get. Since we are grouping on 'mycategory' our `categories` section will look like:
 
-```
+```json
 "categories": {
     "bind": {
         "to":"mycategory"
@@ -245,7 +245,7 @@ We are going to use a `categorical` data mapping, since we want to group our mea
 
 Remember that we are using `bind` because the role is limited to one field. Next, our values:
 
-```
+```json
 "values":
 {
     "bind": {

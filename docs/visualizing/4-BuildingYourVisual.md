@@ -1,7 +1,7 @@
 #Building Your Visual
 ---
 Now that we have a well-defined data model, we need to take it into `update()` and build a visualization with it.
-```
+```typescript
 public update(options: VisualUpdateOptions) {
     let pie: Pie;
     if (options.dataViews.length > 0) {
@@ -14,7 +14,7 @@ public update(options: VisualUpdateOptions) {
 
 Next, let's create a separate function for creating our pie chart.
 
-```
+```typescript
 public update(options: VisualUpdateOptions) {
 
     ...
@@ -31,7 +31,7 @@ Now we'll add the code to generate our pie chart. This section is adapted from [
 
 Start by adding some fields to our `Visual` class:
 
-```
+```typescript
 export class Visual implements IVisual {
     private svg: d3.Selection<SVGElement>;
     private chartContainer: d3.Selection<SVGElement>;
@@ -42,7 +42,7 @@ export class Visual implements IVisual {
 ```
 
 Then we need to initialize our container elements in our constructor.
-```
+```typescript
 constructor(options: VisualConstructorOptions) {
     this.svg = d3.select(options.element).append('svg');
     this.chartContainer = this.svg.append('g');
@@ -50,7 +50,7 @@ constructor(options: VisualConstructorOptions) {
 ```
 
 Finally, we will add the code for generating our pie chart.
-```
+```typescript
 private generateVisual(data: Pie, viewport: IViewport) {
     //making pie chart full size of visual viewport
     let width = viewport.width;

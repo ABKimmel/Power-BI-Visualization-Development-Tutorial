@@ -10,7 +10,7 @@ Each of the fields there has a data role that is defined under the `dataRoles` a
 You can see an example of the minimal data role in the default visual if you look at `capabilities.json`.
 A complete data role will look like this:
 
-```
+```json
 "dataRoles": [
     {
       "displayName": "DisplayName",
@@ -49,7 +49,7 @@ Each kind fills a different purpose:
 ###`requiredTypes`
 Optional. Defines the types of data that will be accepted. An example looks like:
 
-```
+```json
 "requiredTypes": [
     {
       "numeric": true
@@ -76,7 +76,7 @@ In general, you will probably only use the primitive types. You can also say `"t
 
 It is also possible to specify that a data role can be one of a number of types, like this:
 
-```
+```json
 "requiredTypes": [
     {
       "numeric": true
@@ -90,7 +90,7 @@ It is also possible to specify that a data role can be one of a number of types,
 ##samplePieChart Data Roles
 Since we are building a pie chart, we only have two fields for now. We need a category field and a measure field. Let's start with the bare bones for the category field:
 
-```
+```json
 {
   "displayName": "Category",
   "name": "mycategory",
@@ -100,7 +100,7 @@ Since we are building a pie chart, we only have two fields for now. We need a ca
 
 Remember that we are choosing `Grouping` for `kind` because we want to group our measure field on our category field. Next, let's add our required types:
 
-```
+```json
 {
   "displayName": "Category",
   "name": "mycategory",
@@ -118,7 +118,7 @@ Remember that we are choosing `Grouping` for `kind` because we want to group our
 
 Since we want our category to be able to handle both category names and ID numbers, we give it both acceptable types. Lastly we will add a description.
 
-```
+```json
 {
   "displayName": "Category",
   "name": "mycategory",
@@ -137,7 +137,7 @@ Since we want our category to be able to handle both category names and ID numbe
 
 Now the same for our measure field:
 
-```
+```json
 {
   "displayName": "Measure",
   "name": "mymeasure",

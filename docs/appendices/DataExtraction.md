@@ -6,7 +6,7 @@ We've already covered the basics of data extraction in the [tutorial](/docs/visu
 ---
 Accessing your data from a `single` data mapping is very simple. Since there is only ever one entry, you can access it like so:
 
-```
+```typescript
 public update(options: VisualUpdateOptions) {
 
     ...
@@ -27,7 +27,7 @@ There is a simple demonstration visualization for the `single` data mappinig ava
 
 Accessing your data from a `table` mapping can be more difficult than you expect, due to the fact that you are not guaranteed the columns will come back in the order you specify in `capabilities.json`. If you want to determine which columns are which in the data rows, you will have to parse through the `metadata` property of the DataView to determine which column is which. If you just want to access rows, without caring about column identifiers they are simple to access:
 
-```
+```typescript
 public update(options: VisualUpdateOptions) {
 
     ...
@@ -42,7 +42,7 @@ You should also keep in mind that the rows will not be in any particular order u
 
 If you want to identify the columns of the DataView before accessing the data, you will need to write a function similar to this:
 
-```
+```typescript
 private findColumns(columns: DataViewMetadataColumn[]) {
     //iterate over defined column names
     for (let i = 0; i < this.columnIndices.length; i++) {
@@ -65,7 +65,7 @@ private findColumns(columns: DataViewMetadataColumn[]) {
 
 You will also have to define and initialize the field `columnIndices` as so:
 
-```
+```typescript
 private columnIndices: { "name": string, "index", number}[];
 ```
 

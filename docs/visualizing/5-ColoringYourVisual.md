@@ -2,7 +2,7 @@
 ---
 We are going to start coloring our visual by modifying our `PieSlice` data interface to add a property for color.
 
-```
+```typescript
 export interface PieSlice {
     category: string | number,
     measure: number,
@@ -12,7 +12,7 @@ export interface PieSlice {
 
 This will allow us to specify a color when we create the `PieSlice` that will stick with the object. Next, we need to change the `fill` property of the path to reflect the value in our `PieSlice`.
 
-```
+```typescript
 
 ...
 
@@ -28,7 +28,7 @@ let path = this.chartContainer.selectAll('path')
 ```
 Next, we need to extract the `colorPalette` from the constructor options. Start by adding a field for it.
 
-```
+```typescript
 export class Visual implements IVisual {
     private colorPalette: IColorPalette;
 
@@ -39,7 +39,7 @@ export class Visual implements IVisual {
 
 Then extract it from the constructor options:
 
-```
+```typescript
 constructor(options: VisualConstructorOptions) {
 
     ...
@@ -49,7 +49,8 @@ constructor(options: VisualConstructorOptions) {
 ```
 
 Finally, we will use the colorPalette to add colors to our visuals.
-```
+
+```typescript
 private dataExtraction(dataView: DataView): Pie {
 
     ...

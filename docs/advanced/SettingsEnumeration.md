@@ -7,7 +7,7 @@ Before we get started with the specific enumerations of our settings, we have so
 
 We are also going to change the way we access our settings, so you should delete the `settings.ts` file and any code that depends on it. This should leave you with just the methods we have explicitly added in our tutorial, `update()`, the constructor, and `enumerateObjectInstances()`. Now let's replace any existing code in `enumerateObjectInstances()`:
 
-```
+```typescript
 public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
 
     let instanceEnumeration: VisualObjectInstanceEnumeration = [];
@@ -23,7 +23,7 @@ Since we are going to be enumerating our settings differently, we need to know w
 
 We also want to avoid using magic data in our ode, so we are going to be responsible and define a `DataViewObjectPropertyIdentifier` for `chart opacity`. We will also want to define field that holds the current opacity of the visual.
 
-```
+```typescript
 export class Visual implements IVisual {
 
     ...
@@ -42,7 +42,7 @@ export class Visual implements IVisual {
 
 Next, we'll split our enumeration of `chartOpacity` off from the rest of our enumeration.
 
-```
+```typescript
 public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
     let instanceEnumeration: VisualObjectInstanceEnumeration = [];
 
@@ -55,7 +55,7 @@ public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions):
 
 Now let's fill out the function `enumerateChartOpacity()`:
 
-```
+```typescript
 private enumerateChartOpacity(instanceEnumeration: VisualObjectInstance[]) {
     instanceEnumeration.push({
         displayName: "Opacity",
@@ -85,7 +85,7 @@ This method does essentially one thing, and that is make an object that defines 
 ##Enumerating `chartColors`
 This may seem quite a bit trickier than the last section, since we don't have these properties already defined, but you will see that it is actually not much more difficult. Let's start by adding the fields we are going to need. First, we will want to define a `DataViewObjectPropertyIdentifier` for `chartColors`. We will also need access to the data model so that we can see the `slice` categories and colors. Let's do that now:
 
-```TypeScript
+```typescript
 export class Visual implements IVisual {
 
     ...
@@ -113,7 +113,7 @@ export class Visual implements IVisual {
 
 Now that we have all the pieces we need, let's break off the enumeration of `chartColors` from `enumerateObjectInstances()`.
 
-```TypeScript
+```typescript
 public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
     let instanceEnumeration: VisualObjectInstanceEnumeration = [];
 
@@ -129,7 +129,7 @@ public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions):
 
 Now to fill in `enumerateCategoryProperties()`:
 
-```TypeScript
+```typescript
 private enumerateCategoryProperties(instanceEnumeration: VisualObjectInstance[]): void {
     let slices = this.pie.slices;
     if (!slices || slices.length < 1) {

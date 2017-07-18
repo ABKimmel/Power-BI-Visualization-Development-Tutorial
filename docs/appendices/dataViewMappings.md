@@ -3,7 +3,7 @@
 ##`single`
 `single` is the simplest of all the data mappings. `single` takes a single measure data role, and provides you the sum or count of items in the first data field. A `single` data mapping looks like:
 
-```
+```json
 {
     "conditions": [ ... ],
     "single": {
@@ -16,7 +16,7 @@ The main use case for this is things like the built-in Card visual.
 ##`table`
 The `table` data mapping is quite simple. If you want to have rows of data to access, you will want to use the `table` data mapping. In the `table` data mapping, you specify the `rows` of data you want, like such:
 
-```
+```json
 {
     "conditions": [ ... ],
     "table": {
@@ -29,7 +29,7 @@ The `table` data mapping is quite simple. If you want to have rows of data to ac
 ###`rows`
 Rows is where you specify the data roles that will make up the rows of the table DataView. In effect, each data role you bind here will define a column. Each row will then be formed by selecting related data from the roles you bound. A `rows` definition looks like:
 
-```
+```json
 "rows": {
     "for|bind": { ... },
     "dataReductionAlgorithm": { ... }
@@ -38,7 +38,7 @@ Rows is where you specify the data roles that will make up the rows of the table
 
 or
 
-```
+```json
 "rows": {
     "select": [
         {"for|bind": { ... }},
@@ -56,7 +56,7 @@ You have three options for what to specify inside of `rows`: `for`, `bind`, and 
 ####`bind`
 `bind` tells Power BI to return the single field in the specified role as part of the rows property of the DataView object. Note that you should only `bind` data roles if they allow a maximum of one data field. Bindings look like:
 
-```
+```json
 "rows": {
     "bind": {
         "to":"mySingleDataRole"
@@ -67,7 +67,7 @@ You have three options for what to specify inside of `rows`: `for`, `bind`, and 
 ####`for`
 `for` is much the same as `bind`. It tells Power BI that the fields in the role should be returned as part of the rows property of the DataView object. It differs from `bind` in that you can use it on data roles that allow more than one field within them. All the fields will be included in the DataView object. `for` looks like:
 
-```
+```json
 "rows": {
     "for": {
         "in":"myMultipleDataRole"
@@ -77,7 +77,7 @@ You have three options for what to specify inside of `rows`: `for`, `bind`, and 
 ####`select`
 `select` allows you to have more than one data role in your `rows` definition. It can contain any number of Usage is:
 
-```
+```json
 "rows": {
     "select":[
         {"for|bind": { ... }},
@@ -90,7 +90,7 @@ You have three options for what to specify inside of `rows`: `for`, `bind`, and 
 ###`rowCount`
 `rowCount` allows you to define the number of rows that the visual supports. This is an optional property. It has two properties, `preferred` and `supported`. `preferred` sets the preferred range for the number of rows the visual can handle. `supported` sets a hard range for number of rows supported by the visual, and defaults to the `preferred` values if not specified. Example usage is below.
 
-```
+```json
 "rowCount":{
     "preferred": {
         "min": 100,
