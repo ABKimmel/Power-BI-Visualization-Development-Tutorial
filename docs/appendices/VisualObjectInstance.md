@@ -8,7 +8,7 @@ _If you are interested in engaging the services of DMI, please contact me at [bk
 When you are [enumerating your settings](../advanced/SettingsEnumeration.md), you must initialize a `VisualObjectInstance` for each setting you want to show the user. This is a breakdown of all fields available for you to specify.
 
 |Field|Type|Value|
-|--|--|--|
+|---|---|---|
 |`objectName`|`string`|The name of the object being defined by this `VisualObjectInstance`. This should match an object you have defined in `capabilities.json`.|
 |`displayName`|`string`|The name you want to be displayed to the user.|
 |`properties`|`object`|The properties you wish to define. See below.|

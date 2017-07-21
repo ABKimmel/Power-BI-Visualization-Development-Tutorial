@@ -72,8 +72,9 @@ private dataExtraction(dataView: DataView): Pie {
 Here we are using just the `withCategory()` definition, but you can also use `withSeries()` and `withMeasure()`. Once you have added all of the definitions you want, call `createSelectionId()`.
 
 #### Method Information
+
 |Method|Use Case|
-|--|--|
+|---|---|
 |withCategory(categoryColumn: DataViewCategoryColumn, index: number)|Tells the selection ID builder to use the specific entry in the category column as the identifier. Effectively lets you select by category.|
 |withMeasure(measureID: string)|Tells the builder to use the provided string as the measure. TODO: flesh out|
 |withSeries(values: DataViewValueColumns, seriesGroup: DataViewValueColumnGroup)|If you have specified a `group` attribute in your data mapping, you can use this to add it to the selection ID generation.|

@@ -5,8 +5,9 @@ _If you are interested in engaging the services of DMI, please contact me at [bk
 # Anatomy of a `DataView`
 ---
 A `DataView` object has five or six properties:
+
 |Property|Value|
-|--|--|
+|---|---|
 |`metadata`|Contains information about the data fields that have been assigned to the data roles of your visual.|
 |`categorical`|Contains the data specified in the `categorical` data mapping you defined in `capabilities.json`|
 |`matrix`|Contains the data you specified in the `matrix` data mapping you defined in `capabilities.json`|
@@ -16,8 +17,9 @@ A `DataView` object has five or six properties:
 
 ## `metadata`
 `metadata` contains a single object, `columns` that contains an object for each unique field that has been passed to your visual. Each column object has the following properties:
+
 |Property|Value|
-|--|--|
+|---|---|
 |`roles`|This is an object that will have properties that have the internal names of the data roles to which this data field is assigned and the value of `true`. For example: `"mymeasure":true`.|
 |`type`|This is an object that contains properties with names of types, and Boolean values of whether the data field conforms to that type. It also contains some functions for comparing that data field to other objects.|
 |`format`|A deprecated property. The functionality has been moved to settings objects.|
@@ -42,7 +44,7 @@ This is the data from the data roles you assigned in the `categories` section of
 Each object in the `categories` array has the following properties:
 
 |Property|Value|
-|--|--|
+|---|---|
 |`source`|An object containing metadata information about the column in question.|
 |`values`|An array of the values of this column.|
 |`identity`|An array containing the identities of each of the values.|
@@ -50,8 +52,9 @@ Each object in the `categories` array has the following properties:
 
 #### `source`
 `source` contains the metadata information describing the column in question. Basically the same as the column metadata defined above in `metadata`.
+
 |Property|Value|
-|--|--|
+|---|---|
 |`roles`|This is an object that will have properties that have the internal names of the data roles to which this data field is assigned and the value of `true`. For example: `"mygrouping":true`. If this data field has been assigned to multiple data roles, each data role will appear in this section.|
 |`type`|This is an object that contains properties with names of types, and boolean values of whether or not the data field conforms to that type. It also contains some functions for comparing that data field to other objects.|
 |`format`|A deprecated property. The functionality has been moved to settings objects.|
@@ -69,15 +72,16 @@ Each object in the `categories` array has the following properties:
 Each object in the `values` array has the following properties:
 
 |Property|Value|
-|--|--|
+|---|---|
 |`source`|An object containing metadata information about the column in question.|
 |`values`|An array of the values of this column.|
 |`aggregate`|Each aggregate on the column will have a property of the aggregate name and the value of the result. For example the `minLocal` aggregate might add the property `"minLocal": 0` to the object.|
 
 #### `source`
 `source` contains the metadata information describing the column in question. Basically the same as the column metadata defined above in `metadata`.
+
 |Property|Value|
-|--|--|
+|---|---|
 |`roles`|This is an object that will have properties that have the internal names of the data roles to which this data field is assigned and the value of `true`. For example: `"mymeasure":true`. If this data field has been assigned to multiple data roles, each data role will appear in this section.|
 |`type`|This is an object that contains properties with names of types, and boolean values of whether or not the data field conforms to that type. It also contains some functions for comparing that data field to other objects.|
 |`format`|A deprecated property. The functionality has been moved to settings objects.|
