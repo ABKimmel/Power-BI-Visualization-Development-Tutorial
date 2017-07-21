@@ -1,4 +1,4 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+[![DMI Logo](img/DMI_Logo.png)](https://dminc.com/)
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
@@ -16,36 +16,36 @@ You will also find a large set of appendices that contain a lot of information w
 
 ## Table of Contents
 *   ### Setup
-    *   [Setting Up Your Project](/setup/1-SettingUpYourProject.md)
-    *   [Anatomy of a Visualization](/setup/2-VisualizationBreakdown.md)
-    *   [Adding External Libraries](/setup/3-AddingExternalLibraries.md)
+    *   [Setting Up Your Project](setup/1-SettingUpYourProject.md)
+    *   [Anatomy of a Visualization](setup/2-VisualizationBreakdown.md)
+    *   [Adding External Libraries](setup/3-AddingExternalLibraries.md)
 *   ### Capabilities
-    *   [Data Roles](/capabilities/1-DefiningDataRoles.md)
-    *   [DataView Mappings](/capabilities/2-AddingDataViewMappings.md)
-    *   [Sorting and Other Configurations](/capabilities/3-AdditionalCapabilitiesSettings.md)
+    *   [Data Roles](capabilities/1-DefiningDataRoles.md)
+    *   [DataView Mappings](capabilities/2-AddingDataViewMappings.md)
+    *   [Sorting and Other Configurations](capabilities/3-AdditionalCapabilitiesSettings.md)
 *   ### Visualizing Your Data
-    *   [Extracting Your Data](/visualizing/1-ExtractingYourData.md)
-    *   [Defining Your Data Model](/visualizing/2-DefiningYourDataModel.md)
-    *   [Filling Your Data Model](/visualizing/3-FillingYourDataModel.md)
-    *   [Building a Visual](/visualizing/4-BuildingYourVisual.md)
-    *   [Coloring Your Visual](/visualizing/5-ColoringYourVisual.md)
+    *   [Extracting Your Data](visualizing/1-ExtractingYourData.md)
+    *   [Defining Your Data Model](visualizing/2-DefiningYourDataModel.md)
+    *   [Filling Your Data Model](visualizing/3-FillingYourDataModel.md)
+    *   [Building a Visual](visualizing/4-BuildingYourVisual.md)
+    *   [Coloring Your Visual](visualizing/5-ColoringYourVisual.md)
 *   ### Advanced Features
-    *   [Overview](/advanced/1-AdvancedTopics.md)
-    *   [Adding Settings](/advanced/SettingsDefinitions.md)
-    *   [Interactivity](/advanced/Interactivity.md)
-    *   [Performance Considerations](/advanced/PerformanceConsiderations.md)
-    *   [Adding Tooltips](/advanced/Tooltips.md)
+    *   [Overview](advanced/1-AdvancedTopics.md)
+    *   [Adding Settings](advanced/SettingsDefinitions.md)
+    *   [Interactivity](advanced/Interactivity.md)
+    *   [Performance Considerations](advanced/PerformanceConsiderations.md)
+    *   [Adding Tooltips](advanced/Tooltips.md)
 *   ### Appendices
-    *   [Anatomy of a `DataView`](/appendices/AnatomyOfADataView.md)
-    *   [`dataViewMappings`](/appendices/dataViewMappings.md)
-    *   [`VisualUpdateOptions`](/appendices/VisualUpdateOptions.md)
-    *   [Data Extraction](/appendices/DataExtraction.md)
-    *   [`VisualObjectInstance`](/appendices/VisualObjectInstance.md)
-    *   [Features of a Good Visual](/appendices/VisualFeatureList.md)
+    *   [Anatomy of a `DataView`](appendices/AnatomyOfADataView.md)
+    *   [`dataViewMappings`](appendices/dataViewMappings.md)
+    *   [`VisualUpdateOptions`](appendices/VisualUpdateOptions.md)
+    *   [Data Extraction](appendices/DataExtraction.md)
+    *   [`VisualObjectInstance`](appendices/VisualObjectInstance.md)
+    *   [Features of a Good Visual](appendices/VisualFeatureList.md)
 
 ---
 If you have any questions or find an error, please open an issue. I will try to answer questions and fix errors as soon as I can. If you want to elaborate on something, feel free to open a pull request, and I will review it as soon as I can.
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+[![DMI Logo](img/DMI_Logo.png)](https://dminc.com/)
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
