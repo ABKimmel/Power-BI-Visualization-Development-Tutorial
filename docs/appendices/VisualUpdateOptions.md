@@ -7,7 +7,7 @@ _If you are interested in engaging the services of DMI, please contact me at [bk
 ## `dataViews`
 `dataViews` is the object that holds all of the data we are trying to visualize, as well as all of the information on the visual's settings. It is an array of `DataView`s. In all cases, there will be only one `DataView` returned, no matter how many `dataViewMappings` you defined in `capabilities.json`.
 
-For more information on the `DataView` object, see the [Anatomy of a `DataView` appendix](../appendices/AnatomyOfADataView.md).
+For more information on the `DataView` object, see the [Anatomy of a `DataView` appendix](../appendices/DataViewBreakdown.md).
 
 ## `editMode`
 `editMode` was previously discussed in the section on [advanced edit mode](). It normally comes back as `0` or `undefined`, but when the user activates Edit mode, it will return as `1`. Note that if you receive multiple updates from a single user action, they may not have the same value for `editMode`, so it is up to you to handle that in your visual.

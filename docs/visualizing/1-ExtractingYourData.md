@@ -24,7 +24,7 @@ The first step to accessing your data is to extract the `DataView` from the `Vis
 
 **If you want more information on the properties of `VisualUpdateOptions`, see the [`VisualUpdateOptions` appendix](../appendices/VisualUpdateOptions.md).**
 
-**Reading the [Anatomy of a `DataView` appendix](../appendices/AnatomyOfADataView.md) will make the next section easier to understand.**
+**Reading the [Anatomy of a `DataView` appendix](../appendices/DataViewBreakdown.md) will make the next section easier to understand.**
 
 
 ## Extracting Your Data
@@ -48,7 +48,7 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-If you run your visual now, you will see the `DataView` being logged every time the visual updates. This is great and all, but we want more granular access to the data. Since the `DataView` is an object, and we know the schema, we can easily get to the information we want. If you haven't read the [Anatomy of a `DataView` appendix](../appendices/AnatomyOfADataView), this will make more sense if you do. We'll start by extracting the category and value information.
+If you run your visual now, you will see the `DataView` being logged every time the visual updates. This is great and all, but we want more granular access to the data. Since the `DataView` is an object, and we know the schema, we can easily get to the information we want. If you haven't read the [Anatomy of a `DataView` appendix](../appendices/DataViewBreakdown.md), this will make more sense if you do. We'll start by extracting the category and value information.
 
 ```typescript
 private dataExtraction(dataView : DataView) {
