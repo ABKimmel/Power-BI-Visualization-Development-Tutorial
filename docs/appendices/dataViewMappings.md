@@ -3,7 +3,7 @@
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
 # Additional `dataViewMappings`
---
+---
 ## `single`
 `single` is the simplest of all the data mappings. `single` takes a single measure data role, and provides you the sum or count of items in the first data field. A `single` data mapping looks like:
 

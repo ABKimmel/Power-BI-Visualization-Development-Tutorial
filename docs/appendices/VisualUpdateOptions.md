@@ -10,7 +10,7 @@ _If you are interested in engaging the services of DMI, please contact me at [bk
 For more information on the `DataView` object, see the [Anatomy of a `DataView` appendix](../appendices/DataViewBreakdown.md).
 
 ## `editMode`
-`editMode` was previously discussed in the section on [advanced edit mode](../capabilities/3-AdditionalCapabilitiesSettings.md#Advanced-Edit-Mode). It normally comes back as `0` or `undefined`, but when the user activates Edit mode, it will return as `1`. Note that if you receive multiple updates from a single user action, they may not have the same value for `editMode`, so it is up to you to handle that in your visual.
+`editMode` was previously discussed in the section on [advanced edit mode](../capabilities/3-AdditionalCapabilitiesSettings.md#advanced-edit-mode). It normally comes back as `0` or `undefined`, but when the user activates Edit mode, it will return as `1`. Note that if you receive multiple updates from a single user action, they may not have the same value for `editMode`, so it is up to you to handle that in your visual.
 
 ## `type`
 `type` indicates the kind of update that happened, and has many possible values. There are 5 key building block update types. They are:

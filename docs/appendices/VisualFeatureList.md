@@ -34,7 +34,7 @@ When you are designing and implementing your custom visual, you should keep in m
 *   Performance
     *   Users will be frustrated if your visual takes long periods of time to render or update. This is also true for developers, since they may get the ire of the consumers for your mistakes. For more information on improving the performance of your visual see the [performance section](../advanced/PerformanceConsiderations.md) of the advanced documentation.
 *   Interactivity
-    *   Users expect to be able to do the same things with your custom visual as they can with the built-in Microsoft visuals. This means you should provide the ability to select data points in your visual. You may also want to [provide highlighting](../capabilities/3-AdditionalCapabilitiesSettings.md#Highlighting) if it seems appropriate for your visual.
+    *   Users expect to be able to do the same things with your custom visual as they can with the built-in Microsoft visuals. This means you should provide the ability to select data points in your visual. You may also want to [provide highlighting](../capabilities/3-AdditionalCapabilitiesSettings.md#highlighting) if it seems appropriate for your visual.
 *   Interconnectivity
     *   Your visual should respond cleanly to selections in other visuals, filtering, or slicers.
 
