@@ -24,7 +24,7 @@ public update(options: VisualUpdateOptions) {
 
 Once you've pulled out the value, you're set!
 
-There is a simple demonstration visualization for the `single` data mappinig available in the [SingleDemo]() folder. If you want to review the concept of a `single` data mapping, check out its [coverage](../appendices/dataViewMappings.md#single) in the [DataView Mappings](../appendices/dataViewMappings.md) appendix.
+There is a simple demonstration visualization for the `single` data mappinig available in the [SingleDemo](/SingleDemo) folder. If you want to review the concept of a `single` data mapping, check out its [coverage](../appendices/dataViewMappings.md#single) in the [DataView Mappings](../appendices/dataViewMappings.md) appendix.
 
 ## Table Mapping
 ---
@@ -76,6 +76,8 @@ private columnIndices: { "name": string, "index", number}[];
 Initialize it by filling in the **internal** names of your data roles.
 
 Once you have the indices of your columns, you can access the row data with certainty about what information you are getting.
+
+FOr an example, see the [TableDemo](/TableDemo) Visualization.
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 

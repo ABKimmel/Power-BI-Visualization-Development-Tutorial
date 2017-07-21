@@ -46,7 +46,7 @@ module powerbi.extensibility.visual {
 Now that we've defined our data model, you might be worrying about importing the types from `dataInterfaces.ts` into `visual.ts`, but there is no need to worry. At compile time, the TypeScript compiler will concatenate all of the files listed under `tsconfig.json`, so there is no need to import any of the types. Now let's fill in our data model.
 
 ---
-## **[Continue to the next section, Filling Your Data Model](../visualizing/3-FillingYOurDataModel)**
+## **[Continue to the next section, Filling Your Data Model](../visualizing/3-FillingYourDataModel.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

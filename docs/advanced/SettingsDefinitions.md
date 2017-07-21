@@ -57,7 +57,7 @@ The `displayName` is what will show up as the header on the accordion. `displayN
         "displayNameKey": "firstPropertyKey",
         "description": "My First Property",
         "placeHolderText": "Please fill the blank",
-        "suppressFormatPainterCopy": true!false,
+        "suppressFormatPainterCopy": true|false,
         "type": ValueTypeDescriptor|StructuralTypeDescriptor
     }
 }
@@ -149,7 +149,7 @@ First, we'll make an object that will wrap our chart opacity setting:
 "objects": {
     "chartOpacity": {
         "displayName": "Chart Opacity",
-        "description": "Defines the transparency of the chart as a percentage."
+        "description": "Defines the transparency of the chart as a percentage.",
         "properties": {
             "opacity": {
                 "displayName": "Opacity",

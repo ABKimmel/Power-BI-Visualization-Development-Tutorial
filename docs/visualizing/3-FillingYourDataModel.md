@@ -73,7 +73,7 @@ private dataExtraction(dataView: DataView): Pie {
 ```
 
 ---
-## **[Continue to the next section, Building Your Visual](../visualizing/4-BuildingYourVisual)**
+## **[Continue to the next section, Building Your Visual](../visualizing/4-BuildingYourVisual.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

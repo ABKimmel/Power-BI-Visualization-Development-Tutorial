@@ -19,10 +19,10 @@ When you are designing and implementing your custom visual, you should keep in m
         *   Number Formatting
         *   Positioning
         *   Units
-    *   For more information on providing these options, see the [section on settings](../advanced/Settings.md).
+    *   For more information on providing these options, see the [section on settings](../advanced/SettingsDefinitions.md).
 *   Clarity In Structure
     *   Developers will want to know how your visual works, and what does what when they are filling it out. It's very frustrating to have to use trial and error to figure out what a visual does. To prevent this from being a problem, you should:
-        *   Provide useful descriptions of all data roles. See the [section on data roles](../capabilities/1-DataRoles.md) for how to do this.
+        *   Provide useful descriptions of all data roles. See the [section on data roles](../capabilities/1-DefiningDataRoles.md) for how to do this.
         *   Follow a standard, descriptive naming convention.
         *   Provide documentation and examples when you deliver.
         *   Be clear about the limitations of your visual. Things like maximum number of rows accepted, data types required, etc.
@@ -34,7 +34,7 @@ When you are designing and implementing your custom visual, you should keep in m
 *   Performance
     *   Users will be frustrated if your visual takes long periods of time to render or update. This is also true for developers, since they may get the ire of the consumers for your mistakes. For more information on improving the performance of your visual see the [performance section](../advanced/PerformanceConsiderations.md) of the advanced documentation.
 *   Interactivity
-    *   Users expect to be able to do the same things with your custom visual as they can with the built-in Microsoft visuals. This means you should provide the ability to select data points in your visual. You may also want to [provide highlighting](../capabilities/3-AdditionalSettings.md#Highlighting) if it seems appropriate for your visual.
+    *   Users expect to be able to do the same things with your custom visual as they can with the built-in Microsoft visuals. This means you should provide the ability to select data points in your visual. You may also want to [provide highlighting](../capabilities/3-AdditionalCapabilitiesSettings.md#Highlighting) if it seems appropriate for your visual.
 *   Interconnectivity
     *   Your visual should respond cleanly to selections in other visuals, filtering, or slicers.
 

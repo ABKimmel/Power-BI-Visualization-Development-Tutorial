@@ -53,7 +53,7 @@ or
 }
 ```
 
-It is important to note that the data you get from the DataView will not be in any particular order, meaning you cannot look to your data mapping to determine which columns fit which data roles. We will talk more about this in [Accessing Your Data]().
+It is important to note that the data you get from the DataView will not be in any particular order, meaning you cannot look to your data mapping to determine which columns fit which data roles. We will talk more about this in [Accessing Your Data](../visualizing/1-ExtractingYourData.md).
 
 You have three options for what to specify inside of `rows`: `for`, `bind`, and `select`. These are the same as for a `categorical` mapping.
 
