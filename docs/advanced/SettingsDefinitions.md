@@ -2,7 +2,7 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Defining Settings In Capabilities
+# Defining Settings In Capabilities
 ---
 
 Settings are critical to the experience your visualization provides to the developers that will use it, as well as the end consumer. They allow developers to customize the visual to fit there practical needs, as well as their stylization needs. Consumers are then presented with consistent interfaces and visuals that present the information they need.
@@ -11,7 +11,7 @@ If you look at the default `capabilities.json` that is created when you make a n
 
 You should plan on defining an `object` for each element of your visualization that you want the user to be able to customize. You will have to balance giving your users the granularity to make the visual look like they want, without bogging them down in hundreds of options.
 
-##Databound objects
+## Databound objects
 Each object we create under the `objects` property is a databound object. Each represents one of the accordions on that formatting pane. Power BI will also provide some generic settings as long as you have specified an `objects` property. These settings are handled entirely by Power BI. The minimal definition for Power BI to provide the basic settings is:
 
 ```json
@@ -140,7 +140,7 @@ There is also a single reserved property name, `show`. The `show` propewrty adds
 }
 ```
 
-##Adding settings to SamplePieChart
+## Adding settings to SamplePieChart
 Now that you have an understanding of how Databound objects are created, we'll start adding settings to our SamplePieChart. We'll add the defaults provided by Power BI, then settings to allow users to pick the colors of their pie slices and a setting to set the opacity of the whole chart.
 
 First, we'll make an object that will wrap our chart opacity setting:
@@ -191,7 +191,7 @@ Now let's define an object for the colors of our pie slices. Now this one is a l
 You may have noticed that your settings have not yet appeared on the visualizations pane, and that is to be expected. You will have to ennumerate the settings before they appear on the visualizations pane.
 
 ---
-##**[Continue to the next section, Enumerating Settings](../advanced/SettingsEnumeration.md)**
+## **[Continue to the next section, Enumerating Settings](../advanced/SettingsEnumeration.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

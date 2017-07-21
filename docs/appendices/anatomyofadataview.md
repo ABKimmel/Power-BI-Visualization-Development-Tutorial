@@ -2,7 +2,7 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Anatomy of a `DataView`
+# Anatomy of a `DataView`
 ---
 A `DataView` object has five or six properties:
 |Property|Value|
@@ -14,7 +14,7 @@ A `DataView` object has five or six properties:
 |`table`|Contains the data you specified in the `table` data mapping you defined in `capabilities.json`|
 |`tree`|Contains a tree representation of the data you are receiveing.|
 
-##`metadata`
+## `metadata`
 `metadata` contains a single object, `columns` that contains an object for each unique field that has been passed to your visual. Each column object has the following properties:
 |Property|Value|
 |--|--|
@@ -33,10 +33,10 @@ A `DataView` object has five or six properties:
 
 There may be additional properties, depending on your configuration of `capabilities.json` and the data fields assigned. There is limited information on these attributes in `.api/PowerBI-visuals.d.ts`.
 
-##`categorical`
+## `categorical`
 `categorical` is the object that contains the data in the representation you defined in the `categorical` section of `dataViewMappings` in `capabilities.json`.  There are two sub-objects: `categories` and `values`.
 
-###`categories`
+### `categories`
 This is the data from the data roles you assigned in the `categories` section of the `categorical` definition. It is an array of objects that each represent a unique data field that has been assigned to those data roles. For example, say you had defined two grouping data roles, `mygrouping1` and `mygrouping2`, but the user had assigned the same data field, `datafield1`, to both roles. In this case, there would only be one object in the `categories` array. But if the user then assigns `datafield2` to `mygrouping2`, there would be two objects in the `categories` array, one for each unique data field assigned.
 
 Each object in the `categories` array has the following properties:
@@ -48,7 +48,7 @@ Each object in the `categories` array has the following properties:
 |`identity`|An array containing the identities of each of the values.|
 |`identityFields`|An array containing the SQExprs that identify this category.|
 
-####`source`
+#### `source`
 `source` contains the metadata information describing the column in question. Basically the same as the column metadata defined above in `metadata`.
 |Property|Value|
 |--|--|
@@ -63,7 +63,7 @@ Each object in the `categories` array has the following properties:
 |`sortOrder`|The index of this column in the sort order. The lower the index, the earlier in the sequence the sort is applied. Integer. Only appears on grouping objects.|
 |`identityExprs`|An object containing the SQExpr expressions that define the identity of this column. Only appears on grouping columns.|
 
-###`values`
+### `values`
 `values` contains the data from the data roles you assigned in the `values` section of the `categorical` definition. It is an array of objects that each represent a unique data field that has been assigned to those data roles. It behaves the same as `categories` when the user assigns the same data field to multiple data roles.
 
 Each object in the `values` array has the following properties:
@@ -74,7 +74,7 @@ Each object in the `values` array has the following properties:
 |`values`|An array of the values of this column.|
 |`aggregate`|Each aggregate on the column will have a property of the aggregate name and the value of the result. For example the `minLocal` aggregate might add the property `"minLocal": 0` to the object.|
 
-####`source`
+#### `source`
 `source` contains the metadata information describing the column in question. Basically the same as the column metadata defined above in `metadata`.
 |Property|Value|
 |--|--|

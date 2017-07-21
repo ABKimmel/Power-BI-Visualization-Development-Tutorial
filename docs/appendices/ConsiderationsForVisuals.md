@@ -2,7 +2,7 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Considerations in Building Visuals
+# Considerations in Building Visuals
 ---
 
 

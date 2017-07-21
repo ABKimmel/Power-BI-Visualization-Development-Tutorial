@@ -2,10 +2,10 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Adding Tooltips
+# Adding Tooltips
 ---
 
-##Coming Soon!
+## Coming Soon!
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 

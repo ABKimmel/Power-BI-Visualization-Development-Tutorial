@@ -2,11 +2,11 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Data Extraction
+# Data Extraction
 ---
 We've already covered the basics of data extraction in the [tutorial](../visualizing/1-ExtractingYourData.md), but only for the `categorical` mapping. In this appendix, we will cover extracting data from `single`, `table`, and `matrix` mappings.
 
-##Single Mapping
+## Single Mapping
 ---
 Accessing your data from a `single` data mapping is very simple. Since there is only ever one entry, you can access it like so:
 
@@ -26,7 +26,7 @@ Once you've pulled out the value, you're set!
 
 There is a simple demonstration visualization for the `single` data mappinig available in the [SingleDemo]() folder. If you want to review the concept of a `single` data mapping, check out its [coverage](../appendices/dataViewMappings.md#single) in the [DataView Mappings](../appendices/dataViewMappings.md) appendix.
 
-##Table Mapping
+## Table Mapping
 ---
 
 Accessing your data from a `table` mapping can be more difficult than you expect, due to the fact that you are not guaranteed the columns will come back in the order you specify in `capabilities.json`. If you want to determine which columns are which in the data rows, you will have to parse through the `metadata` property of the DataView to determine which column is which. If you just want to access rows, without caring about column identifiers they are simple to access:

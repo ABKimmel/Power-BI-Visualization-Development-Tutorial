@@ -2,7 +2,7 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Data Roles
+# Data Roles
 ---
 Data roles are how you define the fields into which your visualization will accept data.
 
@@ -10,7 +10,7 @@ Data roles are how you define the fields into which your visualization will acce
 
 Each of the fields there has a data role that is defined under the `dataRoles` attribute of `capabilities.json`.
 
-##Anatomy of a Data Role
+## Anatomy of a Data Role
 You can see an example of the minimal data role in the default visual if you look at `capabilities.json`.
 A complete data role will look like this:
 
@@ -30,16 +30,16 @@ A complete data role will look like this:
 ]
 ```
 
-###`displayName`
+### `displayName`
 Required. This is the name that will be presented to the user. It should be short and precise.
 
-###`name`
+### `name`
 Required. This is the internal name for the data field. We will use this name to reference the data field in the future. As such, it must be unique, and should be easily identifiable. Keep in mind that any references to it will be case sensitive.
 
-###`description`
+### `description`
 Optional. A brief description of what the field does and/or what kinds of data should be given to it. It will be a tooltip, so it should be short.
 
-###`kind`
+### `kind`
 Required. This defines what kind of field you are describing. There are three different kinds: `Measure`, `Grouping`, and `GroupingOrMeasure`. Contrary to what the official documentation says, you must use one of those three string enums, rather than the old `0`, `1`, `2` integer enums.
 
 Each kind fills a different purpose:
@@ -50,7 +50,7 @@ Each kind fills a different purpose:
 
 `GroupingOrMeasure`: These can be either. In general, it is best to give your data roles one of `Grouping` or `Measure`, but if you truly must be both, use this kind.
 
-###`requiredTypes`
+### `requiredTypes`
 Optional. Defines the types of data that will be accepted. An example looks like:
 
 ```json
@@ -91,7 +91,7 @@ It is also possible to specify that a data role can be one of a number of types,
 ]
 ```
 
-##samplePieChart Data Roles
+## samplePieChart Data Roles
 Since we are building a pie chart, we only have two fields for now. We need a category field and a measure field. Let's start with the bare bones for the category field:
 
 ```json
@@ -163,7 +163,7 @@ The official documentation for data roles is available [here](https://github.com
 
 
 ---
-##**[Continue to the next section, DataView Mappings](../capabilities/2-DataViewMappings.md)**
+## **[Continue to the next section, DataView Mappings](../capabilities/2-AddingDataViewMappings.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

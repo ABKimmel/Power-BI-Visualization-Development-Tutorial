@@ -2,11 +2,11 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Interactivity
+# Interactivity
 ---
 Adding interactivity to your visual is very important, since it gives your consumers a sense of control over their visualizations. TypeScript obviously gives you many ways to interact with a visual internally, but if you want to interact with other visuals and their data sets, you will have to use the provided selection ID infrastructure.
 
-##Selection IDs
+## Selection IDs
 Adding selection IDs to your visual is fairly easy. Unfortunately, at the time of writing (API v1.7.0), adding selection IDs is only supported for categorical data mappings.
 
 The first step to adding selection IDs to your visual is to update your data model, so that each data point can store its own selection ID. In our case that means modify ing `pieSlice` to look like:
@@ -71,7 +71,7 @@ private dataExtraction(dataView: DataView): Pie {
 
 Here we are using just the `withCategory()` definition, but you can also use `withSeries()` and `withMeasure()`. Once you have added all of the definitions you want, call `createSelectionId()`.
 
-####Method Information
+#### Method Information
 |Method|Use Case|
 |--|--|
 |withCategory(categoryColumn: DataViewCategoryColumn, index: number)|Tells the selection ID builder to use the specific entry in the category column as the identifier. Effectively lets you select by category.|

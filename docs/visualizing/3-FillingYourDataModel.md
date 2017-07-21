@@ -2,7 +2,7 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Filling Your Data Model
+# Filling Your Data Model
 ---
 Now that we've defined a data model, we can begin to populate it with information from the `DataView`. This is the time when you should apply any transformations you want to apply to the incoming data before it gets sent to the visual generation code. Once the data leaves `dataExtraction()` it should only ever be read, unless you have split your extraction and your transformation steps into separate functions.
 
@@ -73,7 +73,7 @@ private dataExtraction(dataView: DataView): Pie {
 ```
 
 ---
-##**[Continue to the next section, Building Your Visual](../visualizing/4-BuildingYourVisual)**
+## **[Continue to the next section, Building Your Visual](../visualizing/4-BuildingYourVisual)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

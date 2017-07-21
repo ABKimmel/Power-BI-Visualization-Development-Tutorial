@@ -2,17 +2,17 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#`VisualUpdateOptions`
+# `VisualUpdateOptions`
 
-##`dataViews`
+## `dataViews`
 `dataViews` is the object that holds all of the data we are trying to visualize, as well as all of the information on the visual's settings. It is an array of `DataView`s. In all cases, there will be only one `DataView` returned, no matter how many `dataViewMappings` you defined in `capabilities.json`.
 
 For more information on the `DataView` object, see the [Anatomy of a `DataView` appendix](../appendices/AnatomyOfADataView.md).
 
-##`editMode`
+## `editMode`
 `editMode` was previously discussed in the section on [advanced edit mode](). It normally comes back as `0` or `undefined`, but when the user activates Edit mode, it will return as `1`. Note that if you receive multiple updates from a single user action, they may not have the same value for `editMode`, so it is up to you to handle that in your visual.
 
-##`type`
+## `type`
 `type` indicates the kind of update that happened, and has many possible values. There are 5 key building block update types. They are:
 
 |Value|Meaning|
@@ -30,7 +30,7 @@ The `type` property can come back as any one of those building blocks, but can a
 |`36`|`4` + `32`|
 |`62`|`2` + `4` + `8` + `16` + `32`|
 
-##`viewMode`
+## `viewMode`
 `viewMode` indicates what mode the visual is in for the person viewing it. In theory, it will return one of three values:
 
 |Value|View|
@@ -41,7 +41,7 @@ The `type` property can come back as any one of those building blocks, but can a
 
 In actuality, `viewMode` will always be `1`, regardless of whether you are in standard or focused view and whether you are editing or not. It is not tied to `editMode`, despite seeming like it should be.
 
-##`viewPort`
+## `viewPort`
 `viewPort` is an object that contains three attributes of the visual's viewport. They are:
 |Attribute|Meaning|
 |--|--|

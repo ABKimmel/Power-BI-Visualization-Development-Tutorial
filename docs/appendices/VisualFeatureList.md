@@ -2,12 +2,12 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Visual Feature List
+# Visual Feature List
 ---
 
 When you are designing and implementing your custom visual, you should keep in mind what makes a visualization useful to both the developers that will use it, and to the people who will consume it. Below are two lists, one of features for other developers, one of features for consumers. These lists are by no means comprehensive, but are aimed at helping you provided the best possible visual.
 
-##Features For Developers
+## Features For Developers
 ---
 
 *   Appearence Customization
@@ -29,7 +29,7 @@ When you are designing and implementing your custom visual, you should keep in m
 *   Testing
     *   As with all products, you should test your visual thouroughly. This means testing with multiple data sets of varying sizes and types. It also means testing on every Power BI platform, from desktop, to mobile.
 
-##Features For Consumers
+## Features For Consumers
 ---
 *   Performance
     *   Users will be frustrated if your visual takes long periods of time to render or update. This is also true for developers, since they may get the ire of the consumers for your mistakes. For more information on improving the performance of your visual see the [performance section](../advanced/PerformanceConsiderations.md) of the advanced documentation.

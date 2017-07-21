@@ -2,7 +2,7 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#DataView Mappings
+# DataView Mappings
 ---
 The `dataViewMappings` property of `capabilities.json` does two different things: define how your individual data roles relate to each other, and let you provide some conditions for your data roles.
 
@@ -20,7 +20,7 @@ A full DataViewMapping will look like:
 **Note that in the `dataViewMapping` property, or anywhere else from this point on, when you want to refer to a data role by name, you should use the internal name you defined. This is the `name` property**
 
 
-##`conditions`
+## `conditions`
 Conditions allow you to specify the number of data fields that can be placed in a particular data role. An example mapping for our SamplePieChart might look like:
 
 ```json
@@ -67,12 +67,12 @@ You can also specify multiple sets of `conditions` that are valid. In this case,
 }]
 ```
 
-##Data Mappings
+## Data Mappings
 Data mappings are how we define the structure of the data in the DataViews we get from Power BI. We will only talk about `categorical` in this section, but there are four other types. Each has its own applications and use cases where it is most relevant. All your data roles should be present in your data mapping definition.
 
 **If you would like information about the other kinds of `dataViewMappings`, please see the [`dataViewMappings` appendix](../appendices/dataViewMappings.md).**
 
-###`categorical`
+### `categorical`
 `categorical` is the data mapping you will probably use the most. It provides a mapping for things that are grouped into categories. This is great for any data you want to group in your visualization. When you define a `categorical` data mapping, you must define both the categories you are mapping onto, and the values you are mapping. A simple `categorical` data mapping looks like this:
 
 ```json
@@ -85,7 +85,7 @@ Data mappings are how we define the structure of the data in the DataViews we ge
 }
 ```
 
-####`categories`
+#### `categories`
 `categories` sets which data roles will be used to define categories in the DataView for grouping the data. These data roles should all have the `kind` `Grouping`. A typical `categories` definition will look like:
 
 ```json
@@ -110,7 +110,7 @@ or
 
 You have three options for what to specify inside of categories: `for`, `bind`, and `select`. This is also where you will specify the `dataReductionAlgorithm`, which is covered further down the page.
 
-#####`bind`
+##### `bind`
 `bind` tells Power BI to return the single field in the specified role as part of the categories property of the DataView object. Note that you should only `bind` data roles if they allow a maximum of one data field. Bindings look like:
 
 ```json
@@ -121,7 +121,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 }
 ```
 
-#####`for`
+##### `for`
 `for` is much the same as `bind`. It tells Power BI that the fields in the role should be returned as part of the categories property of the DataView object. It differs from `bind` in that you can use it on data roles that allow more than one field within them. All the fields will be included in the DataView object. `for` looks like:
 
 ```json
@@ -131,7 +131,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
     }
 }
 ```
-#####`select`
+##### `select`
 `select` allows you to have more than one data role in your `categories` definition. It can contain any number of Usage is:
 
 ```json
@@ -144,7 +144,7 @@ You have three options for what to specify inside of categories: `for`, `bind`, 
 }
 ```
 
-####`values`
+#### `values`
 `values` sets the data roles that will be grouped by the roles in `categories`. These data roles should be `Measure`s. Values look like:
 
 ```json
@@ -181,7 +181,7 @@ or
 }
 ```
 
-##`dataReductionAlgorithm`
+## `dataReductionAlgorithm`
 The `dataReductionAlgorithm` allows you limited control to specify the behavior of Power BI when there are more records than a certain threshold. THis lets you set the threshold and the behavior to a limited extent. There are four reduction algorithms from which you can choose. The algorithms are `top`, `bottom`, `sample`, and `window`. Please note that no matter what you specify for `count`, Power BI will not return more than 30,000 entries to your visual. A `dataReductionAlgorithm` definition looks like:
 
 ```json
@@ -192,16 +192,16 @@ The `dataReductionAlgorithm` allows you limited control to specify the behavior 
 }
 ```
 
-###`top`
+### `top`
 `top` tells Power BI to return the top `count` entries from the query.
 
-##`bottom`
+## `bottom`
 `bottom` tells Power BI to return the bottom `count` entries from the query.
 
-####`sample`
+#### `sample`
 `sample` tells Power BI to return a sample of `count` entries from the query. It is not clear whether the sampling algorithm is their new [high density sampling algorithm](https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-high-density-sampling/), the older algorithm, or even a different algorithm.
 
-###`window`
+### `window`
 `window` tells Power BI to return a window of `count` entries from the query. In theory, this allows you to circumvent the 30,000-entry limit Power BI imposes on your visual. That said, there is no documentation on how to access windows beyond the first, and at the time of writing, no one had figured out how to do it.
 
 It is important to specify a `dataReductionAlgorithm`, because if you do not, it will use this default `dataReductionAlgorithm`:
@@ -215,7 +215,7 @@ It is important to specify a `dataReductionAlgorithm`, because if you do not, it
 ```
 
 
-##samplePieChart Data Bindings
+## samplePieChart Data Bindings
 On the `conditions` side of things, we are only expecting one data field in each role, so our roles should be limited to a max of one field each. This gives us:
 
 ```json
@@ -259,7 +259,7 @@ Remember that we are using `bind` because the role is limited to one field. Next
 ```
 
 ---
-##**[Continue to the next section, Additional Settings](../capabilities/3-AdditionalSettings.md)**
+## **[Continue to the next section, Additional Settings](../capabilities/3-AdditionalCapabilitiesSettings.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

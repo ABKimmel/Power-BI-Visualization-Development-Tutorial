@@ -2,7 +2,7 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Sample Pie Chart Project
+#  Sample Pie Chart Project
 ---
 This documentation will walk you through the creation of a pie chart visualization. We'll start with setting up the project, then pause and look at the files in the default project for a little bit. After that, we'll cover using external libraries in your visualizations.
 
@@ -14,28 +14,28 @@ After the basic visual is sorted out, we'll look at more advanced features you c
 
 You will also find a large set of appendices that contain a lot of information we didn't touch in the step-by-step tutorial. If you don't see something covered in the step-by-step, look through the appendices for the information you want. If you can't find it there, submit an issue and I'll look into adding the desired information as soon as I can.
 
-##Table of Contents
-*   ###Setup
-    *   [Setting Up Your Project](/setup/1-Setup.md)
-    *   [Anatomy of a Visualization](/setup/2-AnatomyOfAVisualization.md)
-    *   [Adding External Libraries](/setup/3-ExternalLibraries.md)
-*   ###Capabilities
-    *   [Data Roles](/capabilities/1-DataRoles.md)
-    *   [DataView Mappings](/capabilities/2-DataViewMappings.md)
-    *   [Sorting and Other Configurations](/capabilities/3-AdditionalSettings.md)
-*   ###Visualizing Your Data
+## Table of Contents
+*   ### Setup
+    *   [Setting Up Your Project](/setup/1-SettingUpYourProject.md)
+    *   [Anatomy of a Visualization](/setup/2-VisualizationBreakdown.md)
+    *   [Adding External Libraries](/setup/3-AddingExternalLibraries.md)
+*   ### Capabilities
+    *   [Data Roles](/capabilities/1-DefiningDataRoles.md)
+    *   [DataView Mappings](/capabilities/2-AddingDataViewMappings.md)
+    *   [Sorting and Other Configurations](/capabilities/3-AdditionalCapabilitiesSettings.md)
+*   ### Visualizing Your Data
     *   [Extracting Your Data](/visualizing/1-ExtractingYourData.md)
     *   [Defining Your Data Model](/visualizing/2-DefiningYourDataModel.md)
     *   [Filling Your Data Model](/visualizing/3-FillingYourDataModel.md)
     *   [Building a Visual](/visualizing/4-BuildingYourVisual.md)
     *   [Coloring Your Visual](/visualizing/5-ColoringYourVisual.md)
-*   ###Advanced Features
+*   ### Advanced Features
     *   [Overview](/advanced/1-AdvancedTopics.md)
     *   [Adding Settings](/advanced/SettingsDefinitions.md)
     *   [Interactivity](/advanced/Interactivity.md)
     *   [Performance Considerations](/advanced/PerformanceConsiderations.md)
     *   [Adding Tooltips](/advanced/Tooltips.md)
-*   ###Appendices
+*   ### Appendices
     *   [Anatomy of a `DataView`](/appendices/AnatomyOfADataView.md)
     *   [`dataViewMappings`](/appendices/dataViewMappings.md)
     *   [`VisualUpdateOptions`](/appendices/VisualUpdateOptions.md)

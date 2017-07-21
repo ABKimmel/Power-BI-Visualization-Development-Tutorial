@@ -2,7 +2,7 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#`VisualObjectInstance`
+# `VisualObjectInstance`
 ---
 
 When you are [enumerating your settings](../advanced/SettingsEnumeration.md), you must initialize a `VisualObjectInstance` for each setting you want to show the user. This is a breakdown of all fields available for you to specify.
@@ -31,7 +31,7 @@ The basic usage of `VisualObjectInstance` is as such:
 }
 ```
 
-##`selector`
+## `selector`
 The selector identifies which data point the object is tied to. You can retrieve the `Selector` object like so:
 
 ```typescript
@@ -42,7 +42,7 @@ In addition, you can always set the value to `null`, and should if the property 
 
 Also, remember that you can currently only generate selection IDs if you are using a `categorical` mapping.
 
-##`properties`
+## `properties`
 `properties` specifies the nature of the properties you wish to define. You can specify a single property or multiple properties with this field. A property definition looks much like the [definitions in `capabilities.json`](../advanced/SettingsDefinitions.md). A single definition could look like:
 
 ```typescript
@@ -70,7 +70,7 @@ properties: {
 }
 ```
 
-##`validValues`
+## `validValues`
 The `validValues` property allows you to specify a range of valid values for a numeric property. Usage is as so:
 
 ```typescript

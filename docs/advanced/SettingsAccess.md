@@ -2,11 +2,11 @@
 
 _If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
 
-#Accessing Settings
+# Accessing Settings
 ---
 Accessing the settings is fairly simple. All of the information will be contained in the `DataView` that also has all of the data for rendering the chart. Setting information appears in one of two spots, depending on how you defined the object. If you defined the object without specifying a `selector`, the information will appear in the `metadata` of the DataView. Otherwise, if you did specify a `selector`, the setting will appear in the section of the DataView that contains the data to which you bound the setting.
 
-##Accessing Global Settings
+## Accessing Global Settings
 To access a setting you did not define a `selector` for, you will need to extract it from `dataView.metadata`. For example, if we want to extract our `chartOpacity` setting, we would start by defining a new function to handle updating the settings.
 
 ```typescript
