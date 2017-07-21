@@ -4,7 +4,7 @@ _If you are interested in engaging the services of DMI, please contact me at [bk
 
 # Power BI Custom Visualization Tutorial
 ---
-This repo aims to provide a more complete tutorial on creating custom visualizations for Power BI than what is provided by the official documentation. There is a [step-by-step tutorial](docs/project.md) that will walk you through creating a pie chart. The source code for that pie chart will be available in the [SamplePieChart]() folder. There are also other visualizations under the [TableDemo](), and [SingleDemo]() folders. These are not fully featured visualizations, and are only intended to demonstrate topics covered in the [appendices](docs/project.md#Appendices) section of the documentation.
+This repo aims to provide a more complete tutorial on creating custom visualizations for Power BI than what is provided by the official documentation. There is a [step-by-step tutorial](docs/project.md) that will walk you through creating a pie chart. The source code for that pie chart will be available in the [SamplePieChart](/SamplePieChart) folder. There are also other visualizations under the [TableDemo](/TableDemo), and [SingleDemo](/SingleDemo) folders. These are not fully featured visualizations, and are only intended to demonstrate topics covered in the [appendices](docs/project.md#Appendices) section of the documentation.
 
 ---
 
