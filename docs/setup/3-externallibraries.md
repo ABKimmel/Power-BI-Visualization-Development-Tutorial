@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Adding External Libraries
 ---
 For our project, we will be using the D3.js library to render our visualization. Since this is not included in the default project, we will have to import it ourselves. For this project, we will use npm to manage our external dependencies. We will also cover adding something that is not available on npm.
@@ -47,3 +49,5 @@ The last step in importing any library is to add it to the `externalJS` section 
 ---
 ##**[Continue to the next section, Data Roles](/docs/capabilities/1-DataRoles.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

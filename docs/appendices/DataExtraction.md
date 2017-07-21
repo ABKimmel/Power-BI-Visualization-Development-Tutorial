@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Data Extraction
 ---
 We've already covered the basics of data extraction in the [tutorial](/docs/visualizing/1-ExtractingYourData.md), but only for the `categorical` mapping. In this appendix, we will cover extracting data from `single`, `table`, and `matrix` mappings.
@@ -72,3 +74,5 @@ private columnIndices: { "name": string, "index", number}[];
 Initialize it by filling in the **internal** names of your data roles.
 
 Once you have the indices of your columns, you can access the row data with certainty about what information you are getting.
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

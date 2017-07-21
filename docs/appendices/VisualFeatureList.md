@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Visual Feature List
 ---
 
@@ -33,3 +35,5 @@ When you are designing and implementing your custom visual, you should keep in m
     *   Users expect to be able to do the same things with your custom visual as they can with the built-in Microsoft visuals. This means you should provide the ability to select data points in your visual. You may also want to [provide highlighting](/docs/capabilities/3-AdditionalSettings.md#Highlighting) if it seems appropriate for your visual.
 *   Interconnectivity
     *   Your visual should respond cleanly to selections in other visuals, filtering, or slicers.
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

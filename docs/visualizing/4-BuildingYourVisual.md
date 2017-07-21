@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Building Your Visual
 ---
 Now that we have a well-defined data model, we need to take it into `update()` and build a visualization with it.
@@ -92,3 +94,5 @@ As you can see, we've got ourselves a very gray pie chart. That's not very helpf
 ---
 ##**[Continue to the next section, Coloring Your Visual](/docs/visualizing/5-ColoringYourVisual.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

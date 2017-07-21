@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Setting Up Your Environment
 ---
 ##Dependencies
@@ -44,3 +46,5 @@ Once you have created the new visual template, the only thing left to do is view
 ---
 
 Official instructions for setting up your environment can be found [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/README.md#installation).
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Defining a Data Model
 We want to define a set of objects that will represent our data to our visualization generation code. This allows us to change our data extraction code and our data model as much as we want, without having to re-write our visualization code each time we make a change. To do this, we will define a series of TypeScript interfaces and export them. We can do this in either `visual.ts` or in a new file. Since we don't want to clutter `visual.ts` with type definitions, we will make a new file `datainterfaces.ts`. Since we added a new `.ts` file, don't forget that we have to add it to `tsconfig.json`.
 
@@ -44,3 +46,5 @@ Now that we've defined our data model, you might be worrying about importing the
 ---
 ##**[Continue to the next section, Filling Your Data Model](/docs/visualizing/3-FillingYOurDataModel)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

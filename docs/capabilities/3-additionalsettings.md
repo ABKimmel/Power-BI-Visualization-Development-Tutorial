@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Sorting and Other Configurations
 ---
 
@@ -132,3 +134,5 @@ We are not going to implement advanced edit mode in our Pi chart, so we will add
 ---
 ##**[Continue to the next section, Extracting Your Data](/docs/visualizing/1-ExtractingYourData.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

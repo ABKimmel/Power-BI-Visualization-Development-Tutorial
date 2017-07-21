@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Accessing Your Data
 ---
 Now that we have completed our `capabilities.json`, we need to figure out how to access our data inside of `visual.ts`. This is a process we will break down into two steps: Extracting Your Data and Defining a Data Models. But before we get to that, let's take a quick look at the things you must implement in your `visual.ts`.
@@ -63,3 +65,5 @@ Before we go any further with this, we want to think about defining a data model
 ---
 ##**[Continue to the next section, Defining Your Data Model](/docs/visualizing/2-DefiningYourDataModel.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

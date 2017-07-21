@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Coloring Your Visual
 ---
 We are going to start coloring our visual by modifying our `PieSlice` data interface to add a property for color.
@@ -87,3 +89,5 @@ Obviously, our visual is very simple and is missing a lot of features you would 
 ---
 ##**[Continue to the advanced topics](/docs/advanced/1-AdvancedTopics.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

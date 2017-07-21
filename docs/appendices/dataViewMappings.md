@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Additional `dataViewMappings`
 --
 ##`single`
@@ -110,3 +112,5 @@ The only documentation covering the `matrix` data mapping is in `schema.capabili
 
 ##`scriptResult`
 The only documentation covering the `scriptResult` data mapping is in `schema.capabilities.json`, and there was not enough time to figure it out, so we will not be providing coverage at this time. If there is more documentation provided in the future or there is time to figure out `scriptResult`, documentation will be provided. If you can provide quality documentation, please open a pull request.
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

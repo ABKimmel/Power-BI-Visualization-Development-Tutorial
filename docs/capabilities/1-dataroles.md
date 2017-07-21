@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Data Roles
 ---
 Data roles are how you define the fields into which your visualization will accept data.
@@ -161,3 +163,5 @@ The official documentation for data roles is available [here](https://github.com
 ---
 ##**[Continue to the next section, DataView Mappings](/docs/capabilities/2-DataViewMappings.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

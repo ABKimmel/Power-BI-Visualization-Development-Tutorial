@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Enumerating Settings
 ---
 Now that we have defined the settings we want in our `capabilities.json`, we need to enumerate them so Power BI knows that we want to put them up on the visualizations pane. This also gives us the ability to programatically add and remove settings as we see fit. We are going to leverage this to create settings for the coloration of each of our categories. First though, we are going to get `chartOpacity` to show up, and use the progromatic tools to set bounds on valid values.
@@ -165,3 +167,5 @@ This covers the process of enumerating your settings. Now, to access them.
 ---
 ##**[Continue to the next section, Accessing Settings](/docs/advanced/SettingsAccess.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Anatomy of a Visualization
 ---
 
@@ -82,3 +84,5 @@ Files on the root of your project are all configuration files of one sort or ano
 ---
 ##**[Continue to the next section, Adding External Libraries](/docs/setup/3-ExternalLibraries.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

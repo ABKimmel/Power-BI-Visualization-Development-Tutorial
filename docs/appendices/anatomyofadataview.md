@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Anatomy of a `DataView`
 ---
 A `DataView` object has five or six properties:
@@ -85,3 +87,5 @@ Each object in the `values` array has the following properties:
 |`aggregates`|An object containing the aggregates computed for the column. This attribute will only appear on measures of numeric type. In general, this will have two attributes: `minLocal` and `maxLocal`, which will have the min and max values of the column, respectively.|
 
 **Others to come**
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

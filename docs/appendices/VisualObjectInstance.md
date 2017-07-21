@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #`VisualObjectInstance`
 ---
 
@@ -79,3 +81,5 @@ validValues: {
     }
 }
 ```
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

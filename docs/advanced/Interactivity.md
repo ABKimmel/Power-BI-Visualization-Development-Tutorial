@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Interactivity
 ---
 Adding interactivity to your visual is very important, since it gives your consumers a sense of control over their visualizations. TypeScript obviously gives you many ways to interact with a visual internally, but if you want to interact with other visuals and their data sets, you will have to use the provided selection ID infrastructure.
@@ -138,3 +140,5 @@ private generateVisual(data: Pie, viewport: IViewport) {
         });
 }
 ```
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

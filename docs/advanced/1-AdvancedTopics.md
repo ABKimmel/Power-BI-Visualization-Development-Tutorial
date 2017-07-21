@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Advanced Topics
 ---
 
@@ -11,3 +13,5 @@ There are a number of more advanced features that will greatly improve the value
 *   [Settings Access](/docs/advanced/SettingsAccess.md)
 *   [Tooltips](/docs/advanced/Tooltips.md)
 *   [Performance Considerations](/docs/advanced/PerformanceConsiderations.md)
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)

@@ -1,3 +1,5 @@
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
 #Defining Settings In Capabilities
 ---
 
@@ -189,3 +191,5 @@ You may have noticed that your settings have not yet appeared on the visualizati
 ---
 ##**[Continue to the next section, Enumerating Settings](/docs/advanced/SettingsEnumeration.md)**
 ---
+
+[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
