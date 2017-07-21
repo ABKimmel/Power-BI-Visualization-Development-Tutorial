@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Building Your Visual
 ---
 Now that we have a well-defined data model, we need to take it into `update()` and build a visualization with it.
@@ -92,7 +94,9 @@ private generateVisual(data: Pie, viewport: IViewport) {
 As you can see, we've got ourselves a very gray pie chart. That's not very helpful, now, is it? In the next section, we'll cover adding theme colors to your visual.
 
 ---
-##**[Continue to the next section, Coloring Your Visual](/docs/visualizing/5-ColoringYourVisual.md)**
+##**[Continue to the next section, Coloring Your Visual](../visualizing/5-ColoringYourVisual.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

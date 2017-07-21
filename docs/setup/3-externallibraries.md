@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Adding External Libraries
 ---
 For our project, we will be using the D3.js library to render our visualization. Since this is not included in the default project, we will have to import it ourselves. For this project, we will use npm to manage our external dependencies. We will also cover adding something that is not available on npm.
@@ -20,7 +22,7 @@ So, to install D3, navigate to the root of the project then run:
 
 `npm install @types/d3`
 
-Once your types are installed, you should be able to use them right away. As of TypeScript 2.0, the compiler looks in `./node_modules/@types` for typing information by default. For more information about it, see the `tsconfig.json` documentation [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types).
+Once your types are installed, you should be able to use them right away. As of TypeScript 2.0, the compiler looks in `./node_modules/@types` for typing information by default. For more information about it, see the `tsconfig.json` documentation [here](https://www.typescriptlang.org../handbook/tsconfig-json.html#types-typeroots-and-types).
 
 Now you should be able to see the `d3` namespace in your TypeScript.
 
@@ -47,7 +49,9 @@ The last step in importing any library is to add it to the `externalJS` section 
 **Don't forget to run `npm install` whenever you change `package.json`**
 
 ---
-##**[Continue to the next section, Data Roles](/docs/capabilities/1-DataRoles.md)**
+##**[Continue to the next section, Data Roles](../capabilities/1-DataRoles.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

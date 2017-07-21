@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Accessing Your Data
 ---
 Now that we have completed our `capabilities.json`, we need to figure out how to access our data inside of `visual.ts`. This is a process we will break down into two steps: Extracting Your Data and Defining a Data Models. But before we get to that, let's take a quick look at the things you must implement in your `visual.ts`.
@@ -20,9 +22,9 @@ The first step to accessing your data is to extract the `DataView` from the `Vis
 *   `viewMode`
 *   `viewPort`
 
-**If you want more information on the properties of `VisualUpdateOptions`, see the [`VisualUpdateOptions` appendix](/docs/appendices/VisualUpdateOptions.md).**
+**If you want more information on the properties of `VisualUpdateOptions`, see the [`VisualUpdateOptions` appendix](../appendices/VisualUpdateOptions.md).**
 
-**Reading the [Anatomy of a `DataView` appendix](/docs/appendices/AnatomyOfADataView.md) will make the next section easier to understand.**
+**Reading the [Anatomy of a `DataView` appendix](../appendices/AnatomyOfADataView.md) will make the next section easier to understand.**
 
 
 ##Extracting Your Data
@@ -46,7 +48,7 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-If you run your visual now, you will see the `DataView` being logged every time the visual updates. This is great and all, but we want more granular access to the data. Since the `DataView` is an object, and we know the schema, we can easily get to the information we want. If you haven't read the [Anatomy of a `DataView` appendix](/docs/appendices/AnatomyOfADataView), this will make more sense if you do. We'll start by extracting the category and value information.
+If you run your visual now, you will see the `DataView` being logged every time the visual updates. This is great and all, but we want more granular access to the data. Since the `DataView` is an object, and we know the schema, we can easily get to the information we want. If you haven't read the [Anatomy of a `DataView` appendix](../appendices/AnatomyOfADataView), this will make more sense if you do. We'll start by extracting the category and value information.
 
 ```typescript
 private dataExtraction(dataView : DataView) {
@@ -60,10 +62,12 @@ private dataExtraction(dataView : DataView) {
 
 Before we go any further with this, we want to think about defining a data model for our data.
 
-**If you want more information and examples of how to extract your data from other data mappings, see the [Data Extraction appendix](/docs/appendices/DataExtraction.md).**
+**If you want more information and examples of how to extract your data from other data mappings, see the [Data Extraction appendix](../appendices/DataExtraction.md).**
 
 ---
-##**[Continue to the next section, Defining Your Data Model](/docs/visualizing/2-DefiningYourDataModel.md)**
+##**[Continue to the next section, Defining Your Data Model](../visualizing/2-DefiningYourDataModel.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

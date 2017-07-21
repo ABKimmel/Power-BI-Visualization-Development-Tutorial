@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Anatomy of a Visualization
 ---
 
@@ -39,7 +41,7 @@ The file structure of the default plugin as of 7/5/2017. This is also after `npm
 ###`.api`
 You should not need to change anything in this folder. It contains module and schema definitions for the packager to use in constructing your `samplePieChart.pbiviz`.
 
-*   `PowerBI-visuals.d.ts`: The declaration file for the Power BI TypeScript components. If you are unfamiliar with the concept of a declaration file, documentation is available [here](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
+*   `PowerBI-visuals.d.ts`: The declaration file for the Power BI TypeScript components. If you are unfamiliar with the concept of a declaration file, documentation is available [here](https://www.typescriptlang.org../handbook/declaration-files/introduction.html).
 *   `schema.capabilities.json`: Defines the legal schema for `capabilities.json`.
 *   `schema.dependencies.json`: Defines the legal schema for the optional `dependencies.json`. `dependencies.json` is used for defining CRAN dependencies if you are using R. Usinng R is outside the scope of this tutorial, and this will not be covered.
 *   `schema.pbiviz.json`: Defines the legal schema for `pbiviz.json`.
@@ -48,8 +50,8 @@ You should not need to change anything in this folder. It contains module and sc
 ###`.vscode`
 You should not need to change anything in this folder. Contains configuration files for Visual Studio Code.
 
-*   `launch.json`: The configuration for the preferred debugger. For more information on debugger settings, see the documentation [here](https://code.visualstudio.com/docs/editor/debugging)
-*   `settings.json`: Custom workspace settings for the project. For more information on workspace settings, see the documentation [here](https://code.visualstudio.com/docs/getstarted/settings).
+*   `launch.json`: The configuration for the preferred debugger. For more information on debugger settings, see the documentation [here](https://code.visualstudio.com../editor/debugging)
+*   `settings.json`: Custom workspace settings for the project. For more information on workspace settings, see the documentation [here](https://code.visualstudio.com../getstarted/settings).
 
 ###`assets`
 You will add things to this folder and should replace the starting file. All your assets for the visualization should be here. This includes the icon, any background images or other similar files.
@@ -77,12 +79,14 @@ Files on the root of your project are all configuration files of one sort or ano
 *   `capabilities.json`: Defines everything about your data binding. You will extensively modify this for most projects. We will talk about this quite a bit in the section on data binding.
 *   `package.json`: Defines external dependencies you want npm to install, as well as scripts that run after various events. We will talk about this more when we talk about using external libraries. This is a feature of npm, so documentation is available [here](https://docs.npmjs.com/files/package.json).
 *   `pbiviz.json`: The configuration file for the `pbiviz package` process. Contains information about visualization name, version, and all of the various components that go into packaging a `.pbiviz`.
-*   `tsconfig.json`: Defines the options and files that should be fed to the TypeScript compiler. When you add additional `.ts` files, you will need to add them to `tsconfig.json`. For more information on configuring the TypeScript compiler, see the documentation [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+*   `tsconfig.json`: Defines the options and files that should be fed to the TypeScript compiler. When you add additional `.ts` files, you will need to add them to `tsconfig.json`. For more information on configuring the TypeScript compiler, see the documentation [here](https://www.typescriptlang.org../handbook/tsconfig-json.html).
 *   `tslint.json`: Defines which rules get run by the linter. Feel free to modify as you see fit. More documentation is available [here](https://palantir.github.io/tslint/usage/tslint-json/).
 
 
 ---
-##**[Continue to the next section, Adding External Libraries](/docs/setup/3-ExternalLibraries.md)**
+##**[Continue to the next section, Adding External Libraries](../setup/3-ExternalLibraries.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

@@ -1,8 +1,10 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Data Extraction
 ---
-We've already covered the basics of data extraction in the [tutorial](/docs/visualizing/1-ExtractingYourData.md), but only for the `categorical` mapping. In this appendix, we will cover extracting data from `single`, `table`, and `matrix` mappings.
+We've already covered the basics of data extraction in the [tutorial](../visualizing/1-ExtractingYourData.md), but only for the `categorical` mapping. In this appendix, we will cover extracting data from `single`, `table`, and `matrix` mappings.
 
 ##Single Mapping
 ---
@@ -22,7 +24,7 @@ public update(options: VisualUpdateOptions) {
 
 Once you've pulled out the value, you're set!
 
-There is a simple demonstration visualization for the `single` data mappinig available in the [SingleDemo]() folder. If you want to review the concept of a `single` data mapping, check out its [coverage](/docs/appendices/dataViewMappings.md#single) in the [DataView Mappings](/docs/appendices/dataViewMappings.md) appendix.
+There is a simple demonstration visualization for the `single` data mappinig available in the [SingleDemo]() folder. If you want to review the concept of a `single` data mapping, check out its [coverage](../appendices/dataViewMappings.md#single) in the [DataView Mappings](../appendices/dataViewMappings.md) appendix.
 
 ##Table Mapping
 ---
@@ -76,3 +78,5 @@ Initialize it by filling in the **internal** names of your data roles.
 Once you have the indices of your columns, you can access the row data with certainty about what information you are getting.
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

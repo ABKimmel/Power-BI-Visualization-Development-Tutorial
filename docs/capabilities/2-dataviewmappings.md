@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #DataView Mappings
 ---
 The `dataViewMappings` property of `capabilities.json` does two different things: define how your individual data roles relate to each other, and let you provide some conditions for your data roles.
@@ -68,7 +70,7 @@ You can also specify multiple sets of `conditions` that are valid. In this case,
 ##Data Mappings
 Data mappings are how we define the structure of the data in the DataViews we get from Power BI. We will only talk about `categorical` in this section, but there are four other types. Each has its own applications and use cases where it is most relevant. All your data roles should be present in your data mapping definition.
 
-**If you would like information about the other kinds of `dataViewMappings`, please see the [`dataViewMappings` appendix](/docs/appendices/dataViewMappings.md).**
+**If you would like information about the other kinds of `dataViewMappings`, please see the [`dataViewMappings` appendix](../appendices/dataViewMappings.md).**
 
 ###`categorical`
 `categorical` is the data mapping you will probably use the most. It provides a mapping for things that are grouped into categories. This is great for any data you want to group in your visualization. When you define a `categorical` data mapping, you must define both the categories you are mapping onto, and the values you are mapping. A simple `categorical` data mapping looks like this:
@@ -257,7 +259,9 @@ Remember that we are using `bind` because the role is limited to one field. Next
 ```
 
 ---
-##**[Continue to the next section, Additional Settings](/docs/capabilities/3-AdditionalSettings.md)**
+##**[Continue to the next section, Additional Settings](../capabilities/3-AdditionalSettings.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

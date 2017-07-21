@@ -1,9 +1,11 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #`VisualObjectInstance`
 ---
 
-When you are [enumerating your settings](/docs/advanced/SettingsEnumeration.md), you must initialize a `VisualObjectInstance` for each setting you want to show the user. This is a breakdown of all fields available for you to specify.
+When you are [enumerating your settings](../advanced/SettingsEnumeration.md), you must initialize a `VisualObjectInstance` for each setting you want to show the user. This is a breakdown of all fields available for you to specify.
 
 |Field|Type|Value|
 |--|--|--|
@@ -41,7 +43,7 @@ In addition, you can always set the value to `null`, and should if the property 
 Also, remember that you can currently only generate selection IDs if you are using a `categorical` mapping.
 
 ##`properties`
-`properties` specifies the nature of the properties you wish to define. You can specify a single property or multiple properties with this field. A property definition looks much like the [definitions in `capabilities.json`](/docs/advanced/SettingsDefinitions.md). A single definition could look like:
+`properties` specifies the nature of the properties you wish to define. You can specify a single property or multiple properties with this field. A property definition looks much like the [definitions in `capabilities.json`](../advanced/SettingsDefinitions.md). A single definition could look like:
 
 ```typescript
 properties: {
@@ -83,3 +85,5 @@ validValues: {
 ```
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

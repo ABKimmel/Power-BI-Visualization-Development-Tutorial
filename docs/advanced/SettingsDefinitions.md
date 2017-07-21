@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Defining Settings In Capabilities
 ---
 
@@ -189,7 +191,9 @@ Now let's define an object for the colors of our pie slices. Now this one is a l
 You may have noticed that your settings have not yet appeared on the visualizations pane, and that is to be expected. You will have to ennumerate the settings before they appear on the visualizations pane.
 
 ---
-##**[Continue to the next section, Enumerating Settings](/docs/advanced/SettingsEnumeration.md)**
+##**[Continue to the next section, Enumerating Settings](../advanced/SettingsEnumeration.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

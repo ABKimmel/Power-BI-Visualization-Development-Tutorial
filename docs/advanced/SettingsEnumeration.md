@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Enumerating Settings
 ---
 Now that we have defined the settings we want in our `capabilities.json`, we need to enumerate them so Power BI knows that we want to put them up on the visualizations pane. This also gives us the ability to programatically add and remove settings as we see fit. We are going to leverage this to create settings for the coloration of each of our categories. First though, we are going to get `chartOpacity` to show up, and use the progromatic tools to set bounds on valid values.
@@ -82,7 +84,7 @@ private enumerateChartOpacity(instanceEnumeration: VisualObjectInstance[]) {
 
 This method does essentially one thing, and that is make an object that defines the `chartOpacity` setting. Now remember that `instanceEnumeration` requires the `VisualObjectInstance` schema from its members, so our object must be a valid `VisualObjectInstance`. In short, this sets the value of the setting to 100, or, if it is already defined, the current opacity. It also tells Power BI that only values between 10 and 100 inclusive are valid.
 
-**For more information on `VisualObjectInstance`, see the [VisualObjectInstance appendix](/docs/appendices/VisualObjectInstance.md)**
+**For more information on `VisualObjectInstance`, see the [VisualObjectInstance appendix](../appendices/VisualObjectInstance.md)**
 
 ##Enumerating `chartColors`
 This may seem quite a bit trickier than the last section, since we don't have these properties already defined, but you will see that it is actually not much more difficult. Let's start by adding the fields we are going to need. First, we will want to define a `DataViewObjectPropertyIdentifier` for `chartColors`. We will also need access to the data model so that we can see the `slice` categories and colors. Let's do that now:
@@ -165,7 +167,9 @@ As you can see, this is very similar to what we did with `chartOpacity`, except 
 This covers the process of enumerating your settings. Now, to access them.
 
 ---
-##**[Continue to the next section, Accessing Settings](/docs/advanced/SettingsAccess.md)**
+##**[Continue to the next section, Accessing Settings](../advanced/SettingsAccess.md)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

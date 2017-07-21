@@ -1,11 +1,13 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #`VisualUpdateOptions`
 
 ##`dataViews`
 `dataViews` is the object that holds all of the data we are trying to visualize, as well as all of the information on the visual's settings. It is an array of `DataView`s. In all cases, there will be only one `DataView` returned, no matter how many `dataViewMappings` you defined in `capabilities.json`.
 
-For more information on the `DataView` object, see the [Anatomy of a `DataView` appendix](/docs/appendices/AnatomyOfADataView.md).
+For more information on the `DataView` object, see the [Anatomy of a `DataView` appendix](../appendices/AnatomyOfADataView.md).
 
 ##`editMode`
 `editMode` was previously discussed in the section on [advanced edit mode](). It normally comes back as `0` or `undefined`, but when the user activates Edit mode, it will return as `1`. Note that if you receive multiple updates from a single user action, they may not have the same value for `editMode`, so it is up to you to handle that in your visual.
@@ -48,3 +50,5 @@ In actuality, `viewMode` will always be `1`, regardless of whether you are in st
 |`scale`|This attribute will only appear on updates that have a `type` of `36`. It does not appear to be related to the amount of the resize, the ratio of width to height, or to the proportion of the report area it takes up.|
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

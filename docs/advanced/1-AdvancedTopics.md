@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Advanced Topics
 ---
 
@@ -7,11 +9,13 @@ There are a number of more advanced features that will greatly improve the value
 
 
 ##Table of Contents
-*   [Interactivity and Interconnectivity](/docs/advanced/Interactivity.md)
-*   [Settings Definitions](/docs/advanced/SettingsDefinitions.md)
-*   [Settings Enumeration](/docs/advanced/SettingsEnumeration.md)
-*   [Settings Access](/docs/advanced/SettingsAccess.md)
-*   [Tooltips](/docs/advanced/Tooltips.md)
-*   [Performance Considerations](/docs/advanced/PerformanceConsiderations.md)
+*   [Interactivity and Interconnectivity](../advanced/Interactivity.md)
+*   [Settings Definitions](../advanced/SettingsDefinitions.md)
+*   [Settings Enumeration](../advanced/SettingsEnumeration.md)
+*   [Settings Access](../advanced/SettingsAccess.md)
+*   [Tooltips](../advanced/Tooltips.md)
+*   [Performance Considerations](../advanced/PerformanceConsiderations.md)
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

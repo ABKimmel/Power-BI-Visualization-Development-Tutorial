@@ -1,5 +1,7 @@
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
 #Defining a Data Model
 We want to define a set of objects that will represent our data to our visualization generation code. This allows us to change our data extraction code and our data model as much as we want, without having to re-write our visualization code each time we make a change. To do this, we will define a series of TypeScript interfaces and export them. We can do this in either `visual.ts` or in a new file. Since we don't want to clutter `visual.ts` with type definitions, we will make a new file `datainterfaces.ts`. Since we added a new `.ts` file, don't forget that we have to add it to `tsconfig.json`.
 
@@ -44,7 +46,9 @@ module powerbi.extensibility.visual {
 Now that we've defined our data model, you might be worrying about importing the types from `dataInterfaces.ts` into `visual.ts`, but there is no need to worry. At compile time, the TypeScript compiler will concatenate all of the files listed under `tsconfig.json`, so there is no need to import any of the types. Now let's fill in our data model.
 
 ---
-##**[Continue to the next section, Filling Your Data Model](/docs/visualizing/3-FillingYOurDataModel)**
+##**[Continue to the next section, Filling Your Data Model](../visualizing/3-FillingYOurDataModel)**
 ---
 
 [![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
+
+_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
