@@ -75,7 +75,7 @@ The `displayName` is what will show up as the header on the accordion. `displayN
 }
 ```
 
-`StructuralTypeDescriptor` is used when you have a more complex setting you want to specify. There are a couple of ways you can specify this. The first is as an `enumeration`:
+<a name="enumerations"></a>`StructuralTypeDescriptor` is used when you have a more complex setting you want to specify. There are a couple of ways you can specify this. The first is as an `enumeration`:
 
 ```json
 "myFirstProperty": {
