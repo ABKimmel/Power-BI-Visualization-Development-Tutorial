@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 #  Sample Pie Chart Project
 ---
@@ -45,7 +45,3 @@ You will also find a large set of appendices that contain a lot of information w
 
 ---
 If you have any questions or find an error, please open an issue. I will try to answer questions and fix errors as soon as I can. If you want to elaborate on something, feel free to open a pull request, and I will review it as soon as I can.
-
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
-
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._

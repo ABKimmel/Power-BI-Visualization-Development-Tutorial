@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # Enumerating Settings
 ---
@@ -170,6 +170,6 @@ This covers the process of enumerating your settings. Now, to access them.
 ## **[Continue to the next section, Accessing Settings](../advanced/SettingsAccess.md)**
 ---
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+

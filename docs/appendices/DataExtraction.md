@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # Data Extraction
 ---
@@ -79,6 +79,6 @@ Once you have the indices of your columns, you can access the row data with cert
 
 FOr an example, see the [TableDemo](/TableDemo) Visualization.
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+

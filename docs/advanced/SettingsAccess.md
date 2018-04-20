@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # Accessing Settings
 ---
@@ -74,6 +74,6 @@ You'll notice we are checking that the object actually exists, despite the list 
 
 Once we are sure the object is what we want it to be, we pull out the specific object we want, and property using the same method as above. You can always `log` the object for reference on its structure. Lastly, we update the color of the related `PieSlice`. Since we mapped the setting to the datapoint, it will be in the same order as the data we use in `dataExtraction()`.
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+

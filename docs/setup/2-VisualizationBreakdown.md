@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # Anatomy of a Visualization
 ---
@@ -87,6 +87,6 @@ Files on the root of your project are all configuration files of one sort or ano
 ## **[Continue to the next section, Adding External Libraries](../setup/3-AddingExternalLibraries.md)**
 ---
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+

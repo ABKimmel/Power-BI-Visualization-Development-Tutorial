@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # Building Your Visual
 ---
@@ -97,6 +97,6 @@ As you can see, we've got ourselves a very gray pie chart. That's not very helpf
 ## **[Continue to the next section, Coloring Your Visual](../visualizing/5-ColoringYourVisual.md)**
 ---
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+

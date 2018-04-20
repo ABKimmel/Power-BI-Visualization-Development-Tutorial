@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # Adding External Libraries
 ---
@@ -52,6 +52,6 @@ The last step in importing any library is to add it to the `externalJS` section 
 ## **[Continue to the next section, Data Roles](../capabilities/1-DefiningDataRoles.md)**
 ---
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+

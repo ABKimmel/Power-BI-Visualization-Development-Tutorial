@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # Defining Settings In Capabilities
 ---
@@ -194,6 +194,6 @@ You may have noticed that your settings have not yet appeared on the visualizati
 ## **[Continue to the next section, Enumerating Settings](../advanced/SettingsEnumeration.md)**
 ---
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+

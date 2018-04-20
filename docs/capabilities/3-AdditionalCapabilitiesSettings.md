@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # Sorting and Other Configurations
 ---
@@ -137,6 +137,6 @@ We are not going to implement advanced edit mode in our Pi chart, so we will add
 ## **[Continue to the next section, Extracting Your Data](../visualizing/1-ExtractingYourData.md)**
 ---
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+

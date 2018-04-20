@@ -1,6 +1,6 @@
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
 
 # `VisualUpdateOptions`
 
@@ -50,6 +50,6 @@ In actuality, `viewMode` will always be `1`, regardless of whether you are in st
 |`width`|The width of the visual's viewport.|
 |`scale`|This attribute will only appear on updates that have a `type` of `36`. It does not appear to be related to the amount of the resize, the ratio of width to height, or to the proportion of the report area it takes up.|
 
-[![DMI Logo](/img/DMI_Logo.png)](https://dminc.com/)
 
-_If you are interested in engaging the services of DMI, please contact me at [bkimmel@dminc.com](mailto:bkimmel@dminc.com)._
+
+
